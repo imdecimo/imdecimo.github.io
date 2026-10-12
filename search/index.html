@@ -38,7 +38,16 @@
   <link rel="preload" href="/search/index.1.json" as="fetch" type="application/json" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="/css/custom.730a801596309655d4fc41e9ef9ac6d3a06d0396ba0b1cea47e7418cf1013673.css" integrity="sha256-cwqAFZYwllXU/EHp75rG06BtA5a6CxzqR&#43;dBjPEBNnM=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.55ce312c639d92dcdfbd178c3b48eb27b5864baf7b57520dcfbd4e3a4d587281.css" integrity="sha256-Vc4xLGOdktzfvReMO0jrJ7WGS697V1INz71OOk1YcoE=" crossorigin="anonymous"><script>
+(function () {
+  try {
+    var w = parseFloat(localStorage.getItem('hbs:content-width'));
+    if (w >= 8 && w <= 200) {
+      document.documentElement.style.setProperty('--rd-measure', w + 'rem');
+    }
+  } catch (e) {}
+})();
+</script>
 <script>
 (function() {
   var originalTitle = document.title;
@@ -80,7 +89,7 @@ decimo的小窝
             <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/categories/">Categories
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/tags/">Tags
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/archives/">Archive
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/friends/">Friends
@@ -89,6 +98,29 @@ decimo的小窝
         </ul>
         <hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
+<li class="nav-item dropdown col-6 col-lg-auto">
+    <a class="nav-link px-0 py-2 px-lg-1" href="#" id="contentWidthDropdown" role="button"
+        data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+        <i class="fas fa-fw fa-expand-alt"></i>
+        <span class="d-lg-none">宽度</span>
+    </a>
+    <ul class="content-width-menu dropdown-menu dropdown-menu-end p-3" aria-labelledby="contentWidthDropdown">
+        <li class="d-flex justify-content-between align-items-baseline mb-1">
+            <span class="small">正文宽度</span>
+            <span class="small text-secondary" id="contentWidthValue">42 字/行</span>
+        </li>
+        <li>
+            <input type="range" class="form-range content-width-range" id="contentWidthRange"
+                min="28" max="62" step="1" value="47" aria-label="正文宽度">
+        </li>
+        <li class="d-flex gap-1 mt-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="34">窄</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="47">标准</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="60">宽</button>
+        </li>
+    </ul>
+</li>
+
 <li class="nav-item dropdown col-6 col-lg-auto">
     <a class="nav-link px-0 py-2 px-lg-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fas fa-fw fa-palette"></i>
@@ -248,11 +280,6 @@ decimo的小窝
             <label for="series-input">Series</label>
             <datalist id="series-list"></datalist>
         </div>
-        <div class="form-floating col-6 col-lg-3">
-            <input type="text" class="form-control form-control-sm" name="tag" id="tag-input" list="tags-list" placeholder="Tags">
-            <label for="tag-input">Tags</label>
-            <datalist id="tags-list"></datalist>
-        </div>
     </div>
 </form>
 
@@ -287,10 +314,6 @@ decimo的小窝
             <a class="stat col d-flex flex-column align-items-center" title="Categories" href="https://decimo.top/categories">
                 <i class="stat-icon fas fa-fw fa-2x fa-folder mb-2"></i>
                 <span class="stat-count">8</span>
-            </a>
-            <a class="stat col d-flex flex-column align-items-center" title="Tags" href="https://decimo.top/tags">
-                <i class="stat-icon fas fa-fw fa-2x fa-tags mb-2"></i>
-                <span class="stat-count">11</span>
             </a>
         </div>
     </div>
@@ -427,6 +450,8 @@ decimo的小窝
 </footer>
 <script data-precache src="/assets/main/bundle.min.28dd2d3072601810e6c4f2bba33b7fcb56216c0db23356903148d0018fbb8195.js" integrity="sha256-KN0tMHJgGBDmxPK7ozt/y1YhbA2yM1aQMUjQAY&#43;7gZU=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.0b03280daa4a59445b0aafc46855a2bb53b310e572534596869c33acaeec09dd.js" integrity="sha256-CwMoDapKWURbCq/EaFWiu1OzEOVyU0WWhpwzrK7sCd0=" crossorigin="anonymous" defer></script>
 <script data-precache src="/assets/viewer/bundle.min.cca398d318de9fa7816141db90f09282784fcfe0c5dabc31599b8c589932e4ae.js" integrity="sha256-zKOY0xjen6eBYUHbkPCSgnhPz&#43;DF2rwxWZuMWJky5K4=" crossorigin="anonymous" defer></script><script data-precache src="/assets/search/bundle.min.abf9397100801d839b6876f818bce17525a5d045c94dae273ef03f945295f87c.js" integrity="sha256-q/k5cQCAHYObaHb4GLzhdSWl0EXJTa4nPvA/lFKV&#43;Hw=" crossorigin="anonymous"></script>
+<script src="/js/content-width.934f78874ee3ec7867ee4eb0d748e4532407370231346898fbe3108e92526acb.js" integrity="sha256-k094h07j7Hhn7k6w10jkUyQHNwIxNGiY&#43;&#43;MQjpJSass=" crossorigin="anonymous" defer></script>
+
 
   </body>
 </html>

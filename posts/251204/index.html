@@ -25,15 +25,13 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-12-04T20:43:35+08:00">
     <meta property="article:modified_time" content="2025-12-04T20:43:35+08:00">
-    <meta property="article:tag" content="CTF">
-    <meta property="article:tag" content="Web">
 
   <meta itemprop="name" content="251204每日打卡">
   <meta itemprop="description" content="2025/12/04做题记录">
   <meta itemprop="datePublished" content="2025-12-04T20:43:35+08:00">
   <meta itemprop="dateModified" content="2025-12-04T20:43:35+08:00">
   <meta itemprop="wordCount" content="319">
-  <meta itemprop="keywords" content="CTF,Web">
+  <meta itemprop="keywords" content="CTF每日打卡">
   <meta property="og:image" content="https://decimo.top/images/logo.png"/>
   <meta name="twitter:image" content="https://decimo.top/images/logo.png"/>
   <meta property="og:image:alt" content="251204每日打卡" />
@@ -44,7 +42,16 @@
     <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.16d2c85c4cae39a98f8cb7a977e95e554b174f91a5484c32605637156f49ca6b.css" integrity="sha256-FtLIXEyuOamPjLepd&#43;leVUsXT5GlSEwyYFY3FW9Jyms=" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="/css/custom.730a801596309655d4fc41e9ef9ac6d3a06d0396ba0b1cea47e7418cf1013673.css" integrity="sha256-cwqAFZYwllXU/EHp75rG06BtA5a6CxzqR&#43;dBjPEBNnM=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.55ce312c639d92dcdfbd178c3b48eb27b5864baf7b57520dcfbd4e3a4d587281.css" integrity="sha256-Vc4xLGOdktzfvReMO0jrJ7WGS697V1INz71OOk1YcoE=" crossorigin="anonymous"><script>
+(function () {
+  try {
+    var w = parseFloat(localStorage.getItem('hbs:content-width'));
+    if (w >= 8 && w <= 200) {
+      document.documentElement.style.setProperty('--rd-measure', w + 'rem');
+    }
+  } catch (e) {}
+})();
+</script>
 <script>
 (function() {
   var originalTitle = document.title;
@@ -86,7 +93,7 @@ decimo的小窝
             <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/categories/">Categories
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/tags/">Tags
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/archives/">Archive
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/friends/">Friends
@@ -113,6 +120,29 @@ decimo的小窝
       </div>
     </form><hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
+<li class="nav-item dropdown col-6 col-lg-auto">
+    <a class="nav-link px-0 py-2 px-lg-1" href="#" id="contentWidthDropdown" role="button"
+        data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+        <i class="fas fa-fw fa-expand-alt"></i>
+        <span class="d-lg-none">宽度</span>
+    </a>
+    <ul class="content-width-menu dropdown-menu dropdown-menu-end p-3" aria-labelledby="contentWidthDropdown">
+        <li class="d-flex justify-content-between align-items-baseline mb-1">
+            <span class="small">正文宽度</span>
+            <span class="small text-secondary" id="contentWidthValue">42 字/行</span>
+        </li>
+        <li>
+            <input type="range" class="form-range content-width-range" id="contentWidthRange"
+                min="28" max="62" step="1" value="47" aria-label="正文宽度">
+        </li>
+        <li class="d-flex gap-1 mt-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="34">窄</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="47">标准</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="60">宽</button>
+        </li>
+    </ul>
+</li>
+
 <li class="nav-item dropdown col-6 col-lg-auto">
     <a class="nav-link px-0 py-2 px-lg-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fas fa-fw fa-palette"></i>
@@ -264,7 +294,7 @@ decimo的小窝
   </div>
   <div class="card-body"><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2025-12-04 20:43:35 &#43;0800 CST.">December 4, 2025</span><span class="post-reading-time me-1 mb-1">3 min read</span><a href="/categories/ctf%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>CTF每日打卡</a><a href="/tags/ctf/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">CTF</a><a href="/tags/web/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Web</a>
+      <i class="fas fa-fw fa-folder me-1"></i>CTF每日打卡</a>
 </div>
 
       <p class="lead mb-3 text-body-emphasis">2025/12/04做题记录</p>
@@ -446,41 +476,7 @@ decimo的小窝
 
 
     </div>
-</div><section class="related-posts row card component">
-      <div class="card-header">
-        <h2 class="card-title fs-4 my-2 text-surface">
-          Related Posts
-        </h2>
-      </div>
-      <div class="card-body slide px-1">
-        <div class="slide-inner row gx-0"><div class="col-12 col-md-6 col-lg-4 me-2">
-            <div class="post-card card card-body p-0 border-0 surface">
-  
-  <div
-    class="post-card-default-img card-img-top d-flex align-items-center justify-content-center bg-body-secondary mb-1">
-    NO IMAGE
-  </div>
-
-  <a class="post-title" href="/posts/251129/">
-    251129每日打卡
-  </a>
-  <div class="post-meta mb-0">
-    November 29, 2025
-
-  </div>
-</div>
-
-          </div></div>
-        <button class="slide-control-left">
-          <i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i>
-          <span class="visually-hidden">Left</span>
-        </button>
-        <button class="slide-control-right">
-          <i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-270"></i>
-          <span class="visually-hidden">Right</span>
-        </button>
-      </div>
-    </section><div class="card component row post-comments" id="post-comments">
+</div><div class="card component row post-comments" id="post-comments">
   <div class="card-header">
     <h2 class="card-title my-2 fs-4 text-surface">Comments</h2>
   </div>
@@ -791,6 +787,8 @@ decimo的小窝
 <script data-precache src="/assets/main/bundle.min.28dd2d3072601810e6c4f2bba33b7fcb56216c0db23356903148d0018fbb8195.js" integrity="sha256-KN0tMHJgGBDmxPK7ozt/y1YhbA2yM1aQMUjQAY&#43;7gZU=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.0b03280daa4a59445b0aafc46855a2bb53b310e572534596869c33acaeec09dd.js" integrity="sha256-CwMoDapKWURbCq/EaFWiu1OzEOVyU0WWhpwzrK7sCd0=" crossorigin="anonymous" defer></script>
 <script data-precache src="/assets/viewer/bundle.min.cca398d318de9fa7816141db90f09282784fcfe0c5dabc31599b8c589932e4ae.js" integrity="sha256-zKOY0xjen6eBYUHbkPCSgnhPz&#43;DF2rwxWZuMWJky5K4=" crossorigin="anonymous" defer></script>
 <script src="/js/toc-auto.635186e6d874d0dfed4a40f65dcc71e277a9772461a22e01fd1e5aabc804694d.js" integrity="sha256-Y1GG5th00N/tSkD2Xcxx4nepdyRhoi4B/R5aq8gEaU0=" crossorigin="anonymous" defer></script>
+<script src="/js/content-width.934f78874ee3ec7867ee4eb0d748e4532407370231346898fbe3108e92526acb.js" integrity="sha256-k094h07j7Hhn7k6w10jkUyQHNwIxNGiY&#43;&#43;MQjpJSass=" crossorigin="anonymous" defer></script>
+
 <script src="https://giscus.app/client.js"
     data-repo="imdecimo/imdecimo.github.io"
     data-repo-id="R_kgDOQcBRNA"

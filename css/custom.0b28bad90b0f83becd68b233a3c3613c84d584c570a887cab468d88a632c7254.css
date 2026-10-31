@@ -1,0 +1,1122 @@
+/* ============================================================
+   1. 原有定制（保留，勿删）
+   ============================================================ */
+
+/* 让目录栏链接在鼠标悬停时高亮变色 */
+.post-toc a:hover,
+.table-of-contents a:hover {
+  color: #007bff !important;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.2s;
+}
+.logo {
+  transition: none;
+  will-change: transform, filter;
+}
+.navbar-brand:hover .logo {
+  animation: spin-glow 2.2s cubic-bezier(.25,.8,.25,1) !important;
+}
+@keyframes spin-glow {
+  0%   { transform: rotate(0deg) scale(1);   filter: drop-shadow(0 0 0px #03a9f4);}
+  20%  { transform: rotate(180deg) scale(1.10); filter: drop-shadow(0 0 16px #e91e63);}
+  40%  { transform: rotate(360deg) scale(1.18); filter: drop-shadow(0 0 36px #8bc34a);}
+  60%  { transform: rotate(540deg) scale(0.97); filter: drop-shadow(0 0 42px #ffa726);}
+  80%  { transform: rotate(650deg) scale(1.09); filter: drop-shadow(0 0 26px #40c4ff);}
+  100% { transform: rotate(720deg) scale(1);    filter: drop-shadow(0 0 0px #03a9f4);}
+}
+.post-card-default-img {
+  display: none !important;
+}
+
+/* ============================================================
+   2. 阅读度量：正文行宽 / 行高 / 字号
+   ============================================================ */
+
+/* 一行 40 个汉字 —— W3C《中文排版需求》(clreq) 给出「大多数书籍 17–40 字」，
+   40 是这个区间的上限；横排硬上限是 48 字。
+   想让栏更宽就加字号、不加字数：18px × 40 字 = 720px，正好是字号的整数倍。 */
+.post-content {
+  font-size: 1.125rem;    /* 18px */
+  line-height: 1.8;
+}
+
+:root {
+  --rd-measure: 47rem;    /* 正文列宽，改这一个数就能调 */
+}
+
+/* 正文列锁宽：约 45 个汉字一行，从手机到 4K 恒定。
+   友情链接页是自定义的卡片墙，不该被收窄，用 :not() 排除。
+   以后再有类似的宽版自定义页面，把它的容器 class 加进下面的 :not() 即可。 */
+.content-posts:not(:has(.nebula-cards)) > .container {
+  max-width: var(--rd-measure);
+  margin-inline: auto;
+}
+
+.post-content p {
+  margin-bottom: 1.15em;
+}
+.post-content li {
+  margin-bottom: .35em;
+}
+.post-content li > ul,
+.post-content li > ol {
+  margin-top: .35em;
+}
+
+/* ============================================================
+   3. 标题层级
+   ============================================================ */
+
+.post-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-top: 2.6em;
+  margin-bottom: .9em;
+  padding-bottom: .35em;
+  border-bottom: 1px solid var(--hbs-border-color);
+  text-wrap: balance;
+}
+.post-content h3 {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  margin-top: 2em;
+  margin-bottom: .7em;
+  text-wrap: balance;
+}
+.post-content h4 {
+  font-size: 1.15rem;
+  margin-top: 1.7em;
+}
+.post-title {
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+/* ============================================================
+   4. 行内元素与块
+   ============================================================ */
+
+.post-content a {
+  color: var(--hbs-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.post-content a:hover {
+  text-decoration-thickness: 2px;
+}
+.post-content code {
+  font-size: .9em;
+  padding: .15em .38em;
+  border-radius: 5px;
+  background: var(--hbs-secondary-bg);
+}
+.post-content pre {
+  font-size: .9em;
+  line-height: 1.7;
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+}
+.post-content pre code {
+  padding: 0;
+  background: transparent;
+}
+.post-content blockquote {
+  margin: 1.6em 0;
+  padding: .55em 1.1em;
+  border-left: 3px solid var(--hbs-primary);
+  background: var(--hbs-secondary-bg-subtle, var(--hbs-secondary-bg));
+  border-radius: 0 8px 8px 0;
+}
+.post-content img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+.post-content hr {
+  margin: 2.6em 0;
+  opacity: .5;
+}
+.post-content table {
+  font-size: .95em;
+}
+
+/* 标签字号 */
+.post-taxonomy,
+.post-tag,
+.tag {
+  font-size: .8125rem !important;
+}
+
+/* ============================================================
+   5. 断点修复
+   原先双栏只在 >=1400px 生效（Bootstrap 的 col-xxl-* 只活在那个断点里），
+   1000–1400 的笔记本上侧栏整块掉到文末、正文被拉到近 1000px 宽。
+   这里把双栏下探到 992px，并且不再锚在 .content-posts 上 ——
+   首页和列表页的内容列是裸 .col-xxl-8，没有这个 class，
+   老写法其实只管住了单篇文章页，首页侧栏照样掉下去。
+   ============================================================ */
+
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  /* 这一段 Bootstrap 的 container 上限是 960 / 1140px。不松开的话，
+     1097px 视口两侧要白白空掉近 140px，两栏也排不开。 */
+  main.container.has-sidebar {
+    max-width: 1500px;
+  }
+
+  main.has-sidebar .row.content > .col-xxl-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  main.has-sidebar .row.content > aside.sidebar {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+/* 折叠侧栏后正文要占满整行。主题只在 >=1400px 把 .content-posts 换成
+   col-xxl-12，所以 1200–1399px 下点浮动栏那个按钮只是把侧栏藏了，
+   正文仍占 2/3、贴在左边；首页/列表页的内容列不带 .content-posts，
+   连 >=1400px 都不生效。这条不放进媒体查询，所有宽度通用。 */
+main.has-sidebar.sidebar-none .row.content > .col-xxl-8 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+/* 正文列想更宽，得先松开外层容器的宽度上限（Bootstrap xxl 默认 1320px，
+   8/12 分栏后正文最多只能到 ~840px，再调 --rd-measure 也会被截住）。
+   只对带正文列的页面放开，首页和列表页不受影响。 */
+@media (min-width: 1400px) {
+  main.container:has(.content-posts) {
+    max-width: 1500px;
+  }
+}
+
+/* 目录只留一份：>=1200 用侧栏那份，<1200 用正文顶部那份 */
+.post-toc {
+  display: none !important;
+}
+div:has(> #post-toc-container) {
+  display: block;
+}
+@media (min-width: 1200px) {
+  .post-toc {
+    display: block !important;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  div:has(> #post-toc-container) {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   6. 目录：滚动联动自动展开
+   当前阅读章节所在的分支自动展开，其它分支收起。
+   逻辑在 /js/toc-auto.js
+   ============================================================ */
+
+.post-toc nav ul,
+#post-toc-container nav ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.post-toc nav ul ul,
+#post-toc-container nav ul ul {
+  padding-left: .9rem;
+}
+.post-toc nav li,
+#post-toc-container nav li {
+  position: relative;
+}
+
+.post-toc nav a,
+#post-toc-container nav a {
+  display: block;
+  padding: .22rem .5rem;
+  border-radius: 6px;
+  color: var(--hbs-surface-color-secondary, var(--hbs-secondary-color));
+  text-decoration: none;
+  line-height: 1.45;
+}
+
+/* 分支：默认收起，展开时再显示子层 */
+.post-toc nav li.toc-branch > ul,
+#post-toc-container nav li.toc-branch > ul {
+  display: none;
+}
+.post-toc nav li.toc-branch.toc-open > ul,
+#post-toc-container nav li.toc-branch.toc-open > ul {
+  display: block;
+}
+
+/* 折叠箭头 */
+.post-toc nav li.toc-branch > a,
+#post-toc-container nav li.toc-branch > a {
+  padding-right: 1.1rem;
+}
+.post-toc nav li.toc-branch > a::after,
+#post-toc-container nav li.toc-branch > a::after {
+  content: "";
+  position: absolute;
+  right: .5rem;
+  top: .72em;
+  width: .36rem;
+  height: .36rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  opacity: .5;
+  transition: transform .2s ease;
+}
+.post-toc nav li.toc-branch.toc-open > a::after,
+#post-toc-container nav li.toc-branch.toc-open > a::after {
+  transform: rotate(45deg);
+}
+
+/* 当前阅读到的条目 */
+.post-toc nav a.toc-active,
+#post-toc-container nav a.toc-active {
+  color: var(--hbs-primary) !important;
+  background: var(--hbs-secondary-bg);
+  font-weight: 600;
+}
+[data-bs-theme="dark"] .post-toc nav a.toc-active,
+[data-bs-theme="dark"] #post-toc-container nav a.toc-active {
+  color: #7cb0ff !important;
+}
+
+/* ============================================================
+   7. 阅读进度条（纯 CSS 滚动驱动，零 JS）
+   不支持的浏览器自动不显示
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .reading-progress {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: 3px;
+      transform-origin: 0 50%;
+      transform: scaleX(0);
+      background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+      z-index: 1035;
+      pointer-events: none;
+      animation: reading-progress-grow linear both;
+      animation-timeline: scroll(root block);
+    }
+    @keyframes reading-progress-grow {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+  }
+}
+
+/* ============================================================
+   8. 极光玻璃顶栏
+   顶栏磨砂半透明，滚动时内容从底下透上来；背后一层极光光晕。
+   ============================================================ */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20vh -10vw auto -10vw;
+  height: 90vh;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(45% 55% at 18% 20%, rgba(96, 165, 250, .38), transparent 70%),
+    radial-gradient(40% 50% at 78% 8%,  rgba(167, 139, 250, .34), transparent 70%),
+    radial-gradient(38% 48% at 55% 42%, rgba(56, 189, 248, .26), transparent 70%);
+  filter: blur(8px);
+}
+
+[data-bs-theme="dark"] body::before {
+  background:
+    radial-gradient(45% 55% at 18% 18%, rgba(37, 99, 235, .45), transparent 70%),
+    radial-gradient(40% 50% at 80% 6%,  rgba(124, 58, 237, .40), transparent 70%),
+    radial-gradient(38% 48% at 52% 40%, rgba(14, 165, 233, .30), transparent 70%);
+  opacity: .75;
+}
+
+/* 毛玻璃底只能挂在 ::before 上，不能写在 .top-app-bar 自己身上：
+   backdrop-filter 会让元素成为 fixed 后代的包含块，而右上角三点打开的抽屉
+   （#navbarMenus，Bootstrap offcanvas，position:fixed）正是它的后代 ——
+   抽屉于是按顶栏那 59px 的高度定位，body 只剩二十几像素的可视区，
+   菜单和一堆开关只能在里面挤着滚动。
+   现在顶栏自己只留边框，玻璃和投影都交给 ::before；它和抽屉是兄弟关系，
+   不影响抽屉的包含块，也就不会再把抽屉压成一条。
+   z-index: 0 让顶栏自成层叠上下文，z-index: -1 的玻璃层才稳定地待在顶栏
+   内容之下、而不是跑到页面内容后面去（只建层叠上下文，不建 backdrop root，
+   所以磨砂采样到的仍然是底下的正文）。 */
+.top-app-bar {
+  z-index: 0;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(148, 163, 184, .28);
+  /* 模板给 nav 挂了 .shadow（!important）。投影已经挪到 ::before，
+     不掐掉这条就会和玻璃层各投一次，阴影翻倍。 */
+  box-shadow: none !important;
+}
+
+.top-app-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(255, 255, 255, .72);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .6) inset, 0 6px 24px -12px rgba(15, 23, 42, .35);
+}
+
+/* 浅色模式下玻璃底是白的，文字必须跟着转深色。
+   主题默认的 #ccc 是配蓝色底用的，放到白玻璃上对比度只有 1.6:1。 */
+[data-bs-theme="light"] .top-app-bar {
+  color: #212529;
+  --hbs-link-color: #212529;
+  --hbs-link-hover-color: var(--hbs-primary);
+  --hbs-navbar-color: rgba(33, 37, 41, .85);
+  --hbs-navbar-hover-color: var(--hbs-primary);
+  --hbs-navbar-active-color: var(--hbs-primary);
+  --hbs-navbar-brand-color: #212529;
+  --hbs-navbar-brand-hover-color: var(--hbs-primary);
+  --hbs-nav-link-color: rgba(33, 37, 41, .85);
+  --hbs-nav-link-hover-color: var(--hbs-primary);
+  --hbs-nav-link-active-color: var(--hbs-primary);
+  --hbs-form-control-bg: rgba(255, 255, 255, .85);
+}
+
+[data-bs-theme="dark"] .top-app-bar {
+  border-bottom-color: rgba(148, 163, 184, .18);
+}
+
+[data-bs-theme="dark"] .top-app-bar::before {
+  background: rgba(17, 24, 39, .68);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .06) inset, 0 6px 24px -12px rgba(0, 0, 0, .8);
+}
+
+/* 抽屉还得从遮罩里拔出来。header.sticky-top 自带 z-index 1020 的层叠上下文，
+   抽屉在它里面；Bootstrap 的 .offcanvas-backdrop 是挂在 body 上的 1040，
+   所以抽屉整体被那层 50% 的黑罩住，白字发灰、控件像被蒙了一层。
+   抽屉打开时（body 上出现 .offcanvas-backdrop）才把顶栏抬到遮罩之上。 */
+body:has(.offcanvas-backdrop) header.sticky-top {
+  z-index: 1050;
+}
+
+/* 浅色模式下抽屉本体沿用主题的 --hbs-primary，是一整块宝蓝，跟这里的白玻璃
+   顶栏完全是两个风格，里面的文字也只有 #ccc 配蓝底那点对比度。
+   让它跟着顶栏走：surface 底色 + 正文色。深色模式本来就是这个取值，不动。
+   关闭按钮模板里写死 btn-close-white（白色图标），白底上要摘掉反色滤镜。 */
+[data-bs-theme="light"] .top-app-bar .offcanvas-lg,
+[data-bs-theme="light"] .top-app-bar .offcanvas-xxl {
+  --hbs-offcanvas-bg: var(--hbs-surface-bg, #fff);
+  --hbs-offcanvas-color: var(--hbs-body-color);
+}
+
+[data-bs-theme="light"] .top-app-bar .btn-close-white {
+  filter: none;
+}
+
+/* 不支持毛玻璃就退回实色，保证可读性 */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .top-app-bar::before {
+    background: var(--hbs-surface-bg, #fff);
+  }
+  [data-bs-theme="dark"] .top-app-bar::before {
+    background: #111827;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post-toc nav li.toc-branch > a::after,
+  #post-toc-container nav li.toc-branch > a::after {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   9. 友链页：星云散落排布
+   原先卡片写死 width: 230px + flex-wrap，一行只塞得下 3 张，
+   右边固定空掉一条；这里换成自适应网格铺满整行，再给整片卡
+   片加一层共用星云底 + 逐卡微错落，让它们像散在同一片星云里
+   的星星，而不是排成一格一格的方块。
+   ============================================================ */
+
+/* 友链页要整幅摊开。两层容器都要松：外层 main 有 1560 的上限，
+   正文那层内层 .container 还带着 Bootstrap 的断点上限（1400 视口以下
+   是 1140px）—— 只松外层的话，星云场仍旧卡在 1108px，25 张卡按
+   1400 的比例摆进来就会压到中心。 */
+main.container:has(.friend-nebula) {
+  max-width: 1560px;
+}
+
+.content-posts:has(.nebula-cards) > .container {
+  max-width: 100%;
+}
+
+/* 侧栏在这一页让位：带着侧栏时内容列只占 8/12，星云场会被挤窄，而槽位表
+   是按整幅宽度算的，卡片尺寸不变、横向缩水 → 互相压成一团。
+   aside 上带着 Bootstrap 的 .d-flex（display: flex !important），
+   这条必须 !important 才盖得住。 */
+main.has-sidebar:has(.friend-nebula) .row.content > .col-xxl-8 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+main.has-sidebar:has(.friend-nebula) aside.sidebar {
+  display: none !important;
+}
+
+.friend-nebula {
+  position: relative;
+}
+
+/* 星云场：卡片位置全部用百分比，再锁一个宽高比 —— 窗口变宽变窄时整片
+   散射按比例缩放，形状不变。宽高比和 min/max-height 按星团分别给（见下面
+   ≥1420 那段），SZU 只有 6 个人，用不着跟 Aurora 一样高。 */
+.nebula-field {
+  position: relative;
+}
+
+/* 中心：这一团的唯一焦点，就是那张组织卡 */
+.nebula-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+/* 中心背后一小团很淡的光，只是把核心托起来，不画任何轮廓 */
+.nebula-core::before {
+  content: '';
+  position: absolute;
+  inset: -3.5rem -4rem;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(closest-side,
+    rgba(167, 139, 250, .22),
+    rgba(96, 165, 250, .08) 55%,
+    transparent 80%);
+  filter: blur(10px);
+  animation: nebula-halo 9s ease-in-out infinite;
+}
+
+@keyframes nebula-halo {
+  0%, 100% { opacity: .8; transform: scale(1); }
+  50%      { opacity: 1;  transform: scale(1.06); }
+}
+
+/* 卡片本体，网格与散射两种模式共用。
+   · 错落量：网格模式由 4n 规则给，散射模式由槽位表给
+   · 不再用 overflow: hidden：散射模式要从卡片外面画一条指向核心的
+     连线，裁掉就看不见了。星点层改成不越界 + 圆角裁切（见 ::before）
+   · 位移/倾角/缩放拆成独立属性写，漂浮动画动 translate 时才不会和
+     transform 打架 */
+.nebula-cards > .friend-card,
+.nebula-core > .org-card {
+  --rot: 0deg;
+  --dy: 0px;
+
+  position: relative;
+  border-radius: 22px;
+  border: 2px solid rgba(255, 255, 255, .18);
+  padding: 1.2rem;
+  box-shadow: 0 8px 40px rgba(175, 66, 97, .18);
+  backdrop-filter: blur(10px) saturate(170%);
+  -webkit-backdrop-filter: blur(10px) saturate(170%);
+  overflow: visible;
+  translate: 0 var(--dy);
+  rotate: var(--rot);
+  transition: translate .25s ease, rotate .25s ease, scale .25s ease,
+              box-shadow .2s, border-color .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* 核心里的两张组织卡：定宽，两个并排正好撑起中心 */
+.nebula-core > .org-card {
+  width: 10rem;
+}
+
+/* 卡片自带的星点层：铺满卡片、圆角裁切，星点缓慢漂移。
+   原先靠 overflow: hidden 裁一张 140% 的旋转圆盘，现在卡片不能再裁
+   （要往外画连线），所以改成不越界 + 圆角跟随卡片，动的是背景位移。 */
+.nebula-cards > .friend-card::before,
+.nebula-core > .org-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, #ffe3b0 .8px, transparent 2px) 12% 22%/110px 80px,
+    radial-gradient(circle, #aae2ff 1.1px, transparent 2px) 72% 32%/150px 75px,
+    radial-gradient(circle, #8e71bf .7px, transparent 2px) 42% 77%/90px 60px,
+    radial-gradient(circle, #fff 1.3px, transparent 2px) 87% 51%/130px 120px,
+    radial-gradient(circle, #fcb3d1 1px, transparent 2px) 33% 64%/120px 88px,
+    radial-gradient(circle, #ffeeb3 1px, transparent 2px) 62% 78%/120px 100px;
+  background-repeat: repeat;
+  animation: friend-stars-drift 90s linear infinite;
+  opacity: .32;
+}
+
+@keyframes friend-stars-drift {
+  0% {
+    background-position: 12% 22%, 72% 32%, 42% 77%, 87% 51%, 33% 64%, 62% 78%;
+  }
+  100% {
+    background-position: calc(12% + 110px) calc(22% + 80px),
+                         calc(72% - 150px) calc(32% + 75px),
+                         calc(42% + 90px)  calc(77% - 60px),
+                         calc(87% - 130px) calc(51% + 120px),
+                         calc(33% + 120px) calc(64% - 88px),
+                         calc(62% - 120px) calc(78% + 100px);
+  }
+}
+
+/* 卡片内容压在星点层上面 */
+.nebula-cards > .friend-card > *,
+.nebula-core > .org-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.nebula-cards > .friend-card:hover,
+.nebula-core > .org-card:hover,
+.nebula-cards > .friend-card:focus-within,
+.nebula-core > .org-card:focus-within {
+  scale: 1.06;
+  box-shadow: 0 16px 50px 6px rgba(175, 66, 160, .25);
+  border-color: rgba(255, 255, 255, .38);
+  z-index: 999;
+}
+
+.nebula-cards > .friend-card img,
+.nebula-core > .org-card img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: .7rem;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 16px #af426178;
+  z-index: 3;
+}
+
+.nebula-cards > .friend-card a,
+.nebula-core > .org-card a {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08em;
+  z-index: 3;
+  text-shadow: 0 2px 14px rgba(175, 66, 160, .16);
+}
+
+.friend-desc,
+.org-desc {
+  color: #fffbe5;
+  font-size: 1em;
+  text-align: center;
+  text-shadow: 0 2px 6px #af426166;
+  z-index: 3;
+}
+
+/* ---- 整片星云共用的底 ----
+   isolation: isolate 让这片星云和卡片自成一层，卡片能靠 z-index
+   稳稳压在星云上面，也不会盖到顶栏和侧边栏。 */
+
+.post-content .friend-nebula {
+  position: relative;
+  isolation: isolate;
+}
+
+.post-content .friend-nebula > h2 {
+  position: relative;
+  z-index: 1;
+}
+
+/* 星云本体：几团柔和的彩色光晕，晕开后再压到卡片底下 */
+.post-content .friend-nebula::before {
+  content: '';
+  position: absolute;
+  inset: -3rem -.5rem;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 30% at 16% 14%, rgba(96, 165, 250, .22), transparent 70%),
+    radial-gradient(34% 26% at 82% 8%, rgba(167, 139, 250, .2), transparent 70%),
+    radial-gradient(40% 30% at 55% 46%, rgba(244, 114, 182, .13), transparent 70%),
+    radial-gradient(34% 26% at 10% 76%, rgba(56, 189, 248, .15), transparent 70%),
+    radial-gradient(36% 26% at 88% 88%, rgba(139, 92, 246, .16), transparent 70%);
+  filter: blur(18px);
+}
+
+/* 星点：铺在星云上面、卡片底下，缓慢明暗呼吸 */
+.post-content .friend-nebula::after {
+  content: '';
+  position: absolute;
+  inset: -2rem -.5rem;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, #ffe3b0 1px, transparent 2px) 12% 22%/110px 80px,
+    radial-gradient(circle, #aae2ff 1.2px, transparent 2px) 72% 32%/150px 75px,
+    radial-gradient(circle, #fff 1.4px, transparent 2px) 87% 51%/130px 120px,
+    radial-gradient(circle, #fcb3d1 1.1px, transparent 2px) 33% 64%/120px 88px,
+    radial-gradient(circle, #8e71bf .9px, transparent 2px) 42% 77%/90px 60px;
+  background-repeat: repeat;
+  animation: friend-nebula-breathe 14s ease-in-out infinite;
+}
+
+@keyframes friend-nebula-breathe {
+  0%, 100% { opacity: .28; }
+  50%      { opacity: .6; }
+}
+
+/* ============================================================
+   桌面：25 张卡散落成星座，围着中心那颗核心
+   门槛按「星云场的宽度」倒推，不是按视口拍脑袋：场子宽度 ≈ 视口 − 116
+   （main 与正文两层容器的内边距），槽位表是按 1400 宽算的，场子低于
+   ~1300 时卡片间距会掉到 1.0 以下开始互相压。所以散落从视口 1420 起。
+   ============================================================ */
+
+@media (min-width: 1420px) {
+  .nebula-cards > .friend-card {
+    position: absolute;
+    left: var(--x, 50%);
+    top: var(--y, 50%);
+    /* 比槽位表算的 176px 窄一点，给窄一点的桌面屏留出安全余量 */
+    width: 10.5rem;
+    padding: .9rem 1rem;
+    translate: -50% -50%;
+    rotate: var(--rot, 0deg);
+    animation: nebula-drift var(--dur, 8s) ease-in-out var(--delay, 0s) infinite;
+  }
+
+  /* 星云里的卡片是小块，内容压紧一点，整卡高度贴着槽位表算的 150px，
+     免得上下两张叠在一起 */
+  .nebula-cards > .friend-card img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: .4rem;
+  }
+
+  .nebula-cards > .friend-card a {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .nebula-cards > .friend-card .friend-desc {
+    font-size: .82rem;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  /* 朝核心的一小段渐隐连线，把"围绕"这件事点出来。
+     卡片不再 overflow: hidden，这条线才画得出卡片之外 */
+  .nebula-cards > .friend-card::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 5.5rem;
+    height: 1px;
+    z-index: -1;
+    pointer-events: none;
+    transform-origin: 0 50%;
+    transform: rotate(var(--ang, 0deg)) translateX(5.6rem);
+    background: linear-gradient(90deg, rgba(148, 163, 184, .5), transparent);
+  }
+
+  /* 悬停：停止漂浮、扶正、放大，压到最上层 */
+  .nebula-cards > .friend-card:hover,
+  .nebula-cards > .friend-card:focus-within {
+    translate: -50% -50%;
+    rotate: 0deg;
+    scale: 1.06;
+    animation-play-state: paused;
+    z-index: 10;
+  }
+
+  @keyframes nebula-drift {
+    0%, 100% { translate: -50% -50%; }
+    50%      { translate: -50% calc(-50% - 5px); }
+  }
+
+  /* ---- 40 个槽位 ----
+     坐标（--x/--y）是星云场的百分比，--ang 是这张卡指向核心的角度
+     （连线用），--dur/--delay 是漂浮节奏，故意错开。
+     加人：在 friends.md 里多粘一段 .friend-card，它会自动领下一个槽。
+     这是硬上限——第 41 张会和第 1 张撞位，那时候重跑
+     `python scripts/nebula-slots.py`，把 scripts/nebula-slots.css
+     整段贴回这里即可（表是这个脚本生成的，别手改）。 */
+  .nebula-cards > .friend-card:nth-child(1) { --x: 68.0%; --y: 74.9%; --rot: -0.7deg; --ang: -121.5deg; --dur: 7.5s; --delay: -0.53s; }
+  .nebula-cards > .friend-card:nth-child(2) { --x: 79.9%; --y: 44.0%; --rot: -1.5deg; --ang: 166.7deg; --dur: 8.6s; --delay: -1.06s; }
+  .nebula-cards > .friend-card:nth-child(3) { --x: 8.1%; --y: 90.6%; --rot: -0.5deg; --ang: -48.9deg; --dur: 6.2s; --delay: -1.59s; }
+  .nebula-cards > .friend-card:nth-child(4) { --x: 45.5%; --y: 74.6%; --rot: -0.9deg; --ang: -81.2deg; --dur: 8.9s; --delay: -2.12s; }
+  .nebula-cards > .friend-card:nth-child(5) { --x: 88.6%; --y: 20.9%; --rot: -1.1deg; --ang: 138.4deg; --dur: 9.6s; --delay: -2.65s; }
+  .nebula-cards > .friend-card:nth-child(6) { --x: 7.0%; --y: 67.8%; --rot: 1.1deg; --ang: -26.0deg; --dur: 6.8s; --delay: -3.18s; }
+  .nebula-cards > .friend-card:nth-child(7) { --x: 71.6%; --y: 86.8%; --rot: 1.4deg; --ang: -116.5deg; --dur: 9.6s; --delay: -3.71s; }
+  .nebula-cards > .friend-card:nth-child(8) { --x: 47.3%; --y: 20.2%; --rot: 1.4deg; --ang: 85.6deg; --dur: 8.6s; --delay: -4.24s; }
+  .nebula-cards > .friend-card:nth-child(9) { --x: 21.5%; --y: 43.8%; --rot: -0.9deg; --ang: 14.4deg; --dur: 8.0s; --delay: -4.77s; }
+  .nebula-cards > .friend-card:nth-child(10) { --x: 36.3%; --y: 6.2%; --rot: -1.3deg; --ang: 75.2deg; --dur: 9.3s; --delay: -5.30s; }
+  .nebula-cards > .friend-card:nth-child(11) { --x: 11.8%; --y: 7.5%; --rot: -0.4deg; --ang: 52.6deg; --dur: 8.0s; --delay: -5.83s; }
+  .nebula-cards > .friend-card:nth-child(12) { --x: 29.1%; --y: 29.4%; --rot: -0.5deg; --ang: 49.4deg; --dur: 10.0s; --delay: -6.36s; }
+  .nebula-cards > .friend-card:nth-child(13) { --x: 70.8%; --y: 57.1%; --rot: 1.5deg; --ang: -158.0deg; --dur: 6.7s; --delay: -6.89s; }
+  .nebula-cards > .friend-card:nth-child(14) { --x: 69.9%; --y: 9.4%; --rot: 0.3deg; --ang: 112.6deg; --dur: 6.1s; --delay: -7.42s; }
+  .nebula-cards > .friend-card:nth-child(15) { --x: 28.8%; --y: 59.2%; --rot: -0.8deg; --ang: -27.2deg; --dur: 9.0s; --delay: -7.95s; }
+  .nebula-cards > .friend-card:nth-child(16) { --x: 68.9%; --y: 23.3%; --rot: -1.1deg; --ang: 121.0deg; --dur: 8.8s; --delay: -8.48s; }
+  .nebula-cards > .friend-card:nth-child(17) { --x: 12.5%; --y: 29.0%; --rot: 1.0deg; --ang: 33.4deg; --dur: 6.1s; --delay: -9.01s; }
+  .nebula-cards > .friend-card:nth-child(18) { --x: 32.1%; --y: 88.9%; --rot: -0.7deg; --ang: -68.7deg; --dur: 6.0s; --delay: -9.54s; }
+  .nebula-cards > .friend-card:nth-child(19) { --x: 49.3%; --y: 88.2%; --rot: -1.0deg; --ang: -89.2deg; --dur: 7.7s; --delay: -10.07s; }
+  .nebula-cards > .friend-card:nth-child(20) { --x: 83.8%; --y: 72.8%; --rot: 0.1deg; --ang: -141.5deg; --dur: 6.4s; --delay: -10.60s; }
+  .nebula-cards > .friend-card:nth-child(21) { --x: 54.6%; --y: 6.6%; --rot: 0.6deg; --ang: 95.1deg; --dur: 9.7s; --delay: -11.13s; }
+  .nebula-cards > .friend-card:nth-child(22) { --x: 29.0%; --y: 71.3%; --rot: 0.5deg; --ang: -50.1deg; --dur: 8.1s; --delay: -11.66s; }
+  .nebula-cards > .friend-card:nth-child(23) { --x: 88.0%; --y: 90.1%; --rot: 0.0deg; --ang: -128.8deg; --dur: 9.1s; --delay: -12.19s; }
+  .nebula-cards > .friend-card:nth-child(24) { --x: 86.2%; --y: 5.5%; --rot: -0.0deg; --ang: 124.6deg; --dur: 9.2s; --delay: -12.72s; }
+  .nebula-cards > .friend-card:nth-child(25) { --x: 48.2%; --y: 34.2%; --rot: -1.0deg; --ang: 84.4deg; --dur: 8.0s; --delay: -13.25s; }
+  .nebula-cards > .friend-card:nth-child(26) { --x: 8.6%; --y: 54.7%; --rot: -0.9deg; --ang: -7.6deg; --dur: 6.2s; --delay: -13.78s; }
+  .nebula-cards > .friend-card:nth-child(27) { --x: 87.9%; --y: 57.1%; --rot: -0.6deg; --ang: -167.6deg; --dur: 7.4s; --delay: -14.31s; }
+  .nebula-cards > .friend-card:nth-child(28) { --x: 90.0%; --y: 32.7%; --rot: -1.4deg; --ang: 153.0deg; --dur: 9.6s; --delay: -14.84s; }
+  .nebula-cards > .friend-card:nth-child(29) { --x: 62.9%; --y: 37.4%; --rot: 1.0deg; --ang: 131.1deg; --dur: 9.5s; --delay: -15.37s; }
+  .nebula-cards > .friend-card:nth-child(30) { --x: 47.3%; --y: 63.8%; --rot: 1.4deg; --ang: -80.4deg; --dur: 6.4s; --delay: -15.90s; }
+  .nebula-cards > .friend-card:nth-child(31) { --x: 9.1%; --y: 79.2%; --rot: -1.1deg; --ang: -40.1deg; --dur: 9.6s; --delay: -16.43s; }
+  .nebula-cards > .friend-card:nth-child(32) { --x: 28.6%; --y: 17.7%; --rot: 0.7deg; --ang: 60.6deg; --dur: 7.1s; --delay: -16.96s; }
+  .nebula-cards > .friend-card:nth-child(33) { --x: 6.9%; --y: 43.9%; --rot: 0.1deg; --ang: 9.4deg; --dur: 9.8s; --delay: -17.49s; }
+  .nebula-cards > .friend-card:nth-child(34) { --x: 7.5%; --y: 18.4%; --rot: -0.1deg; --ang: 41.3deg; --dur: 8.1s; --delay: -18.02s; }
+  .nebula-cards > .friend-card:nth-child(35) { --x: 76.4%; --y: 33.6%; --rot: 0.9deg; --ang: 143.7deg; --dur: 8.6s; --delay: -18.55s; }
+  .nebula-cards > .friend-card:nth-child(36) { --x: 93.1%; --y: 44.3%; --rot: -1.0deg; --ang: 171.1deg; --dur: 7.3s; --delay: -19.08s; }
+  .nebula-cards > .friend-card:nth-child(37) { --x: 34.7%; --y: 40.6%; --rot: -0.4deg; --ang: 35.9deg; --dur: 6.5s; --delay: -19.61s; }
+  .nebula-cards > .friend-card:nth-child(38) { --x: 23.9%; --y: 7.7%; --rot: 0.3deg; --ang: 62.4deg; --dur: 6.0s; --delay: -20.14s; }
+  .nebula-cards > .friend-card:nth-child(39) { --x: 22.2%; --y: 80.1%; --rot: 1.0deg; --ang: -52.0deg; --dur: 8.4s; --delay: -20.67s; }
+  .nebula-cards > .friend-card:nth-child(40) { --x: 68.2%; --y: 66.0%; --rot: -0.5deg; --ang: -133.9deg; --dur: 7.4s; --delay: -21.20s; }
+}
+
+/* ============================================================
+   窄屏与平板：场子不够大，散落会互相压，退回网格
+   ============================================================ */
+
+@media (max-width: 1419.98px) {
+  .nebula-field {
+    position: static;
+    aspect-ratio: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  /* 核心挪到网格上方，两个徽章并排 */
+  .nebula-core {
+    position: static;
+    translate: none;
+    margin: 0 0 2rem;
+    flex-wrap: wrap;
+  }
+
+  /* 光晕和细环是给"中心"用的，网格模式下没有中心 */
+  .nebula-core::before,
+  .nebula-core::after {
+    display: none;
+  }
+
+  .nebula-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+    gap: 1.5rem 1.1rem;
+    /* 给最后一行往下错落的卡片留出余量 */
+    padding-bottom: 1.25rem;
+  }
+
+  /* 错落：同一行里的卡片角度和高低都不同，看着像随手撒下的星星 */
+  .nebula-cards > .friend-card:nth-child(4n + 1) { --rot: -.9deg; --dy: 0; }
+  .nebula-cards > .friend-card:nth-child(4n + 2) { --rot: .6deg; --dy: 10px; }
+  .nebula-cards > .friend-card:nth-child(4n + 3) { --rot: -.4deg; --dy: 4px; }
+  .nebula-cards > .friend-card:nth-child(4n)     { --rot: 1deg; --dy: 14px; }
+}
+
+/* 手机端：两列、去掉高低错落（角度留着），卡片内边距收一点 */
+@media (max-width: 575.98px) {
+  .nebula-cards {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 9rem), 1fr));
+    gap: 1.1rem .85rem;
+  }
+
+  .nebula-cards > .friend-card:nth-child(n) {
+    --dy: 0;
+  }
+
+  .nebula-cards > .friend-card,
+  .nebula-core > .org-card {
+    padding: 1rem .75rem;
+  }
+
+  .nebula-core > .org-card {
+    width: 8.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nebula-cards > .friend-card,
+  .nebula-cards > .friend-card::before,
+  .nebula-core > .org-card::before,
+  .nebula-core::before,
+  .post-content .friend-nebula::after {
+    animation: none;
+  }
+
+  .post-content .friend-nebula::after {
+    opacity: .45;
+  }
+}
+
+/* ============================================================
+   10. 友链页：浅色模式
+   卡片文字写死了 #fff / #fffbe5，卡片本身又没有背景，
+   浅色模式下就是白底白字。这里只补浅色模式缺的那几项，
+   深色模式一点没动。
+   ============================================================ */
+
+[data-bs-theme="light"] .nebula-cards > .friend-card,
+[data-bs-theme="light"] .nebula-core > .org-card {
+  background: rgba(255, 255, 255, .55);
+  border-color: rgba(15, 23, 42, .1);
+  box-shadow: 0 8px 30px rgba(83, 63, 120, .12);
+}
+
+/* 星点在浅色底上会变成脏点，压淡 */
+[data-bs-theme="light"] .nebula-cards > .friend-card::before,
+[data-bs-theme="light"] .nebula-core > .org-card::before {
+  opacity: .16;
+}
+
+[data-bs-theme="light"] .nebula-cards > .friend-card a,
+[data-bs-theme="light"] .nebula-core > .org-card a {
+  color: #1b2440;
+  text-shadow: none;
+}
+
+[data-bs-theme="light"] .friend-desc,
+[data-bs-theme="light"] .org-desc {
+  color: #4a5568;
+  text-shadow: none;
+}
+
+[data-bs-theme="light"] .nebula-cards > .friend-card img,
+[data-bs-theme="light"] .nebula-core > .org-card img {
+  box-shadow: 0 4px 16px rgba(83, 63, 120, .2);
+}
+
+[data-bs-theme="light"] .nebula-cards > .friend-card:hover,
+[data-bs-theme="light"] .nebula-core > .org-card:hover {
+  border-color: rgba(15, 23, 42, .22);
+  box-shadow: 0 16px 40px 4px rgba(83, 63, 120, .18);
+}
+
+/* 浅色页面本身已经有极光底，星云再叠满会糊，收回一半 */
+[data-bs-theme="light"] .post-content .friend-nebula::before {
+  opacity: .55;
+}
+
+/* 浅色下核心的细环和连线要压深一点才看得见 */
+[data-bs-theme="light"] .nebula-core::after {
+  border-color: rgba(15, 23, 42, .16);
+  box-shadow: 0 0 40px rgba(129, 140, 248, .14) inset;
+}
+
+[data-bs-theme="light"] .nebula-cards > .friend-card::after {
+  background: linear-gradient(90deg, rgba(71, 85, 105, .38), transparent);
+}
+
+/* ============================================================
+   11. 侧栏卡片圆角
+   主题把 .card 的圆角交给 --hbs-card-border-radius，默认值是
+   --hbs-border-radius（6px）——330px 宽的卡片上这 6px 几乎看不见，
+   所以看着像直角。这里把右栏三张卡（作者卡 / Recent Posts /
+   Contents）统一放大到 16px。
+
+   两个坑：
+   1. 变量前缀是 --hbs- 不是 --bs-。主题就是 hbs 前缀，
+      写 --bs-card-border-radius 是不存在的变量，一行都不会生效。
+   2. 侧栏这几张卡同时带 .accordion-item，而 Bootstrap 有
+      .accordion-item:first-of-type / :last-of-type 四条
+      border-*-radius: var(--hbs-accordion-border-radius)
+      —— 特异性 (0,2,0)，压过 .card 的 (0,1,0)。
+      所以光改 --hbs-card-* 不够，accordion 那组变量必须一起改，
+      否则 Recent Posts 那张还是 6px（实测过）。
+   3. 头部上两角走 --hbs-card-inner-border-radius，
+      不跟着改的话标题条会顶出圆角外面。
+   ============================================================ */
+
+aside.sidebar .card {
+  --hbs-card-border-radius: 16px;
+  --hbs-card-inner-border-radius: 16px;
+  --hbs-accordion-border-radius: 16px;
+  --hbs-accordion-inner-border-radius: 16px;
+}
+
+/* ============================================================
+   12. 正文宽度控件
+   顶栏下拉里的拖动滑条。markup 在 layouts/partials/header/content-width.html，
+   逻辑在 assets/js/content-width.js；触发器沿用模式/调色板/字号那一套，
+   所以这里只需要管面板和滑条本身。
+
+   主题是把 Bootstrap 按 $prefix: hbs 编译的，页面上的变量全是 --hbs-*，
+   没有 --bs-*；而 Bootstrap 的 .form-range 又把颜色编译成了字面值，
+   调色板和深浅色切换够不到它，滑条得自己接回主题变量。
+   ============================================================ */
+
+.content-width-menu {
+  min-width: 13rem;
+}
+
+.content-width-range {
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+/* 两个伪元素的选择器必须分开写：合成一个选择器列表的话，
+   浏览器只要认不出其中任何一个，整条规则都会被丢掉。 */
+.content-width-range::-webkit-slider-thumb {
+  background: var(--hbs-primary);
+}
+.content-width-range::-moz-range-thumb {
+  background: var(--hbs-primary);
+  border: none;
+}
+.content-width-range::-webkit-slider-runnable-track {
+  background: var(--hbs-secondary-bg);
+  border-radius: 1rem;
+}
+.content-width-range::-moz-range-track {
+  background: var(--hbs-secondary-bg);
+  border-radius: 1rem;
+}
+
+/* 三档「窄 / 标准 / 宽」，当前档位跟着主色走 */
+.content-width-step.active {
+  background: var(--hbs-primary);
+  border-color: var(--hbs-primary);
+  color: #fff;
+}
+
+/* ============================================================
+   13. 归档页：时间线
+   一条竖轨从年份节点串下来，年份是实心大点、每篇文章一个小点。
+   页面在 /archives/，模板 layouts/_default/archives.html。
+   颜色全走主题变量，深浅色模式不用各写一套。
+   ============================================================ */
+
+.rd-timeline {
+  margin-top: .5rem;
+}
+
+/* 竖轨就是年份块的左边框，从本年的年份节点一直画到最后一篇。
+   最后一年不再往下留白，线就收在最后一个条目上，不会多拖一截尾巴。
+
+   颜色别用 --hbs-border-color：浅色模式下主题把它定义成
+   var(--hbs-secondary-text-on-surface)，而那个变量主题里根本没定义过，
+   于是边框退化成 currentColor（还看得见）、背景直接变透明
+   （小圆点会整片消失）。--hbs-secondary-color 才是深浅色都有实值的那个。 */
+.rd-year {
+  position: relative;
+  padding-left: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-left: 2px solid var(--hbs-secondary-color);
+}
+.rd-year:last-child {
+  padding-bottom: 0;
+}
+
+.rd-year-title {
+  position: relative;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  margin: 0 0 .85rem;
+}
+
+/* 年份节点：圆心落在竖轨上。
+   left = -(padding-left 1.75rem + 左框的一半 1px) - 半径 .3rem */
+.rd-year-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(-1.75rem - 1px - .3rem);
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+  background: var(--hbs-primary);
+  transform: translateY(-50%);
+}
+
+.rd-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rd-item {
+  position: relative;
+}
+
+/* 每篇文章一个小点，同样压在竖轨中心（颜色为什么不用 --hbs-border-color 见上面） */
+.rd-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(-1.75rem - 1px - .2rem);
+  width: .4rem;
+  height: .4rem;
+  border-radius: 50%;
+  background: var(--hbs-secondary-color);
+  transform: translateY(-50%);
+  transition: background .15s;
+}
+.rd-item:hover::before {
+  background: var(--hbs-primary);
+}
+
+.rd-link {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  padding: .28rem .5rem;
+  border-radius: 6px;
+  color: inherit;
+  text-decoration: none;
+  transition: background .15s, color .15s;
+}
+.rd-link:hover,
+.rd-link:focus-visible {
+  background: var(--hbs-secondary-bg);
+  color: var(--hbs-primary);
+}
+
+.rd-date {
+  flex: 0 0 3.1rem;
+  color: var(--hbs-secondary-color);
+  font-size: .875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.rd-title {
+  flex: 1 1 auto;
+  min-width: 0;   /* 长标题允许换行，不把行撑破 */
+  text-wrap: pretty;
+}

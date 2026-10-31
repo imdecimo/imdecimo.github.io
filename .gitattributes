@@ -1,0 +1,5 @@
+# 部署产物逐字节发布：禁止 git 做任何行尾转换。
+# 原因：主题给 CSS/JS 加了 integrity（SRI），浏览器按字节校验 sha256；
+# 一旦 git 在 add/checkout 时把 CRLF 转成 LF，线上字节就和 integrity 对不上，
+# 浏览器会整份丢弃该样式表（表现为页面完全没有排版）。
+* -text

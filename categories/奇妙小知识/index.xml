@@ -7,7 +7,42 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2026 decimo. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 12 Jul 2026 16:31:35 +0800</lastBuildDate><atom:link href="https://decimo.top/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Oct 2026 18:35:35 +0800</lastBuildDate><atom:link href="https://decimo.top/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java</title>
+      <link>https://decimo.top/posts/java/</link>
+      <pubDate>Sat, 31 Oct 2026 18:35:35 +0800</pubDate>
+      <guid>https://decimo.top/posts/java/</guid>
+      <description><![CDATA[<h1 id="前言" data-numberify>前言<a class="anchor ms-1" href="#前言"></a></h1>
+<p>这里只写一些我感觉对java比较有意思的内容吧，已经好久没水博客了。</p>
+<p>如果没学过 Java 的朋友，可能听说过 JDK，JRE，JVM 等等J字头神秘小缩写，还有各种神秘的 Java 版本号，听起来很乱很复杂。</p>
+<p>其实，正是在 Java 中，我才真正体会到编程语言的艺术。至少在大学课程里，Java 让我切实看到了编程的实用价值：丰富的类库、各种方法的使用、Web 编程以及异常处理机制，让我第一次感受到企业级开发的实际面貌，而这是此前学习 C++ 和 C 课程时完全体会不到的。（才疏学浅）</p>
+<p>那我们来讲讲一些神秘小知识。</p>
+
+<h1 id="java" data-numberify>Java<a class="anchor ms-1" href="#java"></a></h1>
+
+<h2 id="历史" data-numberify>历史<a class="anchor ms-1" href="#历史"></a></h2>
+<p>1995年5月23日，Java语言诞生。</p>
+<p>从此直到 Java 1.5 为止，都是以 1.x 的版本号命名的，但是为了表示 J2SE1.5 这个java版本的重要性，其更名为 Java SE 5.0 。从此往后，java版本就以整数为版本号，直到今天。</p>
+<p>java有不同的版本后缀：</p>
+<ul>
+<li>
+<p>SE 是 Standard Edition ，标准版，用于开发桌面和普通应用程序。</p>
+</li>
+<li>
+<p>EE 是 Enterprise Edition ，企业版，在SE的基础上增加了（Web、分布式）等企业级功能，用于开发服务器端的大型应用。</p>
+</li>
+<li>
+<p>ME 是 Micro Edition，微型版，用于手机等嵌入式设备。</p>
+</li>
+</ul>
+<p>java有很多神秘缩写，这里举几个常见的：</p>
+<ul>
+<li>
+<p>JDK 即 Java Development Kit，Java 开发工具包，是给开发者用的全家桶。它包含完整的 JRE，以及 javac 编译器、jar 打包工具、jdb 调试器等开发工具，用于编写、编译、调试和打包 Java 程序。简单说：JDK = JRE + 开发工具。</p>]]></description>
+    <enclosure url="https://decimo.top/images/java.jpg" length="23291" type="image/.jpg" />
+    </item>
+    
     <item>
       <title>计算机网络知识梳理</title>
       <link>https://decimo.top/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</link>

@@ -32,7 +32,7 @@
   <meta itemprop="description" content="java的爱恨情仇">
   <meta itemprop="datePublished" content="2026-10-31T18:35:35+08:00">
   <meta itemprop="dateModified" content="2026-10-31T18:35:35+08:00">
-  <meta itemprop="wordCount" content="1581">
+  <meta itemprop="wordCount" content="1702">
   <meta itemprop="image" content="https://decimo.top/images/java.jpg">
   <meta itemprop="keywords" content="奇妙小知识">
   <meta property="og:image:alt" content="java" />
@@ -294,7 +294,7 @@ decimo的小窝
     <h1 class="card-title post-title my-2">java</h1>
   </div>
   <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="created on 2026-10-31 18:35:35 &#43;0800 CST.">October 31, 2026</span><span class="post-reading-time me-1 mb-1">16 min read</span><a href="/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+  <span class="post-date me-1 mb-1" title="created on 2026-10-31 18:35:35 &#43;0800 CST.">October 31, 2026</span><span class="post-reading-time me-1 mb-1">17 min read</span><a href="/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
       <i class="fas fa-fw fa-folder me-1"></i>奇妙小知识</a>
 </div>
 
@@ -372,6 +372,33 @@ decimo的小窝
 <li><strong>默认没有全局变量和全局函数</strong>。一切代码必须在类里，C++ 那种散落在文件顶层的全局状态在 Java 里不存在。</li>
 </ul>
 <p>Java的所有代码都需要在一个类里面。哪怕你写一个 你好，世界！也必须包含在类里面。Java 命名要求 类名用大驼峰，方法/变量小驼峰，常量全大写下划线分割，包名全小写。总之，C++ 让你拥有很高的自由度，但要你自己来兜底。而 Java 则追求让你独到的每一行都没有歧义。</p>
+<p>值得注意的是<strong>Java 没有指针，只有引用。</strong> 既然没指针，那 <code>Walrus b = a;</code> 到底在干嘛？CS61B 开局的“海象谜题”，其实就是在帮你把这事儿掰扯清楚。</p>
+<p>先看两段代码。第一段是对象：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">Walrus</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Walrus</span><span class="p">(</span><span class="n">1000</span><span class="p">,</span><span class="w"> </span><span class="n">8</span><span class="p">.</span><span class="na">3</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w"></span><span class="n">Walrus</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w"></span><span class="n">b</span><span class="p">.</span><span class="na">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">5</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p>改 <code>b.weight</code>，<code>a</code> 会跟着变吗？答案是<strong>会</strong>，两者的体重最后都变成了 5。</p>
+<p>再看第二段，基本类型：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="ln">1</span><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">5</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w"></span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w"></span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">y</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p>改 <code>x</code>，<code>y</code> 会跟着变吗？答案是<strong>不会</strong>，<code>x</code> 是 2，<code>y</code> 依然是 5。</p>
+<p>明明都是 <code>=</code> 赋值，凭啥结果完全相反？因为 Java 只有一套规则，CS61B 管这叫 <strong>“等号的黄金法则”</strong>：<strong><code>y = x</code> 就是把 <code>x</code> 盒子里的比特位，原样复制一份塞进 <code>y</code> 的盒子里。</strong></p>
+<p>搞懂这句话，谜题就解了。</p>
+<p>对于 <code>int</code>，盒子里装的纯粹是<strong>数值本身</strong>。<code>y = x</code> 复制了一份 5 过去。接着你把 <code>x</code> 改成 2，那只是重写了 <code>x</code> 的盒子，<code>y</code> 的盒子还是 5，两不相干。</p>
+<p>但 <code>Walrus</code> 这种对象不同。变量盒子里装的<strong>从来不是海象本身，而是它在内存里的地址</strong>。<code>new Walrus()</code> 在堆里造出一只海象，然后把地址交给了 <code>a</code>。<code>b = a</code> 复制的是地址，所以 <code>a</code> 和 <code>b</code> 手里拿着同一个门牌号。<code>b.weight = 5</code> 并不是换了一只海象，而是顺着 <code>b</code> 的地址摸过去，改了那只海象。<code>a</code> 拿着同样的地址找过去，看到的自然也是同一只变瘦的海象。</p>
+<p>所以，“Java 没有指针只有引用”这句话，准确的理解是：<strong>底层的引用就是个地址，行为跟 C++ 指针一模一样，但 Java 不让你对地址做算术</strong>。你不能 <code>a++</code> 跨到隔壁内存，不能把地址强转成数字，也不能手动去释放它。C++ 的指针像个万能遥控器，想指哪指哪；Java 的引用就像个固定了频道的遥控器，只能用来顺着它找对象、改对象，但绝不允许你越过对象去乱翻内存。这恰恰呼应了前面说的 Java 设计哲学：拿掉指针，就是拿掉了一整类因为乱碰内存而导致的崩溃。</p>
+<p>顺带提一嘴内存分配。当你写下 <code>new</code> 的时候，对象实体是实打实放在<strong>堆（Heap）<strong>里的；而栈（Stack）内存空间小、跑得快，在方法的局部变量表里，给 <code>a</code> 这种变量分配的仅仅是一个存放</strong>地址</strong>的槽位。</p>
+<p>所以，从来不是什么“在栈里创建了一个指向堆的引用”，而是：<strong>栈上有个变量，它存的值是指向堆里那个对象的地址</strong>。正是这个“拷贝地址”的动作，才造就了海象谜题里，两个变量携手指向同一个对象的奇妙现象。</p>
+<p>如果你对引用和指针还比较迷糊的话，可以这样理解：<strong>归根结底，指针和引用你都可以理解为“只是存着地址的变量”</strong></p>
 
 <h2 id="jndi" data-numberify>JNDI<a class="anchor ms-1" href="#jndi"></a></h2>
 <p>JNDI（Java Naming and Directory Interface，Java 命名和目录接口）是 SUN 公司提供的一种标准的 Java 命名系统接口。JNDI 提供统一的客户端 API，通过不同的访问提供者接口（JNDI 服务供应接口，SPI）的实现，由管理者将 JNDI API 映射为特定的命名服务和目录系统，使得 Java 应用程序可以和这些命名服务、目录服务之间进行交互。</p>

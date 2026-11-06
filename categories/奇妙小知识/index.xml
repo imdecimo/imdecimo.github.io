@@ -7,42 +7,7 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>Copyright © 2026 decimo. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 04 Nov 2026 13:35:35 +0800</lastBuildDate><atom:link href="https://decimo.top/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Pickle反序列化</title>
-      <link>https://decimo.top/posts/pickle%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
-      <pubDate>Wed, 04 Nov 2026 13:35:35 +0800</pubDate>
-      <guid>https://decimo.top/posts/pickle%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
-      <description><![CDATA[<h1 id="pickle反序列化" data-numberify>Pickle反序列化<a class="anchor ms-1" href="#pickle反序列化"></a></h1>
-<p>在比赛中经常看到 Pickle反序列化，这个 Pickle 究竟是个啥？</p>
-<p>作为名词时，主要指代通过醋、盐卤腌制的蔬菜或水果（如泡菜、腌黄瓜），亦可指腌制容器（如泡菜坛）。动词含义为“腌制”，涉及食材浸泡保存的工艺。</p>
-<p>确实就是咸菜，酸黄瓜之类的意思。</p>
-<p>其实还挺贴合它在 Python 中的作用的（）</p>
-
-<h2 id="pickle简介" data-numberify>pickle简介<a class="anchor ms-1" href="#pickle简介"></a></h2>
-<p>和 PHP 及其他语言类似，现代的 Python 也有序列化功能用来长期存储内存中的数据。</p>
-<p>pickle 模块就是用来序列化和反序列化 Python 对象的标准库模块。</p>
-<p>它可以将几乎所有的 Python 对象写成二进制文件，或者通过网络传输，然后在需要时重新加载。</p>
-<p>pickle 字节流由一系列 opcode（操作码）组成，它的反序列化器像一个栈式虚拟机，逐条读取并执行：</p>
-<ul>
-<li>压栈、出栈</li>
-<li>导入全局对象（如某个模块里的函数/类）</li>
-<li>调用函数</li>
-<li>构造对象</li>
-<li>设置对象属性</li>
-<li>结束</li>
-</ul>
-<p>它不想 JSON 那样只是描述数据，而是包含了执行构造动作的指令流。</p>
-<p>pickle 反序列化时可以执行 <code>GLOBAL</code>、<code>REDUCE</code>、<code>BUILD</code> 等 opcode，攻击者可以手工构造字节流，让反序列化过程去导入并调用某些函数，或者构造/修改对象状态。经典攻击效果就是：<strong>反序列化不可信 pickle 就约等于RCE</strong>。</p>
-<p>当然执行什么还取决于目标环境有哪些模块和函数可用。</p>
-<p>正是因此，手写 opcode 会比用 pickle 序列化生成的代码更加灵活。</p>
-<p>比如说，正常 <code>pickle.dumps</code> 一个字符串，一般不会生成导入 <code>os</code> 并调用 <code>system</code>这种指令；但手工拼 pickle 字节流可以包含这类 opcode 组合。</p>
-
-<h3 id="object__reduce__-函数" data-numberify>object.__reduce__() 函数<a class="anchor ms-1" href="#object__reduce__-函数"></a></h3>
-<p><code>__reduce__()</code> 函数在对象被 pickle 序列化时被 <code>pickle.dumps()</code> 调用。它返回一个元组，告诉 pickle：“反序列化时请这样重建我”。</p>]]></description>
-    <enclosure url="https://decimo.top/images/pickle.jpg" length="140635" type="image/.jpg" />
-    </item>
-    
+    <lastBuildDate>Sat, 31 Oct 2026 18:35:35 +0800</lastBuildDate><atom:link href="https://decimo.top/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>java</title>
       <link>https://decimo.top/posts/java/</link>

